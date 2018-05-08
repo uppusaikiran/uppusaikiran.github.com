@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-theme                    : minimal-mistakes-jekyll
+remote-theme                    : minimal-mistakes-jekyll
 locale                   : "en"
 title                    : "Standard Deviations"
 title_separator          : "-"
