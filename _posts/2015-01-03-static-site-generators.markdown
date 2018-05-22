@@ -1,0 +1,83 @@
+# Malware Organiser Tool
+A simple tool to organise large malicious/benign files into a organised Structure.
+
+<img src="https://travis-ci.org/uppusaikiran/malware-organiser.svg?branch=master">
+
+# Usage:
+
+## PreRequsite
+
+### Creation of Table
+
+```
+CREATE TABLE `file_meta` (
+ `md5` varchar(40) NOT NULL,
+ `sha256` varchar(80) NOT NULL,
+ `mime` varchar(100) NOT NULL,
+ `severity` varchar(10) NOT NULL,
+ `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ `file_source` varchar(15) NOT NULL,
+ `file_size` varchar(30) NOT NULL,
+ `file_path` varchar(200) NOT NULL,
+ `file_new_location` varchar(200) NOT NULL,
+ `file_name` varchar(100) NOT NULL,
+ `author` varchar(30) NOT NULL,
+ `tags` varchar(250) NOT NULL,
+ PRIMARY KEY (`md5`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+```
+### Update Database Fields in the script file.
+
+Edit the variable corresponding in this line.
+MySQLdb.connect(mysql_host,mysql_user,mysql_pass,mysql_database)
+
+
+### Application Usage
+
+```
+$ sudo python app.py  -h
+usage: app.py [-h] -f FOLDER -src SOURCE -sev {malicious,clean} [-d DELETE] -a
+              AUTHOR [-t TAGS]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FOLDER, --folder FOLDER
+                        Samples Folder/File
+  -src SOURCE, --source SOURCE
+                        Source from which malware is downloaded
+  -sev {malicious,clean}, --severity {malicious,clean}
+                        Benign or Malicious
+  -d DELETE, --delete DELETE
+                        Delete files from source folder after copying
+  -a AUTHOR, --author AUTHOR
+                        Author name
+  -t TAGS, --tags TAGS  Tags to classify the samples
+```
+
+### Index samples based on the Condition
+
+```
+$ python query.py -h
+usage: database.py [-h] -m MIME [-s SIZE] -src SOURCE -sev {malicious,clean}
+                   -a AUTHOR [-t TAGS]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -m MIME, --mime MIME  Mime Type of Files for query
+  -s SIZE, --size SIZE  Size query of files (Specify Range in MB like 1,2 or 1 )
+  -src SOURCE, --source SOURCE
+                        Source from which malware is downloaded
+  -sev {malicious,clean}, --severity {malicious,clean}
+                        Benign or Malicious
+  -a AUTHOR, --author AUTHOR
+                        Author name
+  -t TAGS, --tags TAGS  Tags to classify the samples
+```
+
+Featues:
+
+1. Abbility to classify malware/benign files based on the mime_type
+2. Index records in Database to fetch files which matches different conditions like
+    * All pdf files with size less than 1MB and collected from Virustotal(Source)
+    * All clean files which are collected yesterday and are fresh files.
+3. Tagging different files based on family_name,source etc is implemented.
