@@ -7,7 +7,7 @@ header:
 
 A simple tool to organise large malicious/benign files into a organised Structure.
 
-Source Code : [https://github.com/uppusaikiran/malware-organiser](https://github.com/uppusaikiran/malware-organiser)
+Source Code : [virustotal-falsepositive-detector](https://github.com/uppusaikiran/virustotal-falsepositive-detector)
 
 Hit Counter : [![HitCount](http://hits.dwyl.io/uppusaikiran/virustotal-falsepositive-detector.svg)](http://hits.dwyl.io/uppusaikiran/virustotal-falsepositive-detector)
 
