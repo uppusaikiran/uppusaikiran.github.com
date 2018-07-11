@@ -22,7 +22,6 @@ tags:
     - static-analysis
     - dynamic-analysis
 
-classes: wide
 
 ---
 
