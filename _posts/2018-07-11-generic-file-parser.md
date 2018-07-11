@@ -1,5 +1,7 @@
 ---
 header:
+  image: /assets/images/malware.jpg
+
 title: "Generic File Parser to extract features from Malicious Files."
 
 tags: 
