@@ -41,25 +41,12 @@ admin@cuckoo:~/generic-parser$ . pyenv/bin/activate
 ```
 pip install -r requirements.txt
 Collecting future==0.16.0 (from -r requirements.txt (line 1))
-  Downloading https://files.pythonhosted.org/packages/00/2b/8d082ddfed935f3608cc61140df6dcbf0edea1bc3ab52fb6c29ae3e81e85/future-0.16.0.tar.gz (824kB)
-    100% |████████████████████████████████| 829kB 255kB/s
 Collecting oletools==0.51 (from -r requirements.txt (line 2))
-  Downloading https://files.pythonhosted.org/packages/3d/65/d013d389b2ab7a1e3b5b75d9352d32dfc2bb950b4b64eab81ca0593fa561/oletools-0.51.tar.gz (1.5MB)
-    100% |████████████████████████████████| 1.5MB 407kB/s
 Collecting pdfminer==20140328 (from -r requirements.txt (line 3))
-  Downloading https://files.pythonhosted.org/packages/57/4f/e1df0437858188d2d36466a7bb89aa024d252bd0b7e3ba90cbc567c6c0b8/pdfminer-20140328.tar.gz (4.1MB)
-    100% |████████████████████████████████| 4.1MB 406kB/s
 Collecting pefile==2017.9.3 (from -r requirements.txt (line 4))
-  Downloading https://files.pythonhosted.org/packages/c6/e2/d868d2d36d8b5ae410beff93b9f84484ff7e98cfa54b464bda78074f6307/pefile-2017.9.3.tar.gz (61kB)
-    100% |████████████████████████████████| 71kB 480kB/s
 Collecting python-magic==0.4.13 (from -r requirements.txt (line 5))
-  Downloading https://files.pythonhosted.org/packages/b5/af/74f2df75e372a21547b4dc0d0878f883be4bfa936ddd835e285cb4aab538/python_magic-0.4.13-py2.py3-none-any.whl
 Collecting rarfile==3.0 (from -r requirements.txt (line 6))
-  Downloading https://files.pythonhosted.org/packages/de/a4/8b4abc72310da6fa53b6de8de1019e0516885d05369d6c91cba23476abe5/rarfile-3.0.tar.gz (110kB)
-    100% |████████████████████████████████| 112kB 410kB/s
 Collecting yara-python==3.6.3 (from -r requirements.txt (line 7))
-  Downloading https://files.pythonhosted.org/packages/57/4a/aa0aeb948bb3cd355281ee40401b6673df2f809ed36afc35993c8f02a4d1/yara-python-3.6.3.tar.gz (301kB)
-    100% |████████████████████████████████| 307kB 747kB/s
 Building wheels for collected packages: future, oletools, pdfminer, pefile, rarfile, yara-python
   Running setup.py bdist_wheel for future ... done
   Stored in directory: /home/admin/.cache/pip/wheels/bf/c9/a3/c538d90ef17cf7823fa51fc701a7a7a910a80f6a405bf15b1a
@@ -76,8 +63,8 @@ Building wheels for collected packages: future, oletools, pdfminer, pefile, rarf
 Successfully built future oletools pdfminer pefile rarfile yara-python
 Installing collected packages: future, oletools, pdfminer, pefile, python-magic, rarfile, yara-python
 Successfully installed future-0.16.0 oletools-0.51 pdfminer-20140328 pefile-2017.9.3 python-magic-0.4.13 rarfile-3.0 yara-python-3.6.3
-
 ```
+
 ### Script Usage
 
 ```
@@ -95,6 +82,7 @@ optional arguments:
   --version             show program's version number and exit
 
 ```
+
 1. PATH  : This should point to the path of the malware file which you want to analyze.
 2. STORE : Enable this flag if you want to store in a database.
 3. YARA  : Enable this flag to apply yara to match for suspicious indicators in the file.
