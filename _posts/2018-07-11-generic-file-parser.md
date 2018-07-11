@@ -4,6 +4,9 @@ header:
 
 title: "Generic File Parser to extract features from Malicious Files."
 
+category:
+    - malware
+
 tags: 
     - malware-analysis
     - pdf-parsing
@@ -18,6 +21,8 @@ tags:
     - machine-learning
     - static-analysis
     - dynamic-analysis
+
+classes: wide
 
 ---
 
