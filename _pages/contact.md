@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 permalink: /contact/
-layout: splash
+layout: default
 author_profile: true
 ---
 
