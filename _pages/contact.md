@@ -2,7 +2,6 @@
 title: "Contact"
 permalink: /contact/
 layout: default
-author_profile: true
 ---
 
 <form class="form" id="contactform" action="//formspree.io/saikiran@netskope.com" method="POST">
