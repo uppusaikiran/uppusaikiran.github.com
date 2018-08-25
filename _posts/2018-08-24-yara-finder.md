@@ -2,7 +2,8 @@
 header:
   image: /assets/images/malware.jpg
   caption: "Photo credit: [**pxhere**](https://pxhere.com)"
-  classes: wide
+
+classes: wide
 
 
 ---
