@@ -7,6 +7,9 @@ title: "Generic File Parser to extract features from Malicious Files."
 category:
     - malware
 
+layout: single
+classes: wide
+
 tags: 
     - malware-analysis
     - pdf-parsing
