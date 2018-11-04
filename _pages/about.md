@@ -10,7 +10,7 @@ layout: default
     <div id="header">
       <div id="branding">
         <h1 id="site-title">
-          <a href="/" title="SaiKiran Uppu" rel="Home">Sourabh Bajaj</a>
+          <a href="/" title="SaiKiran Uppu" rel="Home">SaiKiran Uppu</a>
         </h1>
       </div>
 
