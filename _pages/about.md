@@ -3,7 +3,6 @@ title: "SaiKiran Uppu"
 permalink: /about/
 layout: default
 author_profile: true
-
 ---
 
 
