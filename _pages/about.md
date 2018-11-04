@@ -1,6 +1,7 @@
 ---
 title: "SaiKiran Uppu"
-sitemap: false
+permalink: /about/
+layout: default
 ---
 
 
@@ -9,7 +10,7 @@ sitemap: false
     <div id="header">
       <div id="branding">
         <h1 id="site-title">
-          <a href="/" title="Sourabh Bajaj" rel="Home">Sourabh Bajaj</a>
+          <a href="/" title="SaiKiran Uppu" rel="Home">Sourabh Bajaj</a>
         </h1>
       </div>
 
