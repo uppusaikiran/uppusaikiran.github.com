@@ -4,7 +4,7 @@ permalink: /contact/
 layout: default
 ---
 
-
+<!--
 <form class="form" id="contactform" action="https://formspree.io/xrnallqx" method="POST">
  <fieldset class="field">
  <input class="input" type="text" name="name" placeholder="Name" id="name" required>
@@ -19,8 +19,163 @@ layout: default
  <label class="label" for="message"><span class="label-content">Your message</span></label>
  </fieldset>
  <input class="hidden" type="text" name="_gotcha" style="display:none">
- <input class="hidden" type="hidden" name="_subject" value="Message via http://domain.com">
+ <input class="hidden" type="hidden" name="_subject" value="Message via http://uppusaikiran.github.io">
  <fieldset class="field">
  <input class="button submit" type="submit" value="Send">
  </fieldset>
 </form>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="images/img-01.png" alt="IMG">
+			</div>
+
+			<form class="contact1-form validate-form" action="https://formspree.io/xrnallqx" method="POST">
+				<span class="contact1-form-title">
+					Get in touch
+				</span>
+
+				<div class="wrap-input1 validate-input" data-validate = "Name is required">
+					<input class="input1" type="text" name="name" placeholder="Name" id="name" required>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<input class="input1" type="text" name="email" placeholder="Email" id="_replyto" required >
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<input class="input1" type="text" name="subject" placeholder="Subject">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Message is required" >
+					<textarea class="input1" name="message" placeholder="Message" id="message" required></textarea>
+					<span class="shadow-input1"></span>
+				</div>
+				<input class="hidden" type="hidden" name="_subject" value="Message via http://uppusaikiran.github.io">
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn">
+						<span>
+							Send Email
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+<script>
+	(function ($) {
+    "use strict";
+
+    
+    /*==================================================================
+    [ Validate ]*/
+    var name = $('.validate-input input[name="name"]');
+    var email = $('.validate-input input[name="email"]');
+    var subject = $('.validate-input input[name="subject"]');
+    var message = $('.validate-input textarea[name="message"]');
+
+
+    $('.validate-form').on('submit',function(){
+        var check = true;
+
+        if($(name).val().trim() == ''){
+            showValidate(name);
+            check=false;
+        }
+
+        if($(subject).val().trim() == ''){
+            showValidate(subject);
+            check=false;
+        }
+
+
+        if($(email).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+            showValidate(email);
+            check=false;
+        }
+
+        if($(message).val().trim() == ''){
+            showValidate(message);
+            check=false;
+        }
+
+        return check;
+    });
+
+
+    $('.validate-form .input1').each(function(){
+        $(this).focus(function(){
+           hideValidate(this);
+       });
+    });
+
+    function showValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).addClass('alert-validate');
+    }
+
+    function hideValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).removeClass('alert-validate');
+    }
+    
+    
+
+})(jQuery);
+</script>
+
+</body>
+</html>
+
