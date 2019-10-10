@@ -26,14 +26,9 @@ layout: default
 </form>
 -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Contact V1</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="../assets/images/favicon.ico"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -54,7 +49,7 @@ layout: default
 	<div class="contact1">
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="images/img-01.png" alt="IMG">
+				<img src="../assets/images/favicon.icoimg-01.png" alt="IMG">
 			</div>
 
 			<form class="contact1-form validate-form" action="https://formspree.io/xrnallqx" method="POST">
