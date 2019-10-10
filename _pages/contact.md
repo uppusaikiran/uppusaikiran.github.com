@@ -34,7 +34,7 @@ layout: default
 <link rel="stylesheet" type="text/css" href="../assets/js/hamburgers.min.css">
 <link rel="stylesheet" type="text/css" href="../assets/js/select2.min.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/util.css">
-<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/contact.css">
 </head>
 <body>
 
