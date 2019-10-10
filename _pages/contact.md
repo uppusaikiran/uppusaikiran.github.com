@@ -5,7 +5,7 @@ layout: default
 ---
 
 
-<form class="form" id="contactform" action="//formspree.io/saikiran@netskope.com" method="POST">
+<form class="form" id="contactform" action="https://formspree.io/xrnallqx" method="POST">
  <fieldset class="field">
  <input class="input" type="text" name="name" placeholder="Name" id="name" required>
  <label class="label" for="name"><span class="label-content">Your name</span></label>
