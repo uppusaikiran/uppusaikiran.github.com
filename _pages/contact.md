@@ -31,7 +31,7 @@ layout: default
 <link rel="stylesheet" type="text/css" href="../assets/js/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../assets/js/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../assets/js/animate.css">
-<link rel="stylesheet" type="text/css" href="../assets/js/css-hamburgers/hamburgers.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/js/hamburgers.min.css">
 <link rel="stylesheet" type="text/css" href="../assets/js/select2.min.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/util.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
@@ -85,7 +85,7 @@ layout: default
 
 
 
-<script src="../assets/js/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="../assets/js/jquery-3.2.1.min.js"></script>
 
 <script src="../assets/js/popper.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
