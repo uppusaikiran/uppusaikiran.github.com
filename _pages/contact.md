@@ -41,7 +41,7 @@ layout: default
 	<div class="contact1">
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="../assets/images/favicon.icoimg-01.png" alt="IMG">
+				<img src="../assets/images/img-01.png" alt="IMG">
 			</div>
 
 			<form class="contact1-form validate-form" action="https://formspree.io/xrnallqx" method="POST">
