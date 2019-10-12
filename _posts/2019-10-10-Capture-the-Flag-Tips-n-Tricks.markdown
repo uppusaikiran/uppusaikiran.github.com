@@ -11,10 +11,16 @@ classes: wide
 * To discover the system in the network, use either Nmap or Netdiscover
 * To scan for vulnerabilities use nikto.
   * Command to run : `nikto -h <HOST_IP>`
-* To scan for vulnerbilities we can use Nmap alos.
+* To scan for vulnerbilities we can use Nmap also.
   * `namp -sV <HOST_IP>`
-  * `nmap --script vuln <HOST_IP>`
+  * `nmap --script vuln <HOST_IP>`  -- Useful for getting Vulnerabilities on system
+  * `nmap -sS -T4 -A -p- <HOST_IP>` -- Useful for All Ports, SYN Scan and OS detection
+  * `nmap --script ssl-enum-ciphers -p 443  <HOST_IP>` -- Gives rating for SSL Ciphers
 * If port 80 is open, use robots.txt to find any hidden flags.
+* If Webserver is running, we can find the Server version using
+  * `curl --header <SERVER_IP>`
+* If we want to find exploit of a particular version, use the command
+  * `searchsploit apache 1.2.4`
 * If /wp-login.php is found in the Vulnerability scanning, it can be Wordpress site.
 * Use Burpsuite to see login data
 * Use Hydra to bruteforce username
@@ -31,7 +37,8 @@ classes: wide
 * To find all the files which current user can interact use the command
   * `find / -perm -4000 2>/dev/null`
 * If there is any program which we can get to use as root, we need to target that.
-  ```robot@linux:/$ nmap --interactive
+  ```
+  robot@linux:/$ nmap --interactive
   nmap --interactive
   Starting nmap V. 3.81 ( www.insecure.org/nmap/ )
   Welcome to Interactive Mode -- press h <enter> for help
@@ -43,6 +50,10 @@ classes: wide
   ```
 * If we got access to VIM (MAN Pages), we can run `!<Command>` to execute directly in the shell.
 * If we want to run old 16bit or 32bit windows program, we can use www.dosbox.com, an emulator which can be installed on Windows.
+* If RPC is open, we can use the following to login
+  * `rpcclient -U "" <HOST_IP>` -- If this is success without password, we can login using null session.
+* If SMB is open, we can use the following command to try connecting
+  * `smbclient -L \\\\<HOST_IP>`
 
 # File Hacking
 * If something is hidden on a pdf which we need to find, we can Press Ctrl + A to copy everything on the pdf and paste on notepad.
@@ -86,4 +97,5 @@ classes: wide
 * CTF Exploitation Framework : Github.com/Gallopsled/pwntools `pip install pwntools`
 * When using GDB, we can create "~/.gdbinit" file and add this line "set disassembly-flavor intel" to make intel synatx.
 * Dirbuster for enumeration web server Attacks.
+
 
