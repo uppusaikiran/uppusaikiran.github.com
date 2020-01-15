@@ -98,4 +98,9 @@ classes: wide
 * When using GDB, we can create "~/.gdbinit" file and add this line "set disassembly-flavor intel" to make intel synatx.
 * Dirbuster for enumeration web server Attacks.
 
-
+## Recover Files from Deleted File Systems
+* To Extract Flag from the file system - `strings /dev/sdb`
+* Flag Recovery with regex `grep -a '[a-z0-9]\{32\}' /dev/sdb`
+* `ssh username@remote_address "sudo dcfldd -if=/dev/sdb | gzip -1 ." | dcfldd of=extract.dd.gz` -- Used to get from Remote Hosts
+* `gunzip -d extract.dd.gz`
+* `binwalk -Me extract.dd`
