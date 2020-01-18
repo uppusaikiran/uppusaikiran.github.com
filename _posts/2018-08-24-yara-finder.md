@@ -1,11 +1,17 @@
 ---
 header:
   image: /assets/images/malware.jpg
-  caption: "Photo credit: [**pxhere**](https://pxhere.com)"
 
 layout: single
 classes: wide
-
+categories:
+  - malware
+tags:
+  - malware
+  - yara
+  - threat-hunting
+  - mime-type
+  - virustotal
 
 ---
 
