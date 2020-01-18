@@ -3,7 +3,10 @@ header:
   
 layout: single
 classes: wide
-
+categories:
+  - Personal
+tags:
+  - university
 ---
 
 <h3> Linkedin </h3>
