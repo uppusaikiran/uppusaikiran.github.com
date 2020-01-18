@@ -3,6 +3,7 @@ header:
   
 layout: single
 classes: wide
+author_profile: false
 categories:
   - Hacking
 tags:
