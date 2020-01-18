@@ -1,10 +1,10 @@
 # main links
 main:
   - title: "About"
-    url: https://uppusaikiran.github.io/about/
+    url: /about/
   - title: "Recent Posts"
     url: /year-archive/
-  - title: "Archived Posts"
-    url: /collection-archive/
+  - title: "Posts by Category"
+    url: /categories/
   - title: "Contact"
     url: /contact/
