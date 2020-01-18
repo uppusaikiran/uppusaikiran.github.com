@@ -131,14 +131,14 @@ tags:
   id
   uid=1001(enemy) gid=1001(enemy) groups=1001(enemy)
   ```
-  * If `sudo -l` gives something like this ...
+  * If `sudo -l` gives something like this.
   ```
   notch@Blocky:~$ sudo -l
   [sudo] password for notch: 
   Matching Defaults entries for notch on Blocky:
     env_reset, mail_badpass,
     secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
- 
+    
   User notch may run the following commands on Blocky:
     (ALL : ALL) ALL
   notch@Blocky:~$ cat /root/root.txt
