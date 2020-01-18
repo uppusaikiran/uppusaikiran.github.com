@@ -1,10 +1,18 @@
 ---
 header:
   image: /assets/images/malware.jpg
-  caption: "Photo credit: [**pxhere**](https://pxhere.com)"
 layout: single
 classes: wide
-
+categories:
+  - Malware
+tags:
+  - malware
+  - clean files
+  - malicious files
+  - threat-hunting
+  - detection
+  - virustotal
+  - false-positive 
 ---
 
 A simple tool to organise large malicious/benign files into a organised Structure.
