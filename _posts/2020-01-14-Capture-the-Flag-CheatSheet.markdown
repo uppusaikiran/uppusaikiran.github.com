@@ -3,7 +3,15 @@ header:
   
 layout: single
 classes: wide
-
+categories:
+  - Hacking
+tags:
+  - capture-the-flag
+  - hacking
+  - cryptography
+  - web-security
+  - image-forensics
+  - Pentesting
 ---
 
 # System Hacking
