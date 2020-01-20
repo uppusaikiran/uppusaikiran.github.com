@@ -13,8 +13,7 @@ tags:
   - web-security
   - image-forensics
   - Pentesting
-toc: true
-toc_sticky: true
+
 
 ---
 
