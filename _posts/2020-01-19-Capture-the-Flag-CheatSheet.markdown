@@ -59,6 +59,19 @@ tags:
 
   C:\Windows\system32>
   ```
+* To view files on VHD drie, use `7z l <FILENAME>.vhd`
+  ```
+  root@kali:/mnt/smb# 7z l <VHD_NAME>.vhd
+  7-Zip [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+  p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,64 bits,2 CPUs Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz (306D4),ASM,AES-NI)
+  Scanning the drive for archives:
+  1 file, 5418299392 bytes (5168 MiB)
+  Listing archive: <VHD_NAME>.vhd
+  ```
+* To mount VHD drive on Linux use, very useful for forensics
+  ```
+  root@kali:/mnt/smb# guestmount --add <VHD_NAME>.vhd --inspector -ro -v /mnt/vhd
+  ```
 * If Webserver is running, we can find the Server version using
   * `curl --header <SERVER_IP>`
 * If we want to find exploit of a particular version, use the command
@@ -124,6 +137,28 @@ tags:
 # Password Cracking
 * If there is `JOHN` in the title/text/hint, its mostly reference to `JOHN the ripper` for bruteforce passwords/hashes.
   * Command : `./john -show <PASS_FILE>`
+* To crack Well known Hashes (CTF Related Password Cracking),use [Link](hashes.org)
+* To get System User Hashes, we can follow this method
+  ```
+  root@kali:/mnt/vhd/Windows/System32/config# cp SAM SYSTEM ~/CTF/
+  root@kali:/mnt/vhd/Windows/System32/config# cd ~/CTF/
+  root@kali:~/CTF# ls
+  SAM  SYSTEM  
+  root@kali:~/CTF# mkdir Backup_dump
+  root@kali:~/CTF# mv SAM SYSTEM Backup_dump/
+  root@kali:~/CTF# cd Backup_dump/
+  root@kali:~/CTF/Backup_dump# ls
+  SAM  SYSTEM
+  root@kali:~/CTF/Backup_dump# impacket-secretsdump -sam SAM -system SYSTEM local
+  Impacket v0.9.20 - Copyright 2019 SecureAuth Corporation
+
+  [*] Target system bootKey: 0x8b56b2cb5033d8e2e289c26f8939a25f
+  [*] Dumping local SAM hashes (uid:rid:lmhash:nthash)
+  Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+  Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+  User:1000:aad3b435b51404eeaad3b435b51404ee:26112010952d963c8dc4217daec986d9:::
+  [*] Cleaning up... 
+  ```
   
 # XSS Attack
 * If there is a website, with a text field to submit, we can try XSS Attack.
