@@ -25,13 +25,15 @@ tags:
   * `nmap -sS -T4 -A -p- <HOST_IP>` -- Useful for All Ports, SYN Scan and OS detection
   * `nmap --script ssl-enum-ciphers -p 443  <HOST_IP>` -- Gives rating for SSL Ciphers
 * If port 80 is open, use robots.txt to find any hidden flags.
-* If Anonymous SMB is open, we can mount shares like this .
-  ```root@kali:~/CTF# mkdir /mnt/smb
+* If Anonymous SMB is open, we can mount shares like this
+  ```
+  root@kali:~/CTF# mkdir /mnt/smb
   root@kali:~/CTF# mount -t cifs //<HOST_IP>/Backups /mnt/smb/
   Password for root@//<HOST_IP>/Backups: 
   ```
-* If we found Administrator Creds, we can use this method to get root shell.
-  ```root@kali:/opt/impacket/examples# smbmap -u administrator -p password -H <HOST_IP>
+* If we found Administrator Creds, we can use this method to get root shell
+  ```
+  root@kali:/opt/impacket/examples# smbmap -u administrator -p password -H <HOST_IP>
   [+] Finding open SMB ports....
   [+] User SMB session establishd on <HOST_IP>...
   [+] IP: <HOST_IP>:445	Name: <HOST_IP>                                      
