@@ -16,6 +16,8 @@ tags:
   - system-hacking
 toc: true
 toc_sticky: true
+toc_label: "Table of Contents"
+
 ---
 
 ## System Hacking
