@@ -8,6 +8,7 @@ categories:
   - Hacking
 tags:
   - capture-the-flag
+  - ctf
   - hacking
   - cryptography
   - web-security
