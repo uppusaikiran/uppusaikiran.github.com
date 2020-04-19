@@ -202,7 +202,7 @@ toc_label: "Table of Contents"
 * If there is `JOHN` in the title/text/hint, its mostly reference to `JOHN the ripper` for bruteforce passwords/hashes.
   * Command : `./john -show <PASS_FILE>`
   * Better Command : `john output.hash --wordlist=/usr/share/wordlists/rockyou.txt`
-* To crack Well known Hashes (CTF Related Password Cracking),use [Link](hashes.org)
+* To crack Well known Hashes (CTF Related Password Cracking),use [Link](https://hashes.org)
 * To get System User Hashes, we can follow this method
   ```
   root@kali:/mnt/vhd/Windows/System32/config# cp SAM SYSTEM ~/CTF/
