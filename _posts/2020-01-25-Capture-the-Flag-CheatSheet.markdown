@@ -25,8 +25,13 @@ toc_label: "Table of Contents"
 * To scan for systems and Open Services/Ports, Use Nmap
   * `namp -sV <HOST_IP>`
   * `nmap --script vuln <HOST_IP>`  -- Useful for getting Vulnerabilities on system
-  * `nmap -sS -T4 -A -p- <HOST_IP>` -- Useful for All Ports, SYN Scan and OS detection
+  * `nmap -sS -T4 -A <HOST_IP>` -- Useful for Top Ports, SYN Scan and OS detection
   * `nmap --script ssl-enum-ciphers -p 443  <HOST_IP>` -- Gives rating for SSL Ciphers
+  * `nmap -sn <NETWORK>` -- Ping Sweep
+  * `nmap -T4 <NETWORK>` -- SYN Scan with Speed of 4 and port of common 1000 TCP
+  * `nmap -T4 -A -p- <NETWORK>` -- All Port scan with All Scanning including OS, Version, Script and Traceroute
+  * `nmap -sU -T4 <NETWORK>` -- UDP Ports, Dont scan all UDP Ports, as it takes lot of time.
+  
 * To passively discover machines on the network, Use Netdiscover
   ```
   root@kali:~# netdiscover -i eth0
@@ -137,37 +142,17 @@ toc_label: "Table of Contents"
   
 ### RECONNAISSANCE
 #### TOOLS:
-* Whois
-* Nslookup
-* dnsrecon
-* Google Fu
-* dig
-* [Sublist3r](https://github.com/aboul3la/Sublist3r)
-* Bluto
-* [crt.sh](http://crt.sh)
+* Whois, Nslookup, Dnsrecon, Google Fu, Dig
+* [Sublist3r](https://github.com/aboul3la/Sublist3r) , Bluto , [crt.sh](http://crt.sh)
 * [Hunter.io](https://hunter.io/)  -- Gather Email about a Company
-* Fingerprinting
-  * Nmap 
-  * Wappalyzer
-  * Whatweb
-  * Builtwith
-  * Netcat
-* Data breaches
-  * HaveIbeenPwned
-  * `pip install bluto` -- Tool to gather Information Recon
+* Fingerprinting : Nmap, Wappalyzer, Whatweb, Builtwith, Netcat
+* Data breaches : HaveIbeenPwned
 * Use foxy Proxy Firefox adddon for switching for Burp Suite
 * Use scope filter with this filter `.*\.irobot\.com$`
 * Use [SecurityHeaders](https://securityheaders.com/) to find some misconfigured header information on target website.
 * Use Zap Proxy tool to extract hidden files/directories.
 * Clear Text Passwords [Link](https://github.com/philipperemy/tensorflow-1.4-billion-password-analysis)
 * `theharvester -d microsoft.com -l 200 -g -b google` Gather Information
-
-### SCANNING
-* `nmap -sn <NETWORK>` -- Ping Sweep
-* `nmap -T4 <NETWORK>` -- SYN Scan with Speed of 4 and port of common 1000 TCP
-* `nmap -T4 -A -p- <NETWORK>` -- All Port scan with All Scanning including OS, Version, Script and Traceroute
-* `nmap -sU -T4 <NETWORK>` -- UDP Ports, Dont scan all scans, as it takes lot of time.
-
 
 ### Payloads
 * `windows/meterpreter_reverse_tcp` is Non Staged Payload
