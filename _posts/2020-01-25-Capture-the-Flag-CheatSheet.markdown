@@ -372,7 +372,8 @@ toc_label: "Table of Contents"
   * Example Command : `tskark.exe -r <FILE_NAME.pcapng> -Y "usb.transfer_types==1" -e "frame.time.epoch" -e "usb.capdata" -Tfields`
 
 ### Gobuster with Cookie (Useful to directory traversal when cookie is needed )
-```root@kali:# gobuster dir -u http://<IP_ADDRESS> -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php -c PHPSESSID=<COOKIE_VALUE>
+```
+root@kali:# gobuster dir -u http://<IP_ADDRESS> -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php -c PHPSESSID=<COOKIE_VALUE>
 ===============================================================
 Gobuster v3.0.1
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
@@ -394,8 +395,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 
 ### SQL MAP Usage
 Redirect the HTTP Request to Burpsuite and we can see the request like this.
-```
-POST / HTTP/1.1
+```POST / HTTP/1.1
 Host: 10.10.10.162
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -407,11 +407,10 @@ Content-Length: 11
 Connection: close
 Upgrade-Insecure-Requests: 1
 
-search=help
-```
+search=help```
+
 Now Right click and click on `copy to file` option.
-```
-root@kali:/SqlMap# sqlmap -r search.req --batch --force-ssl
+```root@kali:/SqlMap# sqlmap -r search.req --batch --force-ssl
         ___
        __H__
  ___ ___[,]_____ ___ ___  {1.4.3#stable}
@@ -435,5 +434,4 @@ root@kali:/SqlMap# sqlmap -r search.req --batch --force-ssl
 [01:25:19] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
 [01:25:20] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
 [01:25:21] [INFO] testing 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
-[01:25:22] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
-```
+[01:25:22] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause' ```
