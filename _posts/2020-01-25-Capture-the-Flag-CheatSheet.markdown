@@ -393,9 +393,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 /index.php (Status: 200)
 ```
 
-### SQL MAP Usage
-
-*Redirect the HTTP Request to Burpsuite and we can see the request like this.
+### SQL MAP Usage - Redirect the HTTP Request to Burpsuite and we can see the request like this.
 
 ```POST / HTTP/1.1
 Host: 10.10.10.162
@@ -412,7 +410,7 @@ Upgrade-Insecure-Requests: 1
 search=help
 ```
 
-*Now Right click and click on `copy to file` option.
+Now Right click and click on `copy to file` option.
 
 ```
 root@kali:/SqlMap# sqlmap -r search.req --batch --force-ssl
