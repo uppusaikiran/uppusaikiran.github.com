@@ -390,9 +390,11 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 2020/04/19 01:43:01 Starting gobuster
 ===============================================================
 /home.php (Status: 302)
-/index.php (Status: 200)```
+/index.php (Status: 200)
+```
 
 ### SQL MAP Usage
+
 *Redirect the HTTP Request to Burpsuite and we can see the request like this.
 
 ```POST / HTTP/1.1
