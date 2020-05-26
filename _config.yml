@@ -8,7 +8,7 @@
 # Site Settings
 remote-theme             : minimal-mistakes-jekyll
 locale                   : "en"
-title                    : "SaiKiran Uppu - Personal website"
+title                    : "SaiKiran Uppu"
 title_separator          : "-"
 name                     : "SaiKiran Uppu"
 description              : "Homepage"
