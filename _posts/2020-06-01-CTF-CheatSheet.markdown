@@ -15,6 +15,7 @@ tags:
   - image-forensics
   - Pentesting
   - system-hacking
+  - ctf-cheatsheet
 toc: true
 toc_sticky: true
 toc_label: "Table of Contents"
