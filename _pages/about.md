@@ -4,6 +4,7 @@ title: "About"
 excerpt: "SaiKiran Uppu"
 toc: false
 layout: single
+classes: wide
 author_profile: true
 ---
 
