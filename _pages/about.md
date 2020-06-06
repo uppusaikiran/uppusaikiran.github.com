@@ -22,6 +22,8 @@ SaiKiran Uppu is current Graduate Student at Johns Hopkins in Information Securi
 
 | Company                                        | Designation               | Duration| 
 | ------------------------------------------- | ---------------------------- |------------------------ |
+| Adobe | Security Researcher Intern | May '20 to Present |
+| Johns Hopkins Computer Science Department | Teaching Assistant - Cloud Computing | Jan '20 to May '20 | 
 | Johns Hopkins Information Security Institute | Course Assistant - Cloud Security | Aug '19 to Dec '19 |
 | Netskope,Bangalore | Software Engineer - 2 | Apr '18 to Jul '19 |
 | Netskope,Bangalore | Software Engineer - 1 | Jul '17 to Mar '18 |
