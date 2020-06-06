@@ -2,7 +2,7 @@
 permalink: /about/
 title: "About"
 excerpt: "SaiKiran Uppu"
-toc: true
+toc: false
 layout: single
 author_profile: true
 ---
