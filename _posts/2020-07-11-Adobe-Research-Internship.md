@@ -14,6 +14,12 @@ tags:
   - remote
 ---
 
+<img src="/assets/images/LinkedInBanner-Indeed-2019.jpg" alt="Adobe">
+
 ## Adobe Summer Internship Experience
 
-<img src="/assets/images/LinkedInBanner-Indeed-2019.jpg" alt="Adobe">
+### Day-1
+
+### Fun stuff
+
+### Project
