@@ -5,7 +5,7 @@ header:
 title: "Generic File Parser to extract features from Malicious Files."
 
 category:
-    - malware
+    - Malware
 
 layout: single
 classes: wide
