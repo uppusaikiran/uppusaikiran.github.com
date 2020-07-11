@@ -5,7 +5,7 @@ header:
 layout: single
 classes: wide
 categories:
-  - malware
+  - Malware
 tags:
   - malware
   - yara
