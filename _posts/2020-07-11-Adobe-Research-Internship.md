@@ -20,6 +20,8 @@ tags:
 
 ### Day-1
 
+<img src="/assets/images/InternOnboardingCleaned.png" alt="AdobeInternship">
+
 ### Fun stuff
 
 ### Project
