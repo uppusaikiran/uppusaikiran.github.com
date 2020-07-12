@@ -21,6 +21,7 @@ tags:
 ### Day-1
 
 <img src="/assets/images/InternOnboardingCleaned.png" alt="AdobeInternship">
+<img src="/assets/images/InternOnboardingUniversities.png" alt="AdobeInternship">
 
 ### Fun stuff
 
