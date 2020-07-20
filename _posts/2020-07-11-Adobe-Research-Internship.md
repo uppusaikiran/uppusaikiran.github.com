@@ -12,6 +12,8 @@ tags:
   - research
   - adobe-internship
   - remote
+  - AdobeLife
+  - AdobeIntern
 ---
 
 <img src="/assets/images/LinkedInBanner-Indeed-2019.jpg" alt="Adobe">
@@ -25,6 +27,7 @@ Onboarding Presentation
 This year, Adobe shifted their traditional Internship Program to Complete Virtual, hosted more than 700 Interns globally. I was part of Security Research Team worked on both Enterprise and Cloud Platforms, solving security threats at Scale.
 <br/>
 <img src="/assets/images/InternOnboardingUniversities.png" alt="AdobeInternship">
+
 <br/>
 Interns Meet with CEO
 <img src="/assets/images/InternsCEOMeet.png" alt="AdobeInternship">
