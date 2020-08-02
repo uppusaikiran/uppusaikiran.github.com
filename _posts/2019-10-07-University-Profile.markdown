@@ -22,3 +22,8 @@ tags:
 <h3> Twitter </h3>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">In celebration of National Cybersecurity Awareness Month, we are highlighting our future cybersecurity experts all month long. They are graduate students in our Master of Science in Security Informatics (MSSI) program. Meet Sai Kiran Uppu. <a href="https://t.co/AKPddsy7vB">pic.twitter.com/AKPddsy7vB</a></p>&mdash; JHU Info Security (@JHUISI) <a href="https://twitter.com/JHUISI/status/1181207602132209664?ref_src=twsrc%5Etfw">October 7, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h3> Hopkins Mixer </h3>
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">ISI mixers are always a treat. <a href="https://twitter.com/hashtag/ThrowbackThursday?src=hash&amp;ref_src=twsrc%5Etfw">#ThrowbackThursday</a> <a href="https://t.co/sGFwlINxTS">pic.twitter.com/sGFwlINxTS</a></p>&mdash; JHU Info Security (@JHUISI) <a href="https://twitter.com/JHUISI/status/1192489873304739840?ref_src=twsrc%5Etfw">November 7, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
