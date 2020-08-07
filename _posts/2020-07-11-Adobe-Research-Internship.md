@@ -51,13 +51,13 @@ This year, Adobe shifted their traditional Internship Program to Complete Virtua
   <p lang="en" dir="ltr">Check out our newest blog post from <a href="https://twitter.com/AdobeSecurity?ref_src=twsrc%5Etfw">@AdobeSecurity</a> intern <a href="https://twitter.com/backdoorcipher?ref_src=twsrc%5Etfw">@backdoorcipher</a> on how to develop best practices for improving the security posture of DMZ configurations and general firewall hygiene: <a href="https://t.co/G816PowM8P">https://t.co/G816PowM8P</a></p>&mdash; AdobeSecurity (@AdobeSecurity) <a href="https://twitter.com/AdobeSecurity/status/1291447453997240322?ref_src=twsrc%5Etfw">August 6, 2020</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</br>
+<br/>
 <!--Twitter End -->
 
 <!--Linkedin Start -->
 
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6697210309482033152" height="285" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-</br>
+<br/>
 <!--Linkedin End -->
 
 <!--Blog Start -->
