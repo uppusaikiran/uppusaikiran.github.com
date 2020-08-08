@@ -56,7 +56,7 @@ This year, Adobe shifted their traditional Internship Program to Complete Virtua
 
 <!--Linkedin Start -->
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6697210309482033152" height="285" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6697210309482033152" height="700" width="600" frameborder="0" allowfullscreen="" title="Practicing Proper DMZ and Firewall Hygiene"></iframe>
 <br/>
 <!--Linkedin End -->
 
