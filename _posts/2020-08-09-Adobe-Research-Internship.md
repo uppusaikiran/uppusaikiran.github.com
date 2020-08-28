@@ -35,6 +35,7 @@ This year, Adobe shifted their traditional Internship Program to Complete Virtua
 <h4 style="font-size: 0.685em;"><strong>Interns Meet with CEO</strong></h4>
 <img src="/assets/images/InternsCEOMeet.png" alt="AdobeInternship">
 
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6705217615142502401" height="700" width="600" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
 ### Fun stuff
 
