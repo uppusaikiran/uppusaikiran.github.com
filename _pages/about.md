@@ -8,8 +8,9 @@ classes: wide
 author_profile: true
 ---
 
-SaiKiran Uppu is current Graduate Student at Johns Hopkins in Information Security. 2.5+ years of experience specializing in the Cloud, Network Security, Development, infrastructure protection, and Computer hacking. His main motive in learning security is to build large scale secure systems. Efficient problem solver, passionate and Goal Oriented self-starter.
-
+<p style="font-size: 0.65em;">
+I'm second year Graduate Student at Johns Hopkins, studying computer security. 2.5+ years of experience specializing in the cloud, network security, development, infrastructure protection, and computer hacking. My undergraduate degree is in computer science from Vellore Institure of Technology, India. My main research interests include building large scale secure systems, application security.
+</p>
 
 ## Education
 
@@ -31,6 +32,10 @@ SaiKiran Uppu is current Graduate Student at Johns Hopkins in Information Securi
 | Netskope,Bangalore | Software Intern | Jan '17 to Jun '17 |
 | Krify,Kakinada | Summer Intern | Jun '15 to Jul '15 |
 
+## Teaching
+
+## Publications
+
 ## Projects
 
 | Name                                        | Description                                           |
@@ -42,3 +47,4 @@ SaiKiran Uppu is current Graduate Student at Johns Hopkins in Information Securi
 | [CTF Writeups](https://github.com/uppusaikiran/CTFWriteups) | Collection of all Capture the Flag Writeups and Tools. |
 | [Yara Finder](https://github.com/uppusaikiran/yara-finder) | Simple tool to find the yara matches on a file. |
 
+## Awards and Recognition
