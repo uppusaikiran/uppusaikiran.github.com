@@ -22,9 +22,7 @@ toc_label: "Table of Contents"
 
 ---
 
-#### [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/uppusaikiran/awesome-ctf-cheatsheet/issues) 
-
-[![HitCount](http://hits.dwyl.com/uppusaikiran/awesome-ctf-cheatsheet.svg)](http://hits.dwyl.com/uppusaikiran/awesome-ctf-cheatsheet) ![GitHub stars](https://img.shields.io/github/stars/uppusaikiran/awesome-ctf-cheatsheet?style=social)
+#### [![HitCount](http://hits.dwyl.com/uppusaikiran/awesome-ctf-cheatsheet.svg)](http://hits.dwyl.com/uppusaikiran/awesome-ctf-cheatsheet) [![GitHub stars](https://img.shields.io/github/stars/uppusaikiran/awesome-ctf-cheatsheet?style=social)](https://github.com/uppusaikiran/awesome-ctf-cheatsheet/)
 
 ## System Hacking 
 
