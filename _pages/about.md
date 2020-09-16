@@ -12,7 +12,7 @@ author_profile: true
 I'm second year Graduate Student at Johns Hopkins, studying computer security. 2.5+ years of experience specializing in the cloud, network security, development, infrastructure protection, and computer hacking. My undergraduate degree is in computer science from Vellore Institure of Technology, India. My main research interests include building large scale secure systems, application security.
 </p>
 
-## Education
+### Education
 
 | University                                        | Degree               | Duration| 
 | ------------------------------------------- | ---------------------------- |------------------------ |
@@ -20,7 +20,7 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 | Vellore Institute of Technology | BTech Computer Science | Jun '13 to May '17 |
 
 
-## Experience
+### Experience
 
 | Company                                        | Designation               | Duration| 
 | ------------------------------------------- | ---------------------------- |------------------------ |
@@ -32,11 +32,11 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 | Netskope,Bangalore | Software Intern | Jan '17 to Jun '17 |
 | Krify,Kakinada | Summer Intern | Jun '15 to Jul '15 |
 
-## Teaching
+### Teaching
 
-## Publications
+### Publications
 
-## Projects
+### Projects
 
 | Name                                        | Description                                           |
 | ------------------------------------------- | ----------------------------------------------------- |
@@ -47,4 +47,4 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 | [CTF Writeups](https://github.com/uppusaikiran/CTFWriteups) | Collection of all Capture the Flag Writeups and Tools. |
 | [Yara Finder](https://github.com/uppusaikiran/yara-finder) | Simple tool to find the yara matches on a file. |
 
-## Awards and Recognition
+### Awards and Recognition
