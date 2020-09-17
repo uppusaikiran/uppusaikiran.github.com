@@ -24,7 +24,7 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 
 | Company                                        | Designation               | Duration| 
 | ------------------------------------------- | ---------------------------- |------------------------ |
-| Adobe | Security Researcher Intern | May '20 to Present |
+| Adobe | Security Researcher Intern | May '20 to Aug '20 |
 | Johns Hopkins Computer Science Department | Teaching Assistant - Cloud Computing | Jan '20 to May '20 | 
 | Johns Hopkins Information Security Institute | Course Assistant - Cloud Security | Aug '19 to Dec '19 |
 | Netskope,Bangalore | Software Engineer - 2 | Apr '18 to Jul '19 |
@@ -33,6 +33,13 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 | Krify,Kakinada | Summer Intern | Jun '15 to Jul '15 |
 
 ### Teaching
+
+
+| University                                        | Position               | Duration| 
+| ------------------------------------------- | ---------------------------- |------------------------ |
+| Johns Hopkins Computer Science Department | Teaching Assistant - Cloud Computing | Aug '20 to Dec '20 | 
+| Johns Hopkins Computer Science Department | Teaching Assistant - Cloud Computing | Jan '20 to May '20 | 
+| Johns Hopkins Information Security Institute | Course Assistant - Cloud Security | Aug '19 to Dec '19 |
 
 ### Publications
 
@@ -48,3 +55,4 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 | [Yara Finder](https://github.com/uppusaikiran/yara-finder) | Simple tool to find the yara matches on a file. |
 
 ### Awards and Recognition
+
