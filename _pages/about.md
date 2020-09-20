@@ -334,3 +334,59 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 
 ### Awards and Recognition
 
+<table cellspacing="0" cellpadding="1">
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-left">
+</colgroup>
+<tbody>
+
+<!-- Hophacks-->
+<tr>
+  <td class="org-left"><b>Winner, HopHacks CTF </b></td>
+  <td class="org-left"><b>Sep 2019</b></td>
+</tr>
+
+<!--<tr>
+  <td class="org-left" colspan="2"><i>Bangalore, India</i></td>
+</tr> -->
+
+<tr>
+  <td class="org-left" colspan="2">» Northrop Grumman along with Hophacks organized a Capture the Flag event</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Won first place by capturing hidden flags in six machines in a time sensitive competition</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- NSKP Hack -->
+<tr>
+  <td class="org-left"><b>Finalist, Netskope - Hackathon </b></td>
+  <td class="org-left"><b>Dec 2017</b></td>
+</tr>
+
+<!--<tr>
+  <td class="org-left" colspan="2"><i>Bangalore, India</i></td>
+</tr> -->
+
+<tr>
+  <td class="org-left" colspan="2">» Led two teams to the final five of the annual hackathon at Netskope, presented both ideas to the CTO and Chief Scientist</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+</tbody>
+</table>
