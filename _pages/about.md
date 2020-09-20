@@ -17,6 +17,9 @@ td.org-right  { text-align: right;  }
 td.org-left   { text-align: left;   }
 td.org-center { text-align: center; }
 .underline { text-decoration: underline; }
+a {
+    text-decoration: none !important;
+}
   
 </style>
 
@@ -321,16 +324,193 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 </table>
 
 
-### Publications
+### Publications and Blogs
+
+<table cellspacing="0" cellpadding="1">
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-left">
+</colgroup>
+<tbody>
+
+<!-- Malware and Threat Analysis and Remediation of Cloud SaaS Traffic-->
+<tr>
+  <td class="org-left"><b>Malware and Threat Analysis and Remediation of Cloud SaaS Traffic</b></td>
+  <td class="org-left"><b>May 2019</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2"><i>Journal of Computational and Theoretical Nanoscience</i></td>
+</tr> 
+
+<tr>
+  <td class="org-left" colspan="2">» Paper on different cloud attacks and methods to prevent them from an enterprise perspective using variety of detection mechanisms</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Adobe Blog -->
+<tr>
+  <td class="org-left"><b>Practicing Proper DMZ and Firewall Hygiene </b></td>
+  <td class="org-left"><b>Aug 2020</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2"><i>Adobe Security BLog</i></td>
+</tr> 
+
+<tr>
+  <td class="org-left" colspan="2">» Develop practices that can improve the overall security posture of DMZ configurations and general firewall hygien</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+</tbody>
+</table>
 
 ### Projects
 
-| [Malicious URL Detector](https://github.com/uppusaikiran/Malicious-URL-Detector) | A Machine Learning Model to detect malicious urls which include Deep File Analysis on attributes as well dropped files. |
-| [Malware Organizer](https://github.com/uppusaikiran/malware-organiser) | A simple tool to organise large malicious/benign files into a organised Structure. |
-| [Ransomware C2C Detector](https://github.com/uppusaikiran/ransom_c2c_detector) | Machine Learning Based Ransomware generated Command and Control Server Domain Detector. |
-| [Generic Parser](https://github.com/uppusaikiran/generic-parser) | A Single Library Parser to extract meta information, static analysis and detect macros within the files. |
-| [CTF Writeups](https://github.com/uppusaikiran/CTFWriteups) | Collection of all Capture the Flag Writeups and Tools. |
-| [Yara Finder](https://github.com/uppusaikiran/yara-finder) | Simple tool to find the yara matches on a file. |
+<table cellspacing="0" cellpadding="1">
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-left">
+</colgroup>
+<tbody>
+
+<!-- Malicious URL Detector-->
+<tr>
+  <td class="org-left"><b>Malicious URL Detector </b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» A <a href="https://github.com/uppusaikiran/Malicious-URL-Detector">open-source </a> Machine Learning Model to detect malicious urls using lexical features</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» It includes Deep File Analysis on attributes from the dropped executables</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Malware Org-->
+<tr>
+  <td class="org-left"><b>Malware Organiser</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» A <a href="https://github.com/uppusaikiran/malware-organiser">tool</a>  to organise large malicious and benign files into a organised Structure</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Helps in classification of Malwares according to tags, family names and mime type</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Ransom-->
+<tr>
+  <td class="org-left"><b>Ransomware C2C Server Detector</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» <a href="https://github.com/uppusaikiran/ransom_c2c_detector">Open Source</a> Machine Learning Based Ransomware generated Command and Control Server Domain Detector</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Identifies domains which are not humanly generated with good accuracy</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Generic-->
+<tr>
+  <td class="org-left"><b>Generic Parser</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» A single <a href="https://github.com/uppusaikiran/generic-parser">open-source library</a> to extract meta information, static analysis and detect macros within the files</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Works on popular file formats like doc, docx, pdf, xml etc</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- CTF-->
+<tr>
+  <td class="org-left"><b>CTF Writeups</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» A <a href="https://github.com/uppusaikiran/CTFWriteups">collection</a> of all Capture the Flag Writeups and Tools</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Includes HacktheBox, Vulnhub and popular CTF Solutions</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Yara-->
+<tr>
+  <td class="org-left"><b>Yara Finder</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» A <a href="https://github.com/uppusaikiran/yara-finder">open-source </a>  tool to find the yara matches on a file</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Easily extensible to custom Yara rules</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+</tbody>
+</table>
 
 ### Awards and Recognition
 
