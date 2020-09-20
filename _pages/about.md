@@ -9,7 +9,7 @@ author_profile: true
 ---
 
 <style>
-td, th { vertical-align:top;  }
+td, th { vertical-align:top;padding:0.0em;border-bottom:0px  }
 th.org-right  { text-align: center;  }
 th.org-left   { text-align: center;   }
 th.org-center { text-align: center; }
@@ -34,22 +34,19 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 <col class="org-left">
 </colgroup>
 <tbody>
+
 <tr>
-<td class="org-left"><h2>Education</h2></td>
+  <td class="org-left"><b>Masters of Science, Information Security</b></td>
+  <td class="org-left"><b>2019 – Present</b></td>
 </tr>
 
 <tr>
-<td class="org-left"><b>Masters of Science, Information Security</b></td>
-<td class="org-left"><b>2019 – Present</b></td>
+  <td class="org-left" colspan="2"><i>The Johns Hopkins University, Baltimore, MD</i></td>
 </tr>
 
 <tr>
-<td class="org-left" colspan="2"><i>The Johns Hopkins University, Baltimore, MD</i></td>
-</tr>
-
-<tr>
-<td class="org-left" colspan="2">» Research interests in systems, software, network, and IoT Security</td>
-<td class="org-left">&nbsp;</td>
+  <td class="org-left" colspan="2">» Research interests in cloud, infrastructure, network, and IoT Security</td>
+  <td class="org-left">&nbsp;</td>
 </tr>
 
 </tbody>
