@@ -35,6 +35,7 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 </colgroup>
 <tbody>
 
+<!-- Hopkins -->
 <tr>
   <td class="org-left"><b>Masters of Science, Information Security</b></td>
   <td class="org-left"><b>2019 – Present</b></td>
@@ -49,25 +50,197 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
   <td class="org-left">&nbsp;</td>
 </tr>
 
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- VIT -->
+<tr>
+  <td class="org-left"><b>Bachelor of Technology, Computer Science</b></td>
+  <td class="org-left"><b>2013 – 2017</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2"><i>Vellore Institute of Technology, Vellore, India</i></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» GPA: 4, Research Topics include Multi cloud security, SQL Injection</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
 </tbody>
 </table>
 
-| Masters in Information Security, Johns Hopkins University | Aug '19 to Dec '20 (Exp)|
-| Vellore Institute of Technology | BTech Computer Science | Jun '13 to May '17 |
 
 
 ### Experience
 
 
-| Adobe | Security Researcher Intern | May '20 to Aug '20 |
-| Netskope,Bangalore | Software Engineer - 2 | Apr '18 to Jul '19 |
-| Netskope,Bangalore | Software Engineer - 1 | Jul '17 to Mar '18 |
-| Netskope,Bangalore | Software Intern | Jan '17 to Jun '17 |
-| Krify,Kakinada | Summer Intern | Jun '15 to Jul '15 |
+<table cellspacing="0" cellpadding="1">
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-left">
+</colgroup>
+<tbody>
+
+<!-- Adobe -->
+<tr>
+  <td class="org-left"><b>Security Researcher Intern, Adobe</b></td>
+  <td class="org-left"><b>May 2020 – Aug 2020</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2"><i>San Jose, CA</i></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Team: Enterprise Security</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Project -1 : Create an automated risk firewall rule detection system to identify Security policy violation at DMZ Level and reduce the attack exposure</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Impact: Formulated a violation matrix and setup an intelligent firewall rule detection process, published best practices guidelines, featured on Adobe Blog</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Team: Cloud Security</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Project -2 : Designed a plan to utilize the Organization Security Policies and enforce security controls at Adobe Public Cloud Scale, create violation strategies to bypass current AWS Security detections</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Impact: Presented the findings to the team, helped in incorporating more secure controls</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Netskope - 2 -->
+<tr>
+  <td class="org-left"><b>Software Engineer - 2, Netskope</b></td>
+  <td class="org-left"><b>Apr 2018 – Jul 2019</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2"><i>Bangalore, India</i></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Malware Efficacy Project: Developed API’s and data acquisition framework for training models on file features. Increased scalability from few hundreds to 10M samples per day, helped in reducing False Positives</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Threat Intelligence Framework: Built a proactive Threat hunting framework for insights about the latest threats using file decomposition, macro analysis and dropped file clustering, improved detection rate by 50%</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Netskope - 1 -->
+<tr>
+  <td class="org-left"><b>Software Engineer - 1, Netskope</b></td>
+  <td class="org-left"><b>Jul 2017 – Mar 2018</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2"><i>Bangalore, India</i></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Developed URL Heuristics engine using Machine Learning modelled on lexical features, dropped file extract, third-party reputation which improved the efficacy by 60%</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Integrated Cuckoo Sandbox for Ransomware File Encryption system and used this in generating threat intelligence, which acted as a key differentiator for Netskope threat capabilities</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Streamlined malware analysis with a task scheduling framework, integrated signature matching, static and dynamic analysis eliminating hours of manual effort at a cost reduction of 85%</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Netskope - Intern -->
+<tr>
+  <td class="org-left"><b>Software Intern, Netskope</b></td>
+  <td class="org-left"><b>Jan 2017 – Jun 2017</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2"><i>Bangalore, India</i></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Built from scratch a Malware Corpus system for systematic collection of vast malware artifacts and an open-source Malware Organizer Tool to find useful insights about malware families.</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» I work part of Netskope Threat Research Labs, staffed by the industry’s foremost cloud threat and malware researchers, the Netskope Threat Research Labs build products help corporates protect against advanced threats using various technologies like machine learning, Heuristics, Sandboxing</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+<!-- Krify -->
+<tr>
+  <td class="org-left"><b>Summer Intern, Krify</b></td>
+  <td class="org-left"><b>Jun 2015 – Jul 2015</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2"><i>Kakinada, India</i></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Developed cross platform applications</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+</tbody>
+</table>
+
 
 ### Teaching
-
-
 
 | Johns Hopkins Computer Science Department | Teaching Assistant - Cloud Computing | Aug '20 to Dec '20 | 
 | Johns Hopkins Computer Science Department | Teaching Assistant - Cloud Computing | Jan '20 to May '20 | 
