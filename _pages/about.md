@@ -14,16 +14,13 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 
 ### Education
 
-| University                                        | Degree               | Duration| 
-| ------------------------------------------- | ---------------------------- |------------------------ |
-| Johns Hopkins Information Security Institute | Masters in Information Security | Aug '19 to Dec '20 (Exp)|
+| Masters in Information Security, Johns Hopkins University | Aug '19 to Dec '20 (Exp)|
 | Vellore Institute of Technology | BTech Computer Science | Jun '13 to May '17 |
 
 
 ### Experience
 
-| Company                                        | Designation               | Duration| 
-| ------------------------------------------- | ---------------------------- |------------------------ |
+
 | Adobe | Security Researcher Intern | May '20 to Aug '20 |
 | Netskope,Bangalore | Software Engineer - 2 | Apr '18 to Jul '19 |
 | Netskope,Bangalore | Software Engineer - 1 | Jul '17 to Mar '18 |
@@ -33,8 +30,7 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 ### Teaching
 
 
-| University                                        | Position               | Duration| 
-| ------------------------------------------- | ---------------------------- |------------------------ |
+
 | Johns Hopkins Computer Science Department | Teaching Assistant - Cloud Computing | Aug '20 to Dec '20 | 
 | Johns Hopkins Computer Science Department | Teaching Assistant - Cloud Computing | Jan '20 to May '20 | 
 | Johns Hopkins Information Security Institute | Course Assistant - Cloud Security | Aug '19 to Dec '19 |
@@ -43,8 +39,6 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 
 ### Projects
 
-| Name                                        | Description                                           |
-| ------------------------------------------- | ----------------------------------------------------- |
 | [Malicious URL Detector](https://github.com/uppusaikiran/Malicious-URL-Detector) | A Machine Learning Model to detect malicious urls which include Deep File Analysis on attributes as well dropped files. |
 | [Malware Organizer](https://github.com/uppusaikiran/malware-organiser) | A simple tool to organise large malicious/benign files into a organised Structure. |
 | [Ransomware C2C Detector](https://github.com/uppusaikiran/ransom_c2c_detector) | Machine Learning Based Ransomware generated Command and Control Server Domain Detector. |
