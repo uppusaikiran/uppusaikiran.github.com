@@ -8,11 +8,52 @@ classes: wide
 author_profile: true
 ---
 
+<style>
+td, th { vertical-align:top;  }
+th.org-right  { text-align: center;  }
+th.org-left   { text-align: center;   }
+th.org-center { text-align: center; }
+td.org-right  { text-align: right;  }
+td.org-left   { text-align: left;   }
+td.org-center { text-align: center; }
+.underline { text-decoration: underline; }
+  
+<style>
+
 <p style="font-size: 0.65em;">
 I'm second year Graduate Student at Johns Hopkins, studying computer security. 2.5+ years of experience specializing in the cloud, network security, development, infrastructure protection, and computer hacking. My undergraduate degree is in computer science from Vellore Institure of Technology, India. My main research interests include building large scale secure systems, application security.
 </p>
 
 ### Education
+
+<table cellspacing="0" cellpadding="1">
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><h2>Education</h2></td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Masters of Science, Information Security</b></td>
+<td class="org-left"><b>2019 – Present</b></td>
+</tr>
+
+<tr>
+<td class="org-left" colspan="2"><i>The Johns Hopkins University, Baltimore, MD</i></td>
+</tr>
+
+<tr>
+<td class="org-left" colspan="2">» Research interests in systems, software, network, and IoT Security</td>
+<td class="org-left">&nbsp;</td>
+</tr>
+
+</tbody>
+</table>
 
 | Masters in Information Security, Johns Hopkins University | Aug '19 to Dec '20 (Exp)|
 | Vellore Institute of Technology | BTech Computer Science | Jun '13 to May '17 |
