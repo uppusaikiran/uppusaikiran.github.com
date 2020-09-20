@@ -242,9 +242,84 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 
 ### Teaching
 
-| Johns Hopkins Computer Science Department | Teaching Assistant - Cloud Computing | Aug '20 to Dec '20 | 
-| Johns Hopkins Computer Science Department | Teaching Assistant - Cloud Computing | Jan '20 to May '20 | 
-| Johns Hopkins Information Security Institute | Course Assistant - Cloud Security | Aug '19 to Dec '19 |
+<table cellspacing="0" cellpadding="1">
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-left">
+</colgroup>
+<tbody>
+
+<!-- Cloud Fall 2020-->
+<tr>
+  <td class="org-left"><b>Teaching Assistant, Cloud computing </b></td>
+  <td class="org-left"><b>Aug 2020 – Dec 2020</b></td>
+</tr>
+
+<!--<tr>
+  <td class="org-left" colspan="2"><i>Bangalore, India</i></td>
+</tr> -->
+
+<tr>
+  <td class="org-left" colspan="2">» Designed cloud ssignments utilizing GCP and AWS platforms</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Graded programming assignments and conducted office hours to assist grad students</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Cloud Spring 2020 -->
+<tr>
+  <td class="org-left"><b>Teaching Assistant, Cloud computing </b></td>
+  <td class="org-left"><b>Jan 2020 – May 2020</b></td>
+</tr>
+
+<!--<tr>
+  <td class="org-left" colspan="2"><i>Bangalore, India</i></td>
+</tr> -->
+
+<tr>
+  <td class="org-left" colspan="2">» Conducted office hours to assist students on Mininet, GCP Programming Labs</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Cloud Security -->
+<tr>
+  <td class="org-left"><b>Course Assistant, Cloud computing security</b></td>
+  <td class="org-left"><b>Aug 2019 – Dec 2019</b></td>
+</tr>
+
+<!--<tr>
+  <td class="org-left" colspan="2"><i>Bangalore, India</i></td>
+</tr> -->
+
+<tr>
+  <td class="org-left" colspan="2">» Graded programming assignments and conducted office hours to assist grad students</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+
+</tbody>
+</table>
+
 
 ### Publications
 
