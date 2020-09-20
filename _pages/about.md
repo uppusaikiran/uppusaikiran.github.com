@@ -18,7 +18,7 @@ td.org-left   { text-align: left;   }
 td.org-center { text-align: center; }
 .underline { text-decoration: underline; }
   
-<style>
+</style>
 
 <p style="font-size: 0.65em;">
 I'm second year Graduate Student at Johns Hopkins, studying computer security. 2.5+ years of experience specializing in the cloud, network security, development, infrastructure protection, and computer hacking. My undergraduate degree is in computer science from Vellore Institure of Technology, India. My main research interests include building large scale secure systems, application security.
