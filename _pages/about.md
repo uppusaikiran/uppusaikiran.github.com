@@ -392,7 +392,7 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 
 <!-- Network Sec-->
 <tr>
-  <td class="org-left"><b>Malicious URL Detector </b></td>
+  <td class="org-left"><b>Network Security and Attacks </b></td>
 </tr>
 
 <tr>
