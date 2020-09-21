@@ -389,6 +389,27 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 </colgroup>
 <tbody>
 
+
+<!-- Network Sec-->
+<tr>
+  <td class="org-left"><b>Malicious URL Detector </b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» <a href="https://github.com/uppusaikiran/NetworkSecurity">Project</a> aimed at implementing a HTTP Server on RPI box and test various network attacks</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Capture the network interactions, analyze using wireshark, created both server and client on docker</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
 <!-- Malicious URL Detector-->
 <tr>
   <td class="org-left"><b>Malicious URL Detector </b></td>
