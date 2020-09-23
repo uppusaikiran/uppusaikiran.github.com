@@ -1,7 +1,4 @@
 ---
-header:
-  image: /assets/images/malware.jpg
-
 title: "Generic File Parser to extract features from Malicious Files."
 
 category:
@@ -24,15 +21,15 @@ tags:
     - machine-learning
     - static-analysis
     - dynamic-analysis
-
-
+    
 ---
 
-A simple tool to organise large malicious/benign files into a organised Structure.
+A Single Library Parser to extract meta information,static analysis and detect macros within the files.
 
 Source Code : [Generic File Parser](https://github.com/uppusaikiran/generic-parser)
 
-Hit Counter : [![HitCount](http://hits.dwyl.io/uppusaikiran/generic-parser.svg)](http://hits.dwyl.io/uppusaikiran/generic-parser)
+Hit Counter : [![HitCount](http://hits.dwyl.com/uppusaikiran/generic-parser.svg)](http://hits.dwyl.com/uppusaikiran/generic-parser)
+
 
 # Usage:
 
@@ -41,39 +38,11 @@ Hit Counter : [![HitCount](http://hits.dwyl.io/uppusaikiran/generic-parser.svg)]
 2. Create a virutalenv
 ```
 virtualenv pyenv
-New python executable in /home/admin/generic-parser/pyenv/bin/python
-Installing setuptools, pip, wheel...done.
-admin@cuckoo:~/generic-parser$ . pyenv/bin/activate
-(pyenv) admin@cuckoo:~/generic-parser$ ls
 ```
 3. Install the requirements.
 ```
 pip install -r requirements.txt
-Collecting future==0.16.0 (from -r requirements.txt (line 1))
-Collecting oletools==0.51 (from -r requirements.txt (line 2))
-Collecting pdfminer==20140328 (from -r requirements.txt (line 3))
-Collecting pefile==2017.9.3 (from -r requirements.txt (line 4))
-Collecting python-magic==0.4.13 (from -r requirements.txt (line 5))
-Collecting rarfile==3.0 (from -r requirements.txt (line 6))
-Collecting yara-python==3.6.3 (from -r requirements.txt (line 7))
-Building wheels for collected packages: future, oletools, pdfminer, pefile, rarfile, yara-python
-  Running setup.py bdist_wheel for future ... done
-  Stored in directory: /home/admin/.cache/pip/wheels/bf/c9/a3/c538d90ef17cf7823fa51fc701a7a7a910a80f6a405bf15b1a
-  Running setup.py bdist_wheel for oletools ... done
-  Stored in directory: /home/admin/.cache/pip/wheels/bb/bc/fe/2b89a88080a7353b181bd86957f7a33fad4a18d9f0b6af377d
-  Running setup.py bdist_wheel for pdfminer ... done
-  Stored in directory: /home/admin/.cache/pip/wheels/1b/af/91/b925461baf990ee92513dd451237a7570fca3e7f8dd5439e5b
-  Running setup.py bdist_wheel for pefile ... done
-  Stored in directory: /home/admin/.cache/pip/wheels/06/ac/f0/7a034d6561041bad8bcca49844311edcb7f4792ccec1e266a1
-  Running setup.py bdist_wheel for rarfile ... done
-  Stored in directory: /home/admin/.cache/pip/wheels/dc/84/da/8aff50941f548db5384b076d5a6a6afea0cd12672e0326edc4
-  Running setup.py bdist_wheel for yara-python ... done
-  Stored in directory: /home/admin/.cache/pip/wheels/e9/a5/e5/c533c04dc5b512ddf7b068f734244a65c55896ebcdb1a82e55
-Successfully built future oletools pdfminer pefile rarfile yara-python
-Installing collected packages: future, oletools, pdfminer, pefile, python-magic, rarfile, yara-python
-Successfully installed future-0.16.0 oletools-0.51 pdfminer-20140328 pefile-2017.9.3 python-magic-0.4.13 rarfile-3.0 yara-python-3.6.3
 ```
-
 ### Script Usage
 
 ```
@@ -91,11 +60,18 @@ optional arguments:
   --version             show program's version number and exit
 
 ```
-
 1. PATH  : This should point to the path of the malware file which you want to analyze.
 2. STORE : Enable this flag if you want to store in a database.
 3. YARA  : Enable this flag to apply yara to match for suspicious indicators in the file.
 4. version : Shows the version of the tool.
+
+### Features:
+
+1. Ability to Identify the Decomposition module selected based on the mime-type.
+2. Apply PDF based decomposition to extract features from the pdf file.
+3. Apply Office based decomposition to extract features of office files.
+4. Web Based files are decomposed to get interesting strings etc.
+5. Yara is applied on the entire file to get interesting matches which can help in identifying suspicious behaviour.
 
 ### Sample UseCase For PDF File:
 
@@ -340,11 +316,3 @@ python app.py -f test_files/07041a3c64fea7dd888220c87ce090aa6d29c92d75ea9fce1b1d
     ]
 }
 ```
-
-### Featues:
-
-1. Abbility to Identify the Decomposition module selected based on the mime-type.
-2. Apply PDF based decomposition to extract features from the pdf file.
-3. Apply Office based decomposition to extract features of office files.
-4. Web Based files are decomposed to get interesting strings etc.
-5. Yara is applied on the entire file to get interesting matches which can help in identifying suspicious behaviour.
