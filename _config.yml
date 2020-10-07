@@ -80,8 +80,8 @@ analytics:
 author:
   name             : "SaiKiran Uppu"
   avatar           : /assets/images/head_shot.jpg
-  bio              : "Security Researcher Intern at Adobe"
-  location         : "Baltimore,Maryland"
+  bio              : "Security Research Intern - Adobe"
+  location         : "Baltimore, Maryland"
   email            : "iamsaikiran.official@gmail.com"
   uri              :
   bitbucket        :
@@ -98,7 +98,7 @@ author:
   linkedin         : "saikiranuppu"
   pinterest        :
   soundcloud       :
-  stackoverflow    : "5908241/backdoor-cipher" # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
+  stackoverflow    : #"5908241/backdoor-cipher" # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
   twitter          : backdoorcipher
