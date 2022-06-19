@@ -256,6 +256,15 @@
           </a>
         </li>
       {% endif %}
+      
+      
+      {% if author.credly %}
+        <li>
+          <a href="https://www.credly.com/users/{{ author.vine }}/badges" itemprop="sameAs">
+            <i class="fab fa-fw fa-badge" aria-hidden="true"></i> Credly
+          </a>
+        </li>
+      {% endif %}
 
       {% include author-profile-custom-links.html %}
     </ul>
