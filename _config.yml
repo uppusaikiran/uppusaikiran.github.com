@@ -81,6 +81,7 @@ author:
   name             : "SaiKiran Uppu"
   avatar           : /assets/images/profile.jpg
   bio              : "Security Research - Adobe"
+  credly           : "sai-kiran-uppu"
   location         : "San Jose, California"
   email            : "iamsaikiran.official@gmail.com"
   uri              :
@@ -106,7 +107,7 @@ author:
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
-
+ 
 
 # Reading Files
 include:
