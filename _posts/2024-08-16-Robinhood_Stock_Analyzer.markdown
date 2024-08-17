@@ -127,7 +127,7 @@ Run your application and verify that it logs in successfully using the generated
    - Calculates and prints outstanding stock quantities and detailed sales information.
    - Plots historical stock prices and key transaction points.
 
-![Alt text](https://github.com/uppusaikiran/robinhood_stock_analyzer/blob/main/sample.png))
+![Alt text](https://raw.githubusercontent.com/uppusaikiran/robinhood_stock_analyzer/main/sample.png))
 
 
 ## Example
