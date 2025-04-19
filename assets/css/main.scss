@@ -7,46 +7,4 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-// Increase content width while maintaining sidebar position
-.page {
-  @include breakpoint($large) {
-    float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
-  }
 
-  @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
-  }
-}
-
-#main {
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  
-  @include breakpoint($x-large) {
-    max-width: 1400px;
-  }
-}
-
-.sidebar {
-  @include breakpoint($large) {
-    float: right;
-    width: $right-sidebar-width-narrow;
-    margin-right: -$right-sidebar-width-narrow;
-  }
-
-  @include breakpoint($x-large) {
-    width: $right-sidebar-width;
-    margin-right: -$right-sidebar-width;
-  }
-}
-
-.page__content {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-}
