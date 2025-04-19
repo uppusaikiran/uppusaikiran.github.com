@@ -24,7 +24,7 @@ a {
 </style>
 
 <p style="font-size: 0.65em;">
-I'm second year Graduate Student at Johns Hopkins, studying computer security. 2.5+ years of experience specializing in the cloud, network security, development, infrastructure protection, and computer hacking. My undergraduate degree is in computer science from Vellore Institure of Technology, India. My main research interests include building large scale secure systems, application security.
+I'm a security professional with seven years of experience in Cloud Security. Currently at Adobe, I focus on detecting cloud threats at scale. Previously at Netskope, a cloud security startup, I developed automated malware pipelines for security research. I hold a Master's in Information Security from Johns Hopkins University and a Bachelor's in Computer Science from Vellore Institute of Technology, India. I'm passionate about applying data to solve security problems, particularly in deep diving cloud environments and identifying threat actors. My research interests include building large-scale secure systems and application security.
 </p>
 
 ### Education
