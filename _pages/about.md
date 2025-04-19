@@ -96,6 +96,96 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 <tbody>
 
 <!-- Adobe -->
+
+<!-- Adobe Senior Security Researcher -->
+<tr>
+  <td class="org-left"><b>Senior Security Researcher, Adobe</b></td>
+  <td class="org-left"><b>Feb 2024 – Present</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2"><i>On-site</i></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Developed the first threat intelligence pipeline based on the Model Context Protocol (MCP), leveraging Large Language Models (LLMs) to extract, enrich, and contextualize indicators of compromise (IOCs) from PDF-based threat reports, enabling structured ingestion and accelerated threat response</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Led Project Redact, a cross-functional initiative to detect and remediate sensitive secrets—such as credentials, AWS secret keys, and tokens—within security and application logs; architected and deployed scalable solutions using Cribl and data lake pipelines, significantly enhancing data hygiene and compliance</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Engaged with multiple security vendors to evaluate and benchmark advanced solutions, including threat intelligence platforms and deception technologies, to enhance Adobe's detection and response capabilities</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Authored in-depth threat intelligence reports assessing the security and data governance risks of Large Language Models (LLMs), focusing on jailbreak techniques, prompt injection vulnerabilities, and exposure of sensitive data in enterprise environments</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Adobe Cloud Security Researcher III -->
+<tr>
+  <td class="org-left"><b>Cloud Security Researcher - III, Adobe</b></td>
+  <td class="org-left"><b>Aug 2022 – Jan 2024</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Designed and implemented an extensible, modular framework for security data schema normalization, addressing data heterogeneity across diverse security telemetry sources</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Led the end-to-end development of a scalable security metrics framework on Databricks, integrating multi-source threat intelligence with logs from endpoint detection systems, firewalls, and network telemetry to drive actionable insights</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<!-- Adobe Cloud Security Researcher II -->
+<tr>
+  <td class="org-left"><b>Cloud Security Researcher - II, Adobe</b></td>
+  <td class="org-left"><b>Feb 2021 – Jul 2022</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Designing, building, and maintaining scalable infrastructure to detect high-risk firewall rules, evaluate them against a standardized risk matrix, and automate risk-based approvals across Adobe Firewalls</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Responding to security incidents across Adobe data centers and public cloud environments, including AWS and Azure, to ensure rapid containment and resolution</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Performing threat modeling and automating the detection of security issues across hybrid cloud environments, while developing and deploying preventive controls within Adobe's storage, network, and compute infrastructure</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Collaborating directly with the Security Coordination Center (SCC) to triage, investigate, and remediate security incidents across on-premises and cloud platforms</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+
+
 <tr>
   <td class="org-left"><b>Security Researcher Intern, Adobe</b></td>
   <td class="org-left"><b>May 2020 – Aug 2020</b></td>
@@ -106,32 +196,27 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 </tr>
 
 <tr>
-  <td class="org-left" colspan="2">» Team: Enterprise Security</td>
+  <td class="org-left" colspan="2">» Team: Enterprise and Cloud Security</td>
   <td class="org-left">&nbsp;</td>
 </tr>
 
 <tr>
-  <td class="org-left" colspan="2">» Project -1 : Create an automated risk firewall rule detection system to identify Security policy violation at DMZ Level and reduce the attack exposure</td>
+  <td class="org-left" colspan="2">» Designed and implemented an intelligent system to detect firewall rule violations and security policy breaches at the DMZ layer, reducing attack surface exposure</td>
   <td class="org-left">&nbsp;</td>
 </tr>
 
 <tr>
-  <td class="org-left" colspan="2">» Impact: Formulated a violation matrix and setup an intelligent firewall rule detection process, published best practices guidelines, featured on Adobe Blog</td>
+  <td class="org-left" colspan="2">» Developed a comprehensive violation matrix, published internal best practices guidelines, and featured on the Adobe Blog for impact-driven innovation</td>
   <td class="org-left">&nbsp;</td>
 </tr>
 
 <tr>
-  <td class="org-left" colspan="2">» Team: Cloud Security</td>
+  <td class="org-left" colspan="2">» Spearheaded a strategy to align AWS cloud environments with Adobe's enterprise security policies, identifying gaps in existing security controls</td>
   <td class="org-left">&nbsp;</td>
 </tr>
 
 <tr>
-  <td class="org-left" colspan="2">» Project -2 : Designed a plan to utilize the Organization Security Policies and enforce security controls at Adobe Public Cloud Scale, create violation strategies to bypass current AWS Security detections</td>
-  <td class="org-left">&nbsp;</td>
-</tr>
-
-<tr>
-  <td class="org-left" colspan="2">» Impact: Presented the findings to the team, helped in incorporating more secure controls</td>
+  <td class="org-left" colspan="2">» Proposed and demonstrated bypass scenarios for current AWS security detections, leading to the implementation of stronger controls across public cloud infrastructure</td>
   <td class="org-left">&nbsp;</td>
 </tr>
 
@@ -165,10 +250,35 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
   <td class="org-left">&nbsp;</td>
 </tr>
 
+<!-- Netskope - 2 -->
+<tr>
+  <td class="org-left"><b>Software Engineer - 2, Netskope</b></td>
+  <td class="org-left"><b>Apr 2018 – Jul 2019</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2"><i>Bangalore, India</i></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Malware Efficacy Project: Developed API's and data acquisition framework for training models on file features. Increased scalability from few hundreds to 10M samples per day, helped in reducing False Positives</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Threat Intelligence Framework: Built a proactive Threat hunting framework for insights about the latest threats using file decomposition, macro analysis and dropped file clustering, improved detection rate by 50%</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
 <!-- Netskope - 1 -->
 <tr>
   <td class="org-left"><b>Software Engineer - 1, Netskope</b></td>
-  <td class="org-left"><b>Jul 2017 – Mar 2018</b></td>
+  <td class="org-left"><b>Jun 2017 – Mar 2018</b></td>
 </tr>
 
 <tr>
@@ -195,9 +305,34 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
   <td class="org-left">&nbsp;</td>
 </tr>
 
+<!-- Netskope - Threat Researcher -->
+<tr>
+  <td class="org-left"><b>Threat Researcher, Netskope Threat Research Labs</b></td>
+  <td class="org-left"><b>Jun 2017 – Jul 2019</b></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2"><i>Bangalore, India</i></td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Contributed to a world-class team focused on cloud threat and malware research. Worked on building cutting-edge security products that protect enterprises from advanced threats using machine learning, heuristics, sandboxing, and other detection technologies</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left" colspan="2">» Played a key role in identifying and mitigating emerging cloud-based attacks</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
+<tr>
+  <td class="org-left">&nbsp;</td>
+  <td class="org-left">&nbsp;</td>
+</tr>
+
 <!-- Netskope - Intern -->
 <tr>
-  <td class="org-left"><b>Software Intern, Netskope</b></td>
+  <td class="org-left"><b>Student Intern, Netskope</b></td>
   <td class="org-left"><b>Jan 2017 – Jun 2017</b></td>
 </tr>
 
@@ -206,12 +341,12 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
 </tr>
 
 <tr>
-  <td class="org-left" colspan="2">» Built from scratch a Malware Corpus system for systematic collection of vast malware artifacts and an open-source Malware Organizer Tool to find useful insights about malware families.</td>
+  <td class="org-left" colspan="2">» Automated Malware Analysis Pipeline: Developed a scalable malware analysis service with a plug-and-play architecture, RESTful APIs, task scheduling, batch processing, and a secure file upload portal</td>
   <td class="org-left">&nbsp;</td>
 </tr>
 
 <tr>
-  <td class="org-left" colspan="2">» I work part of Netskope Threat Research Labs, staffed by the industry’s foremost cloud threat and malware researchers, the Netskope Threat Research Labs build products help corporates protect against advanced threats using various technologies like machine learning, Heuristics, Sandboxing</td>
+  <td class="org-left" colspan="2">» Built on Celery and Redis, the system efficiently scaled to handle over 1 million files per day, significantly accelerating threat detection workflows</td>
   <td class="org-left">&nbsp;</td>
 </tr>
 
@@ -219,6 +354,7 @@ I'm second year Graduate Student at Johns Hopkins, studying computer security. 2
   <td class="org-left">&nbsp;</td>
   <td class="org-left">&nbsp;</td>
 </tr>
+
 <!-- Krify -->
 <tr>
   <td class="org-left"><b>Summer Intern, Krify</b></td>
