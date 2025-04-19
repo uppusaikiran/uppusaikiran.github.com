@@ -11,7 +11,7 @@ locale                   : "en"
 title                    : "SaiKiran Uppu"
 title_separator          : "-"
 name                     : "SaiKiran Uppu"
-description              : "Homepage"
+description              : "SaiKiran Uppu - Sr Cyber Threat Researcher - Adobe"
 url                      : "https://uppusaikiran.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "uppusaikiran/uppusaikiran.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -81,7 +81,6 @@ author:
   name             : "SaiKiran Uppu"
   avatar           : /assets/images/profile.jpg
   bio              : "Sr Cyber Threat Researcher - Adobe"
-  credly           : "sai-kiran-uppu"
   location         : "San Jose, California"
   email            : "uppusaikiran@gmail.com"
   uri              :
