@@ -20,6 +20,7 @@ toc: false
 toc_sticky: true
 toc_label: "Table of Contents"
 
+<p style="font-size: 0.65em;">
 ---
 # Awesome Capture the Flag Cheatsheet [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)[<img src="https://github.com/uppusaikiran/awesome-ctf-cheatsheet/raw/refs/heads/master/media/icons8-hacking.svg" align="right" width="150">](https://uppusaikiran.github.io/hacking/Capture-the-Flag-CheatSheet/)
 
@@ -2402,3 +2403,4 @@ reconnoitre -t <TARGET_IP> -o `pwd` --services
 ```
 
 ---
+</p>
