@@ -16,7 +16,7 @@ tags:
   - Pentesting
   - system-hacking
   - ctf-cheatsheet
-toc: true
+toc: false
 toc_sticky: true
 toc_label: "Table of Contents"
 
