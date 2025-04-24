@@ -1,6 +1,5 @@
 ---
 header:
-  image: 
 layout: single
 classes: wide
 title: "Exploring Open AI's GPT-Image-1 API Release"
