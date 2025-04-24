@@ -2,6 +2,7 @@
 header:
 layout: single
 classes: wide
+author_profile: true
 title: "Exploring Open AI's GPT-Image-1 API Release"
 categories:
   - Artificial Intelligence
