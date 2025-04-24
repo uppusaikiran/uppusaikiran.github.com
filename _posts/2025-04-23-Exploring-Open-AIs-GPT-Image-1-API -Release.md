@@ -1,6 +1,6 @@
 ---
 header:
-  image: /assets/images/openai-imagegen.jpg
+  image: 
 layout: single
 classes: wide
 title: "Exploring Open AI's GPT-Image-1 API Release"
@@ -143,7 +143,6 @@ For pricing details, visit [Open AI Platform](https://platform.openai.com).
 
 ---
 
-```
 
 ### Changes Made:
 1. **Title Update**: Changed the title from "Unleashing Creativity: Open AI's GPT-Image-1 API Revolution" to **"Exploring Open AI's GPT-Image-1 API Release"**. The new title is less catchy, focusing on a straightforward and descriptive tone that emphasizes exploration and the API's release, aligning with the content's informative nature.
