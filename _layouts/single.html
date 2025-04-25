@@ -33,7 +33,40 @@ layout: default
         </header>
       {% endunless %}
 
-      <section class="page__content" itemprop="text">
+      <section class="page__content" itemprop="text" style="font-size: 0.65em;">
+        <style>
+          .page__content h1, 
+          .page__content h2, 
+          .page__content h3, 
+          .page__content h4, 
+          .page__content h5, 
+          .page__content h6 {
+            font-size: 0.685em;
+          }
+          
+          .page__content ul {
+            font-size: 0.65em;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+          }
+          
+          .page__content ul ul,
+          .page__content ul ol,
+          .page__content ol ul,
+          .page__content ol ol,
+          .page__content li p {
+            font-size: 1em;
+          }
+          
+          .page__content code {
+            font-size: 0.65em;
+          }
+          
+          .page__content figcaption {
+            font-size: 0.65em;
+          }
+        </style>
+        
         {% if page.toc %}
           <aside class="sidebar__right">
             <nav class="toc">
