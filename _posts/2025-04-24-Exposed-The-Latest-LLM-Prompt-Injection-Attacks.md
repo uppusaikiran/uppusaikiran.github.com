@@ -22,6 +22,7 @@ tags:
 
 An eye-opening analysis of the most recent prompt injection techniques that force popular AI models to expose their internal tool capabilities.
 
+
 ## Introduction
 
 Large Language Models (LLMs) like ChatGPT-4o, GPT-4.5, Gemini 2.5 Flash, and Grok 3 have become integral parts of our digital landscape. However, as these AI systems grow more sophisticated and gain additional capabilities through tools and plugins, they also face new security challenges. Today, we'll examine a particularly concerning vulnerability: prompt injection attacks that trick models into revealing their internal tool capabilities.
@@ -57,11 +58,19 @@ When faced with this attack, OpenAI's most advanced models — ChatGPT-4o and th
 
 The exposed tools include:
 
-- Web browsing capabilities with detailed parameters
-- Image generation and analysis tools
-- Data analysis functions
-- Code interpretation functionalities
-- Plugin management systems
+```json
+{
+  "public_tools": [
+    "python",
+    "image_gen",
+    "web",
+    "guardian_tool",
+    "canmore"
+  ]
+}
+```
+
+These tools provide capabilities ranging from Python code execution and image generation to web browsing and content moderation through the "guardian_tool." The "canmore" tool appears to be an additional capability not widely documented in OpenAI's public materials.
 
 Notably, GPT-4.5 revealed several experimental features still in development, including advanced reasoning frameworks not mentioned in OpenAI's public documentation.
 
@@ -83,15 +92,15 @@ Google's Gemini 2.5 Flash responds similarly, though with some differences in it
 ![Gemini Tool Exposure](/assets/images/gemini_tools_exposed.jpg)
 *Gemini 2.5 Flash revealing its internal tool architecture and capabilities*
 
-Particularly concerning are exposed tools for:
+The attack on Gemini 2.5 Flash exposed a single tool:
 
-- System file access (though limited)
-- API integration capabilities
-- Web search implementation details
-- Data processing granularity
-- Multimodal analysis capabilities
+```json
+[
+  "Google Search"
+]
+```
 
-Gemini 2.5 Flash appears especially vulnerable to this attack, revealing more detailed parameter structures than other models.
+This suggests that the model may have a more limited set of integrated tools compared to ChatGPT-4o, or that it has different levels of protection against this specific attack. However, the fact that it revealed any tool at all indicates a significant vulnerability in the context-handling mechanisms.
 
 ### Grok 3
 
@@ -100,12 +109,25 @@ Even Grok 3, which markets itself as more "unfiltered," maintains certain tool r
 ![Grok Tool Exposure](/assets/images/grok_tools_exposed.jpg)
 *Grok 3's tool capabilities being exposed through the injection attack*
 
-Grok 3 exposed several unique capabilities including:
+Grok 3 exposed a comprehensive set of analysis-oriented tools:
 
-- Real-time data analysis tools
-- Financial data integration endpoints
-- Social media monitoring capabilities
-- Custom reasoning frameworks
+```json
+{
+  "public_tools": [
+    "web_search",
+    "x_user_profile_analysis",
+    "x_post_analysis",
+    "content_analysis",
+    "image_analysis",
+    "pdf_analysis",
+    "text_file_analysis",
+    "image_editing",
+    "canvas_panel"
+  ]
+}
+```
+
+These tools reveal Grok's focus on content and media analysis, particularly its capabilities for analyzing social media (notably X/Twitter profiles and posts), various document types, and image processing. The presence of "canvas_panel" suggests interactive visualization capabilities not publicly documented.
 
 ## Security Implications
 
