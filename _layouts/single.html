@@ -70,6 +70,17 @@ layout: default
           .page__content figcaption {
             font-size: 0.9em;
           }
+          
+          /* Limit image height */
+          .page__content img {
+            max-height: 600px;
+            object-fit: contain;
+          }
+          
+          .page__content figure img {
+            max-height: 600px;
+            object-fit: contain;
+          }
         </style>
         
         {% if page.toc %}
