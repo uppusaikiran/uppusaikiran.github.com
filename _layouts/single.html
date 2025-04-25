@@ -67,19 +67,33 @@ layout: default
             font-size: 0.9em;
           }
           
-          .page__content figcaption {
-            font-size: 0.9em;
-          }
-          
           /* Limit image height */
           .page__content img {
             max-height: 600px;
             object-fit: contain;
+            display: block;
+            margin-bottom: 1em;
+            clear: both;
           }
           
           .page__content figure img {
             max-height: 600px;
             object-fit: contain;
+            width: 100%;
+            display: block;
+          }
+          
+          .page__content figure {
+            display: block;
+            width: 100%;
+            clear: both;
+          }
+          
+          .page__content figcaption {
+            display: block;
+            width: 100%;
+            clear: both;
+            margin-top: 0.5em;
           }
         </style>
         
