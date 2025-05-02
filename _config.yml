@@ -18,43 +18,22 @@ repository               : "uppusaikiran/uppusaikiran.github.io" # GitHub userna
 teaser                   : "/assets/images/malware.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
-comments:
-  provider               : "disqus"
-  disqus:
-    shortname            : "https-uppusaikiran-github-io"
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "master"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "docs/_data/comments/{options.slug}" # "/_data/comments/{options.slug}" (default)
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-atom_feed:
-  path                   : # blank (default) uses feed.xml
 
+# Comments
+comments                 : false  # Disable comments globally
+  
 # SEO Related
 google_site_verification : d7_WK71GhwgFyBfnfjnFMnbxOHJWOkznMlWjzV4kw-w
 bing_site_verification   : F514F1AAACFB561A1542260200878BC7
 alexa_site_verification  :
 yandex_site_verification :
 
+# Atom feed
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+
 # Social Sharing
+share                    : false  # Disable social sharing globally
 twitter:
   username               : uppusaikiran
 facebook:
@@ -240,8 +219,8 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
-      share: true
+      comments: false     # Disable comments for all posts
+      share: false        # Disable sharing for all posts
       related: true
 
 search: true
