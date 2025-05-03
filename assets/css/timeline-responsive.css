@@ -1,0 +1,124 @@
+/* Timeline Responsive Styles */
+
+/* Default styles (desktop) - don't change these */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  margin-left: 10px;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  left: 75px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #eee;
+}
+
+.timeline-entry {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 90px;
+  margin-bottom: 10px;
+}
+
+.year {
+  position: absolute;
+  left: 0;
+  color: #999;
+  width: 75px;
+  padding-top: 5px;
+  font-size: 0.65em;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.timeline-entry::before {
+  content: "";
+  position: absolute;
+  left: 71px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: #999;
+  border-radius: 50%;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 600px) {
+  /* Timeline Section */
+  .timeline-container {
+    margin-left: 0;
+  }
+  
+  .timeline-container::before {
+    left: 20px;
+  }
+  
+  .timeline-entry {
+    padding-left: 35px;
+    margin-bottom: 25px;
+  }
+  
+  .year {
+    position: relative;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding-left: 35px;
+    padding-right: 0;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .timeline-entry::before {
+    left: 16px;
+    top: 8px;
+  }
+  
+  /* Adjust the image and text layout for mobile */
+  .timeline-entry > div {
+    width: 100%;
+  }
+  
+  .timeline-entry > div > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .timeline-entry img {
+    margin-bottom: 5px;
+  }
+  
+  /* Hackathon Section */
+  .hackathon-entry {
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-bottom: 25px !important;
+  }
+  
+  .hackathon-entry img {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  /* Fix any potential overflow issues */
+  .page-content {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
+  /* Ensure certification images stack properly on very small screens */
+  @media screen and (max-width: 400px) {
+    div[style*="display: flex; flex-wrap: wrap; gap: 20px;"] {
+      justify-content: center;
+    }
+  }
+} 

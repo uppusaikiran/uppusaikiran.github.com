@@ -6,6 +6,11 @@ image: /assets/images/header.jpg
 
 ---
 
+<!-- Include responsive timeline CSS -->
+<link rel="stylesheet" href="/assets/css/timeline-responsive.css">
+<!-- Ensure proper mobile viewport scaling -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <div class="page-content" style="text-align: justify">
   <h4 style="font-size: 0.685em;"><strong>About Me</strong></h4>
   <p style="font-size: 0.65em;">
@@ -27,7 +32,7 @@ image: /assets/images/header.jpg
     This intersection of AI and security presents fascinating challenges that combine my expertise 
     in threat detection with emerging technologies.
     
-    I actively contribute to open-source projects and regularly participate in Capture the Flag competitions and Hackthebox 
+    I actively contribute to open-source projects and regularly participate in Capture the Flag competitions and Hackathbox 
     challenges with the handle
     <code>backdoorcipher</code>.
 
@@ -120,70 +125,59 @@ image: /assets/images/header.jpg
   
   <h4 style="font-size: 0.685em;"><strong>Timeline</strong></h4>
   
-  <div class="timeline-container" style="display: flex; flex-direction: column; gap: 30px; position: relative;">
-    <!-- Vertical Line -->
-    <div style="position: absolute; left: 120px; top: 0; bottom: 0; width: 2px; background-color: #eee;"></div>
-    
+  <div class="timeline-container">
     <!-- Adobe Entry -->
-    <div class="timeline-entry" style="display: flex; gap: 20px; position: relative;">
-      <div class="year" style="color: #999; min-width: 120px; padding-top: 5px; font-size: 0.65em;">2021 - Present</div>
-      <!-- Circle connector -->
-      <div style="position: absolute; left: 116px; top: 25px; width: 10px; height: 10px; background-color: #999; border-radius: 50%;"></div>
-      <div style="display: flex; gap: 15px; margin-left: 25px;">
-        <img src="/assets/images/adobe.png" alt="Adobe" width="60" height="60" style="border-radius: 8px;">
-        <div>
+    <div class="timeline-entry">
+      <div class="year">2021 - Present</div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/assets/images/adobe.png" alt="Adobe" width="40" height="40" style="border-radius: 8px; object-fit: contain;">
           <div style="font-size: 0.65em;"><strong>Sr Cyber Threat Researcher at Adobe</strong></div>
-          <div style="margin-top: 10px; line-height: 1.5; font-size: 0.65em;">
-            Leading threat research initiatives and developing advanced security solutions in San Jose, California.
-          </div>
+        </div>
+        <div style="line-height: 1.5; font-size: 0.65em;">
+          Leading threat research initiatives and developing advanced security solutions in San Jose, California.
         </div>
       </div>
     </div>
 
     <!-- Johns Hopkins Entry -->
-    <div class="timeline-entry" style="display: flex; gap: 20px; position: relative;">
-      <div class="year" style="color: #999; min-width: 120px; padding-top: 5px; font-size: 0.65em;">2019 - 2020</div>
-      <!-- Circle connector -->
-      <div style="position: absolute; left: 116px; top: 25px; width: 10px; height: 10px; background-color: #999; border-radius: 50%;"></div>
-      <div style="display: flex; gap: 15px; margin-left: 25px;">
-        <img src="/assets/images/hopkins.png" alt="Johns Hopkins University" width="60" height="60" style="border-radius: 8px;">
-        <div>
+    <div class="timeline-entry">
+      <div class="year">2019 - 2020</div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/assets/images/hopkins.png" alt="Johns Hopkins University" width="40" height="40" style="border-radius: 8px; object-fit: contain;">
           <div style="font-size: 0.65em;"><strong>Masters in Information Security at Johns Hopkins University</strong></div>
-          <div style="margin-top: 10px; line-height: 1.5; font-size: 0.65em;">
-            Specialized in advanced information security concepts and practices in Baltimore.
-          </div>
+        </div>
+        <div style="line-height: 1.5; font-size: 0.65em;">
+          Specialized in advanced information security concepts and practices in Baltimore.
         </div>
       </div>
     </div>
 
     <!-- Netskope Entry -->
-    <div class="timeline-entry" style="display: flex; gap: 20px; position: relative;">
-      <div class="year" style="color: #999; min-width: 120px; padding-top: 5px; font-size: 0.65em;">2017 - 2019</div>
-      <!-- Circle connector -->
-      <div style="position: absolute; left: 116px; top: 25px; width: 10px; height: 10px; background-color: #999; border-radius: 50%;"></div>
-      <div style="display: flex; gap: 15px; margin-left: 25px;">
-        <img src="/assets/images/netskope.png" alt="Netskope" width="60" height="60" style="border-radius: 8px;">
-        <div>
+    <div class="timeline-entry">
+      <div class="year">2017 - 2019</div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/assets/images/netskope.png" alt="Netskope" width="40" height="40" style="border-radius: 8px; object-fit: contain;">
           <div style="font-size: 0.65em;"><strong>Software Engineer at Netskope Threat Research Labs</strong></div>
-          <div style="margin-top: 10px; line-height: 1.5; font-size: 0.65em;">
-            Developed security solutions and conducted threat research in Bengaluru.
-          </div>
+        </div>
+        <div style="line-height: 1.5; font-size: 0.65em;">
+          Developed security solutions and conducted threat research in Bengaluru.
         </div>
       </div>
     </div>
 
     <!-- VIT Entry -->
-    <div class="timeline-entry" style="display: flex; gap: 20px; position: relative;">
-      <div class="year" style="color: #999; min-width: 120px; padding-top: 5px; font-size: 0.65em;">2013 - 2017</div>
-      <!-- Circle connector -->
-      <div style="position: absolute; left: 116px; top: 25px; width: 10px; height: 10px; background-color: #999; border-radius: 50%;"></div>
-      <div style="display: flex; gap: 15px; margin-left: 25px;">
-        <img src="/assets/images/vit.jpeg" alt="VIT" width="60" height="60" style="border-radius: 8px;">
-        <div>
+    <div class="timeline-entry">
+      <div class="year">2013 - 2017</div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="/assets/images/vit.jpeg" alt="VIT" width="40" height="40" style="border-radius: 8px; object-fit: contain;">
           <div style="font-size: 0.65em;"><strong>B.Tech in Computer Science at VIT</strong></div>
-          <div style="margin-top: 10px; line-height: 1.5; font-size: 0.65em;">
-            Completed undergraduate studies in Computer Science at VIT, Vellore, India.
-          </div>
+        </div>
+        <div style="line-height: 1.5; font-size: 0.65em;">
+          Completed undergraduate studies in Computer Science at VIT, Vellore, India.
         </div>
       </div>
     </div>
