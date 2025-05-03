@@ -1,16 +1,14 @@
 ---
 title: "Contact"
 permalink: /contact/
-layout: nofooter
+layout: default
 ---
 
-<head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="../assets/css/contact.css">
-</head>
-<body>
+<link rel="stylesheet" type="text/css" href="/assets/css/contact.css">
 
-<div class="contact-container">
+<div class="page__content">
+  <div class="contact-container">
     <div class="contact-info">
         <h2>Let's Connect</h2>
         <p class="contact-description">Have a question or want to collaborate? I'd love to hear from you. Fill out the form and I'll get back to you as soon as possible.</p>
@@ -88,6 +86,7 @@ layout: nofooter
             </button>
         </form>
     </div>
+  </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -153,7 +152,5 @@ layout: nofooter
     });
 })(jQuery);
 </script>
-
-</body>
 
 
