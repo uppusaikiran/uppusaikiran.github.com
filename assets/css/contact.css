@@ -1,18 +1,18 @@
 /* Modern Contact Page Styles */
 :root {
-    --primary-color: #2563eb;
-    --text-color: #1f2937;
-    --border-color: #e5e7eb;
-    --background-color: #ffffff;
-    --error-color: #ef4444;
-    --success-color: #10b981;
+    --primary-color: #52adc8;
+    --text-color: #343434;
+    --border-color: #e9dcbe;
+    --background-color: #f3f3f3;
+    --error-color: #ee5f5b;
+    --success-color: #62c462;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     color: var(--text-color);
     line-height: 1.5;
-    background-color: #f3f4f6;
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
 }
@@ -24,7 +24,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 4rem;
-    background: var(--background-color);
+    background: #fff;
     border-radius: 1rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
@@ -135,7 +135,7 @@ body {
 .form-group textarea:focus {
     border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(82, 173, 200, 0.1);
 }
 
 .form-group input:focus ~ label,
@@ -166,7 +166,7 @@ body {
 }
 
 .submit-btn:hover {
-    background: #1d4ed8;
+    background: #3a91ac;
     transform: translateY(-1px);
 }
 
