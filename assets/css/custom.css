@@ -1,31 +1,64 @@
-/* Custom X logo (formerly Twitter) */
-.fa-x-twitter:before {
-  content: ""; /* Override the content with empty to use our background */
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'%3E%3C/path%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
+/* Custom X logo styles have been removed as we're now using Font Awesome 6 */
 
-/* Specific overrides for different contexts */
-.author__urls .fa-x-twitter:before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2355acee' d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'%3E%3C/path%3E%3C/svg%3E");
-}
-
-.page__footer-follow .fa-x-twitter:before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'%3E%3C/path%3E%3C/svg%3E");
-}
-
-/* Keep the Twitter color for consistency */
+/* Social icon styles */
 .social-icons .fa-x-twitter {
-  color: #55acee;
+  color: #000000; /* X uses black */
 }
 
-/* Style for the X button */
+/* X logo in author profile */
+.author__urls .fa-x-twitter:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000000' d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* X logo in footer */
+.page__footer-follow .fa-x-twitter:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000000' d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* X share button styling */
 .btn--twitter {
   background-color: #000 !important; /* X's black background */
   color: #fff !important;
+  border: 1px solid #000 !important;
+}
+
+/* X logo in share buttons needs white fill */
+.btn--twitter .fa-x-twitter:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* X (Twitter) Logo Fix */
+
+/* Base X logo style - create a custom X icon that works on all pages */
+i.fa-x-twitter {
+  font-family: sans-serif !important; /* Override FontAwesome font */
+  position: relative;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  overflow: visible;
+}
+
+/* Remove the original content and replace with X */
+i.fa-x-twitter:before {
+  content: "𝕏" !important; /* Unicode X symbol */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  font-weight: 600;
+  color: black; /* Default color */
+}
+
+/* Style for the X logo in the dark button */
+.btn--twitter i.fa-x-twitter:before {
+  color: white !important; /* White X for the share button */
+}
+
+/* Style for X share button */
+.btn--twitter {
+  background-color: #000 !important; /* X's black background */
+  color: #fff !important;
+  border: 1px solid #000 !important;
 } 

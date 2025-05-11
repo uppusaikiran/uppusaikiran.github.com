@@ -1,0 +1,24 @@
+/* Font Awesome 6 icon fixes */
+
+/* X (Twitter) button styling */
+.btn--twitter {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* X icon needs specific styling */
+.fa-x-twitter {
+  display: inline-block;
+  color: #000;
+}
+
+/* For buttons with X icon */
+.btn--twitter .fa-x-twitter {
+  color: #fff;
+}
+
+/* Fix for social icons */
+.social-icons .fa-brands,
+.social-icons .fa-solid {
+  display: inline-block;
+} 
