@@ -183,10 +183,10 @@ body:hover .visually-hidden button {
 /* social icons*/
 
 .social-icons {
-  .fa-solid,
-  .fa-brands,
-  .fa-regular,
-  .fa-light {
+  .fas,
+  .fab,
+  .far,
+  .fal {
     color: $text-color;
   }
 
@@ -274,8 +274,7 @@ body:hover .visually-hidden button {
   }
 
   .fa-twitter,
-  .fa-twitter-square,
-  .fa-x-twitter {
+  .fa-twitter-square {
     color: $twitter-color;
   }
 
