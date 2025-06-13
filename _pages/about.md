@@ -20,10 +20,40 @@ td.org-center { text-align: center; }
 a {
     text-decoration: none !important;
 }
+
+/* About page specific font sizing for better readability */
+p {
+    font-size: 1.1em !important;
+    line-height: 1.6;
+}
+
+h3 {
+    font-size: 1.3em !important;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+table {
+    font-size: 1em !important;
+}
+
+td, th {
+    font-size: 1em !important;
+    line-height: 1.5;
+    padding: 0.3em 0;
+}
+
+td b {
+    font-size: 1.05em !important;
+}
+
+td i {
+    font-size: 0.95em !important;
+}
   
 </style>
 
-<p style="font-size: 0.65em;">
+<p>
 I'm a security professional with seven years of experience in Cloud Security. Currently at Adobe, I focus on detecting cloud threats at scale. Previously at Netskope, a cloud security startup, I developed automated malware pipelines for security research. I hold a Master's in Information Security from Johns Hopkins University and a Bachelor's in Computer Science from Vellore Institute of Technology, India. I'm passionate about applying data to solve security problems, particularly in deep diving cloud environments and identifying threat actors. My research interests include building large-scale secure systems and application security.
 </p>
 
