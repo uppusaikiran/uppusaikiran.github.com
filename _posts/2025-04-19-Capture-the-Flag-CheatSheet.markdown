@@ -18,6 +18,10 @@ toc: false
 ---
 
 <div class="ctf-hero" id="top">
+  <svg class="ctf-hero-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="4" y1="22" x2="4" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
   <h1>Capture the Flag Cheatsheet</h1>
   <p>The single source of truth for CTF players. Methodology, platforms, tools, and copy-paste commands for HackTheBox, VulnHub, TryHackMe, and live competitions.</p>
   <ul class="ctf-pills">
@@ -55,7 +59,7 @@ toc: false
 
 <div class="ctf-info" markdown="1">
 
-<h4>First 24 hours checklist</h4>
+<h4><i class="fas fa-clipboard-list" aria-hidden="true" style="margin-right:6px; color:#1d4ed8;"></i>First 24 hours checklist</h4>
 
 1. **Join a platform** - sign up and spin up a VM or connect via VPN.
 2. **Recon** - find live hosts and open ports (`nmap`, `netdiscover`).
@@ -72,13 +76,13 @@ toc: false
 Where to practice and compete:
 
 <div class="ctf-card-grid">
-  <a href="https://www.hackthebox.com/" class="ctf-card" target="_blank"><strong>HackTheBox</strong><span>Linux/Windows boxes, challenges, Pro Labs</span></a>
-  <a href="https://tryhackme.com/" class="ctf-card" target="_blank"><strong>TryHackMe</strong><span>Guided rooms, beginner-friendly</span></a>
-  <a href="https://www.vulnhub.com/" class="ctf-card" target="_blank"><strong>VulnHub</strong><span>Downloadable VMs, offline practice</span></a>
-  <a href="https://ctftime.org/" class="ctf-card" target="_blank"><strong>CTFtime</strong><span>Live CTF calendar, rankings, events</span></a>
-  <a href="https://picoctf.org/" class="ctf-card" target="_blank"><strong>PicoCTF</strong><span>Beginner Jeopardy (annual + practice)</span></a>
-  <a href="https://overthewire.org/wargames/" class="ctf-card" target="_blank"><strong>OverTheWire</strong><span>Wargames (Bandit, Natas, etc.)</span></a>
-  <a href="https://pentesterlab.com/" class="ctf-card" target="_blank"><strong>PentesterLab</strong><span>Web and pentest exercises</span></a>
+  <a href="https://www.hackthebox.com/" class="ctf-card" target="_blank"><span class="ctf-card-icon"><i class="fas fa-server" aria-hidden="true"></i></span><strong>HackTheBox</strong><span>Linux/Windows boxes, challenges, Pro Labs</span></a>
+  <a href="https://tryhackme.com/" class="ctf-card" target="_blank"><span class="ctf-card-icon"><i class="fas fa-book" aria-hidden="true"></i></span><strong>TryHackMe</strong><span>Guided rooms, beginner-friendly</span></a>
+  <a href="https://www.vulnhub.com/" class="ctf-card" target="_blank"><span class="ctf-card-icon"><i class="fas fa-download" aria-hidden="true"></i></span><strong>VulnHub</strong><span>Downloadable VMs, offline practice</span></a>
+  <a href="https://ctftime.org/" class="ctf-card" target="_blank"><span class="ctf-card-icon"><i class="fas fa-calendar-alt" aria-hidden="true"></i></span><strong>CTFtime</strong><span>Live CTF calendar, rankings, events</span></a>
+  <a href="https://picoctf.org/" class="ctf-card" target="_blank"><span class="ctf-card-icon"><i class="fas fa-puzzle-piece" aria-hidden="true"></i></span><strong>PicoCTF</strong><span>Beginner Jeopardy (annual + practice)</span></a>
+  <a href="https://overthewire.org/wargames/" class="ctf-card" target="_blank"><span class="ctf-card-icon"><i class="fas fa-terminal" aria-hidden="true"></i></span><strong>OverTheWire</strong><span>Wargames (Bandit, Natas, etc.)</span></a>
+  <a href="https://pentesterlab.com/" class="ctf-card" target="_blank"><span class="ctf-card-icon"><i class="fas fa-flask" aria-hidden="true"></i></span><strong>PentesterLab</strong><span>Web and pentest exercises</span></a>
 </div>
 
 ---
@@ -86,6 +90,26 @@ Where to practice and compete:
 ## Methodology
 
 Use this flow on every box or challenge. Each step links into the cheatsheets below.
+
+<div class="ctf-methodology-diagram">
+  <svg viewBox="0 0 520 56" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#94a3b8"/></marker></defs>
+    <rect class="flow-step" x="2" y="12" width="88" height="32" rx="6"/>
+    <text class="flow-text" x="46" y="32" text-anchor="middle">Recon</text>
+    <line class="flow-arrow" x1="94" y1="28" x2="118" y2="28" marker-end="url(#arrow)"/>
+    <rect class="flow-step" x="122" y="12" width="88" height="32" rx="6"/>
+    <text class="flow-text" x="166" y="32" text-anchor="middle">Enum</text>
+    <line class="flow-arrow" x1="214" y1="28" x2="238" y2="28" marker-end="url(#arrow)"/>
+    <rect class="flow-step" x="242" y="12" width="88" height="32" rx="6"/>
+    <text class="flow-text" x="286" y="32" text-anchor="middle">Exploit</text>
+    <line class="flow-arrow" x1="334" y1="28" x2="358" y2="28" marker-end="url(#arrow)"/>
+    <rect class="flow-step" x="362" y="12" width="88" height="32" rx="6"/>
+    <text class="flow-text" x="406" y="32" text-anchor="middle">Post-Exploit</text>
+    <line class="flow-arrow" x1="454" y1="28" x2="478" y2="28" marker-end="url(#arrow)"/>
+    <rect class="flow-step" x="482" y="12" width="36" height="32" rx="6"/>
+    <text class="flow-text" x="500" y="32" text-anchor="middle">Flag</text>
+  </svg>
+</div>
 
 <ol class="ctf-steps">
   <li><strong>Recon</strong> - Identify targets (IPs, domains, ports). Use <a href="#nmap-scanning">Nmap</a>, netdiscover, passive sources.</li>
@@ -126,7 +150,7 @@ Quick reference for the most-used CTF tools. Commands and details are in the che
 
 <div class="ctf-tip" markdown="1">
 
-<h4>Quick search from a shell</h4>
+<h4><i class="fas fa-terminal" aria-hidden="true" style="margin-right:6px; color:#15803d;"></i>Quick search from a shell</h4>
 
 ```bash
 grep -rE 'flag\{|HTB\{|CTF\{|THM\{' / 2>/dev/null
@@ -192,13 +216,13 @@ python3 -c "import pty; pty.spawn('/bin/bash')"
 ## Cheatsheets
 
 <ul class="ctf-section-index">
-  <li><a href="#system-hacking">System Hacking<span>Nmap, netdiscover, SMB, service enum</span></a></li>
-  <li><a href="#web-hacking">Web Hacking<span>Dir busting, SQLi, WordPress, Nikto</span></a></li>
-  <li><a href="#file-hacking">File Hacking<span>Archives, PDFs, binaries, encoding</span></a></li>
-  <li><a href="#cryptography">Cryptography<span>Ciphers, hashes, SSH keys, OTP</span></a></li>
-  <li><a href="#forensics">Forensics<span>Disk images, PCAP, USB, memory</span></a></li>
-  <li><a href="#password-cracking">Password Cracking<span>John, Hashcat, hash types</span></a></li>
-  <li><a href="#privilege-escalation">Privilege Escalation<span>LinPEAS, GTFOBins, cron, sudo</span></a></li>
+  <li><a href="#system-hacking"><span class="ctf-sec-icon"><i class="fas fa-server" aria-hidden="true"></i></span>System Hacking<span>Nmap, netdiscover, SMB, service enum</span></a></li>
+  <li><a href="#web-hacking"><span class="ctf-sec-icon"><i class="fas fa-globe" aria-hidden="true"></i></span>Web Hacking<span>Dir busting, SQLi, WordPress, Nikto</span></a></li>
+  <li><a href="#file-hacking"><span class="ctf-sec-icon"><i class="fas fa-file-archive" aria-hidden="true"></i></span>File Hacking<span>Archives, PDFs, binaries, encoding</span></a></li>
+  <li><a href="#cryptography"><span class="ctf-sec-icon"><i class="fas fa-key" aria-hidden="true"></i></span>Cryptography<span>Ciphers, hashes, SSH keys, OTP</span></a></li>
+  <li><a href="#forensics"><span class="ctf-sec-icon"><i class="fas fa-search" aria-hidden="true"></i></span>Forensics<span>Disk images, PCAP, USB, memory</span></a></li>
+  <li><a href="#password-cracking"><span class="ctf-sec-icon"><i class="fas fa-lock" aria-hidden="true"></i></span>Password Cracking<span>John, Hashcat, hash types</span></a></li>
+  <li><a href="#privilege-escalation"><span class="ctf-sec-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>Privilege Escalation<span>LinPEAS, GTFOBins, cron, sudo</span></a></li>
 </ul>
 
 ---
