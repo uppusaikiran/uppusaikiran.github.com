@@ -2,6 +2,8 @@
 main:
   - title: "About"
     url: /about/
+  - title: "CTF Cheatsheet"
+    url: /hacking/Capture-the-Flag-CheatSheet/
   - title: "Recent Posts"
     url: /year-archive/
   - title: "Contact"
