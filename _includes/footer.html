@@ -1,15 +1,9 @@
-{% if site.data.ui-text[site.locale].follow_label %}
-<div class="page__footer-follow" style="display: inline-block;">
-  <span style="font-size: 0.8em;">{{ site.data.ui-text[site.locale].follow_label }}:</span>
-  {% if site.twitter.username %}<a href="https://twitter.com/{{ site.twitter.username }}" title="Twitter"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>{% endif %}
-  {% if site.facebook.username %}<a href="https://www.facebook.com/{{ site.facebook.username }}" title="Facebook"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i></a>{% endif %}
+<div class="page__footer-follow">
   {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}" title="GitHub"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a>{% endif %}
-  {% if site.author.gitlab %}<a href="https://gitlab.com/{{ site.author.gitlab }}" title="GitLab"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i></a>{% endif %}
-  {% if site.author.bitbucket %}<a href="https://bitbucket.org/{{ site.author.bitbucket }}" title="Bitbucket"><i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i></a>{% endif %}
-  <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" title="Feed"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i></a>
+  {% if site.twitter.username %}<a href="https://twitter.com/{{ site.twitter.username }}" title="Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>{% endif %}
+  {% if site.author.linkedin %}<a href="https://linkedin.com/in/{{ site.author.linkedin }}" title="LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a>{% endif %}
 </div>
-{% endif %}
 
-<div class="page__footer-copyright" style="font-size: 0.75em; margin-top: 0.5em;">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. All logos are property of their respective organizations.
+<div class="page__footer-copyright">
+  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
 </div>
