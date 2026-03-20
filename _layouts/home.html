@@ -23,6 +23,47 @@ image: /assets/images/header.jpg
     overflow: hidden;
     border-radius: 8px;
   }
+  /* LinkedIn embeds: full-width row, two equal columns */
+  .linkedin-embed-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+    width: 100%;
+    overflow: hidden;
+  }
+  .linkedin-embed-slot {
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .linkedin-embed-frame {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  /* One size for both collapsed LinkedIn embeds (624px min isn’t enough when columns are wide) */
+  .linkedin-embed-frame--collapsed {
+    aspect-ratio: 504 / 780;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .linkedin-embed-frame--collapsed::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  .linkedin-embed-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 8px);
+    height: calc(100% + 6px);
+    margin: -3px 0 0 -4px;
+    border: 0 !important;
+    display: block;
+    overflow: hidden;
+  }
 </style>
 
 <div class="page-content" style="text-align: justify">
@@ -166,6 +207,10 @@ image: /assets/images/header.jpg
   </p>
   <ul style="font-size: 0.65em; margin-top: 0.5em; margin-bottom: 0.5em;">
     <li>
+      <a href="https://blog.adobe.com/security/building-an-agentic-ai-powered-threat-intelligence-platform" target="_blank" style="text-decoration: none;">Building an agentic AI-powered threat intelligence platform</a> -
+      Adobe Security Blog on unifying threat intelligence on a lakehouse, using LLMs to extract IOCs from unstructured sources, and orchestrating automated hunts across enterprise telemetry at scale.
+    </li>
+    <li>
       <a href="https://blog.developer.adobe.com/designing-effective-data-security-schemas-d33af7b205e0" target="_blank" style="text-decoration: none;">Designing Effective Data Security Schemas</a> - 
       A comprehensive guide to implementing robust data classification frameworks that balance security requirements with operational efficiency in enterprise environments.
     </li>
@@ -174,6 +219,45 @@ image: /assets/images/header.jpg
       An in-depth analysis of network segmentation strategies and firewall configuration best practices to protect critical infrastructure from emerging threats.
     </li>
   </ul>
+
+  <div style="font-size: 0.65em; margin: 18px 0 28px 0;">
+    <p style="margin-bottom: 16px; line-height: 1.5;">
+      <strong>Leadership spotlight:</strong> Adobe leaders shared my
+      <a href="https://blog.adobe.com/security/building-an-agentic-ai-powered-threat-intelligence-platform" target="_blank" style="text-decoration: none;">agentic threat intelligence</a>
+      article on LinkedIn.
+    </p>
+
+    <div class="linkedin-embed-grid">
+      <div class="linkedin-embed-slot">
+        <p style="margin: 0 0 8px 0; line-height: 1.4;">
+          <strong><a href="https://www.linkedin.com/in/aanchalgupta/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Aanchal Gupta</a></strong>,
+          Chief Security Officer, Adobe
+        </p>
+        <div class="linkedin-embed-frame linkedin-embed-frame--collapsed">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7440448240405315584?collapsed=1"
+            width="504"
+            height="780"
+            allowfullscreen=""
+            title="Embedded post"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="linkedin-embed-slot">
+        <p style="margin: 0 0 8px 0; line-height: 1.4;">
+          <strong><a href="https://www.linkedin.com/in/maartenv/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Maarten Van Horenbeeck</a></strong>,
+          Adobe Fellow and former Adobe Chief Security Officer
+        </p>
+        <div class="linkedin-embed-frame linkedin-embed-frame--collapsed">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7440795232968794112?collapsed=1"
+            width="504"
+            height="780"
+            allowfullscreen=""
+            title="LinkedIn: Maarten Van Horenbeeck shares article"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <h4 style="font-size: 0.685em;"><strong>Academic Publications</strong></h4>
   <p style="font-size: 0.65em;">
