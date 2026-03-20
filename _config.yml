@@ -11,7 +11,7 @@ locale                   : "en"
 title                    : "SaiKiran Uppu"
 title_separator          : "-"
 name                     : "SaiKiran Uppu"
-description              : "SaiKiran Uppu - Sr Cyber Threat Researcher - Adobe"
+description              : "Sai Kiran Uppu, Senior Security Researcher at Adobe CTRI: AI-driven threat intelligence, cloud security, Adobe Security Blog, JHU MS, CISSP/GCTI/AWS Security."
 url                      : "https://uppusaikiran.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "uppusaikiran/uppusaikiran.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -37,7 +37,7 @@ share                    : false  # Disable social sharing globally
 twitter:
   username               : uppusaikiran
 facebook:
-  username               : iamsaikiranuppu
+  username               :
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -59,7 +59,7 @@ analytics:
 author:
   name             : "SaiKiran Uppu"
   avatar           : /assets/images/SaiKiranUppu3.png
-  bio              : "Sr Cyber Threat Researcher - Adobe"
+  bio              : "Senior Security Researcher, Adobe Cybersecurity Threat Research & Intelligence (CTRI)"
   location         : "San Jose, California"
   email            : "uppusaikiran@gmail.com"
   uri              :
@@ -67,12 +67,12 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "iamsaikiranuppu"
+  facebook         :
   foursquare       :
   github           : "uppusaikiran"
   google_plus      :
   keybase          : #"backdoorcipher"
-  instagram        : "saikiran_uppu"
+  instagram        :
   lastfm           :
   linkedin         : "saikiranuppu"
   pinterest        :

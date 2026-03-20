@@ -42,9 +42,10 @@ image: /assets/images/header.jpg
     width: 100%;
     overflow: hidden;
   }
-  /* One size for both collapsed LinkedIn embeds (624px min isn’t enough when columns are wide) */
+  /* Collapsed LinkedIn embeds: one size for both columns to avoid inner iframe scrollbars */
   .linkedin-embed-frame--collapsed {
-    aspect-ratio: 504 / 780;
+    aspect-ratio: 504 / 580;
+    max-height: 640px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -64,33 +65,44 @@ image: /assets/images/header.jpg
     display: block;
     overflow: hidden;
   }
+  /* TDI 2025: keep three photos on one row (flex-wrap broke when 3x300px exceeded main column) */
+  .tdi-photos-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    align-items: center;
+    width: calc(100% - 80px);
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-left: 80px;
+  }
+  .tdi-photos-row img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+  @media (max-width: 600px) {
+    .tdi-photos-row {
+      margin-left: 0;
+      width: 100%;
+      gap: 8px;
+    }
+  }
 </style>
 
 <div class="page-content" style="text-align: justify">
   <h4 style="font-size: 0.685em;"><strong>About Me</strong></h4>
   <p style="font-size: 0.65em;">
-    I'm a security professional with seven years of experience in Cloud Security. Currently at Adobe, I focus on detecting cloud threats at scale. I hold a Master's in Information Security from Johns Hopkins University and a Bachelor's in Computer Science from Vellore Institute of Technology, India.
+    Sai Kiran Uppu is a Senior Security Researcher in Adobe's Cybersecurity Threat Research & Intelligence (CTRI) team, where he focuses on AI-driven threat intelligence and cloud security. He architects and runs Adobe's threat intelligence and fleet sweep platform and has built agentic AI threat intel pipelines to stay ahead of adversaries. He is the author of the Adobe Security Blog article <em>Building an agentic AI-powered threat intelligence platform</em> (March 2026). He is a 2026 Gold Award winner for AI Security Innovator of the Year at the Cybersecurity Excellence Awards and has placed first in the Recorded Future CTF at RSA Conference. He holds an MS in Security Informatics from Johns Hopkins and is certified in CISSP, GCTI, and AWS Security - Specialty. He has spoken at IEEE SVCC, The Diana Initiative, BSides SLC, Penn State, and was invited by Johns Hopkins as a panelist for Security Metamorphosis 2026. He has judged for the Monterey Cyber 9/12 Strategy Challenge and student hackathons.
   </p>
   <p style="font-size: 0.65em;">
-    I am passionate about designing large-scale secure systems with a focus on Cloud Security, Application Security, 
-    and Threat Intelligence. My expertise includes detecting cloud threats at scale, developing automated security pipelines, 
-    and implementing proactive threat hunting frameworks. I've worked extensively with AWS environments, aligning cloud 
-    infrastructure with enterprise security policies and strengthening security controls.
-    My recent focus has been on Large Language Models (LLMs), particularly in the area of 
-    LLM security. I'm deeply interested in understanding and mitigating security vulnerabilities 
-    in these systems, including sophisticated attacks like jailbreaking and prompt injection. 
-    
-    I work on developing robust defenses against adversarial techniques that attempt to bypass 
-    safety guardrails in LLMs, while also exploring the broader implications of these technologies 
-    for cybersecurity. 
-    
-    This intersection of AI and security presents fascinating challenges that combine my expertise 
-    in threat detection with emerging technologies.
-    
-    I actively contribute to open-source projects and regularly participate in Capture the Flag competitions and Hackathbox 
-    challenges with the handle
-    <code>backdoorcipher</code>.
-
+    He also holds a B.Tech in Computer Science from Vellore Institute of Technology (India). He is passionate about designing large-scale secure systems with a focus on Cloud Security, Application Security, and Threat Intelligence. His expertise includes detecting cloud threats at scale, developing automated security pipelines, and implementing proactive threat hunting frameworks. He has worked extensively with AWS environments, aligning cloud infrastructure with enterprise security policies and strengthening security controls.
+  </p>
+  <p style="font-size: 0.65em;">
+    His recent focus has been on Large Language Models (LLMs), particularly LLM security. He is interested in understanding and mitigating security vulnerabilities in these systems, including attacks like jailbreaking and prompt injection. He works on defenses against adversarial techniques that attempt to bypass safety guardrails in LLMs, and on the broader implications of these technologies for cybersecurity. He actively contributes to open-source projects and regularly participates in Capture the Flag competitions and hackathons with the handle <code>backdoorcipher</code>.
   </p>
   
   <h4 style="font-size: 0.685em;"><strong>Recent Conference Talks</strong></h4>
@@ -110,15 +122,11 @@ image: /assets/images/header.jpg
       </div>
     </div>
     
-    <!-- TDI Images -->
-    <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-start; justify-content: flex-start; margin-bottom: 20px; margin-left: 80px;">
-      <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
-        <img src="/assets/images/TDI2025.png" alt="TDI 2025 Conference" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-        <img src="/assets/images/TDI2025_1.jpg" alt="TDI 2025 Stage" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-      </div>
-      <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
-        <img src="/assets/images/TDI2025_2.jpg" alt="TDI 2025 Badge" style="max-width: 350px; height: auto; border-radius: 8px; object-fit: contain;">
-      </div>
+    <!-- TDI Images: single row, columns share width -->
+    <div class="tdi-photos-row">
+      <img src="/assets/images/TDI2025.png" alt="TDI 2025 Conference">
+      <img src="/assets/images/TDI2025_1.jpg" alt="TDI 2025 Stage">
+      <img src="/assets/images/TDI2025_2.jpg" alt="TDI 2025 Badge">
     </div>
 
     <!-- SVCC-SVCSI Talk -->
@@ -220,8 +228,8 @@ image: /assets/images/header.jpg
     </li>
   </ul>
 
-  <div style="font-size: 0.65em; margin: 18px 0 28px 0;">
-    <p style="margin-bottom: 16px; line-height: 1.5;">
+  <div style="font-size: 0.65em; margin: 18px 0 12px 0;">
+    <p style="margin-bottom: 10px; line-height: 1.5;">
       <strong>Leadership spotlight:</strong> Adobe leaders shared my
       <a href="https://blog.adobe.com/security/building-an-agentic-ai-powered-threat-intelligence-platform" target="_blank" style="text-decoration: none;">agentic threat intelligence</a>
       article on LinkedIn.
@@ -236,7 +244,8 @@ image: /assets/images/header.jpg
         <div class="linkedin-embed-frame linkedin-embed-frame--collapsed">
           <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7440448240405315584?collapsed=1"
             width="504"
-            height="780"
+            height="900"
+            scrolling="no"
             allowfullscreen=""
             title="Embedded post"
             loading="lazy"></iframe>
@@ -250,7 +259,8 @@ image: /assets/images/header.jpg
         <div class="linkedin-embed-frame linkedin-embed-frame--collapsed">
           <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7440795232968794112?collapsed=1"
             width="504"
-            height="780"
+            height="900"
+            scrolling="no"
             allowfullscreen=""
             title="LinkedIn: Maarten Van Horenbeeck shares article"
             loading="lazy"></iframe>
@@ -259,7 +269,7 @@ image: /assets/images/header.jpg
     </div>
   </div>
 
-  <h4 style="font-size: 0.685em;"><strong>Academic Publications</strong></h4>
+  <h4 style="font-size: 0.685em; margin-top: 0.75em;"><strong>Academic Publications</strong></h4>
   <p style="font-size: 0.65em;">
     My research has been published in academic journals focusing on security vulnerabilities and cloud threat analysis:
   </p>
