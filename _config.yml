@@ -23,7 +23,7 @@ words_per_minute         : 200
 comments                 : false  # Disable comments globally
   
 # SEO Related
-google_site_verification : d7_WK71GhwgFyBfnfjnFMnbxOHJWOkznMlWjzV4kw-w
+google_site_verification : L1UJyvQSu2MSnOdW5ySIrNVWNRLS1ETT6R5YX0IwLaE
 bing_site_verification   : F514F1AAACFB561A1542260200878BC7
 alexa_site_verification  :
 yandex_site_verification :
@@ -40,13 +40,16 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
-# For specifying social profiles
+og_image                 : /assets/images/SaiKiranUppu3.png
+# For specifying social profiles (JSON-LD sameAs; helps search and AI overviews)
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "SaiKiran Uppu"
+  links:
+    - "https://github.com/uppusaikiran"
+    - "https://www.linkedin.com/in/saikiranuppu"
+    - "https://x.com/uppusaikiran"
 
 # Analytics
 analytics:
@@ -91,6 +94,7 @@ author:
 include:
   - .htaccess
   - _pages
+  - robots.txt
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

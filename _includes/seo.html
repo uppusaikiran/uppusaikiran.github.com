@@ -23,7 +23,7 @@
   {%- assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once -%}
 {%- endif -%}
 
-{%- assign author = page.author | default: page.authors[0] | default: site:author -%}
+{%- assign author = page.author | default: page.authors[0] | default: site.author -%}
 {%- assign author = site.data.authors[author] | default: author -%}
 
 {%- if author.twitter -%}
@@ -36,7 +36,7 @@
 {%- endunless -%}
 {%- assign page_large_image = page_large_image | escape -%}
 
-{%- assign page_teaser_image = page.header.teaser | default: site.og_image -%}
+{%- assign page_teaser_image = page.header.teaser | default: site.og_image | default: site.teaser -%}
 {%- unless page_teaser_image contains '://' -%}
   {%- assign page_teaser_image = page_teaser_image | absolute_url -%}
 {%- endunless -%}
@@ -67,7 +67,7 @@
 <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
 <meta property="og:url" content="{{ canonical_url }}">
 
-{% if page.excerpt %}
+{% if seo_description %}
   <meta property="og:description" content="{{ seo_description }}">
 {% endif %}
 
@@ -75,6 +75,8 @@
   <meta property="og:image" content="{{ page_large_image }}">
 {% elsif page_teaser_image %}
   <meta property="og:image" content="{{ page_teaser_image }}">
+{% elsif site_og_image %}
+  <meta property="og:image" content="{{ site_og_image }}">
 {% endif %}
 
 {% if site.twitter.username %}
@@ -86,11 +88,14 @@
   {% if page_large_image %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="{{ page_large_image }}">
+  {% elsif page_teaser_image %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ page_teaser_image }}">
+  {% elsif site_og_image %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ site_og_image }}">
   {% else %}
     <meta name="twitter:card" content="summary">
-    {% if page_teaser_image %}
-      <meta name="twitter:image" content="{{ page_teaser_image }}">
-    {% endif %}
   {% endif %}
 
   {% if author_twitter %}
@@ -125,10 +130,20 @@
   <link rel="next" href="{{ paginator.next_page_path | absolute_url }}">
 {% endif %}
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.title | jsonify }},
+    "url": {{ seo_url | jsonify }},
+    "description": {{ site.description | jsonify }}
+  }
+</script>
+
 {% if site.og_image %}
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Organization",
       "url": {{ seo_url | jsonify }},
       "logo": {{ site_og_image | jsonify }}
@@ -136,14 +151,44 @@
   </script>
 {% endif %}
 
-{% if site.social %}
+{% if site.social.links and site.social.links.size > 0 %}
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
       "name": {{ site.social.name | default: site.name | jsonify }},
       "url": {{ seo_url | jsonify }},
       "sameAs": {{ site.social.links | jsonify }}
+    }
+  </script>
+{% endif %}
+
+{% if page.date and page.title %}
+  {%- assign blog_image_ld = page_large_image | default: page_teaser_image | default: site_og_image -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {{ page.title | markdownify | strip_html | strip_newlines | jsonify }},
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+      "author": {
+        "@type": "Person",
+        "name": {{ site.author.name | jsonify }},
+        "url": {{ seo_url | jsonify }}
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ site.title | jsonify }},
+        "url": {{ seo_url | jsonify }}
+      },
+      "description": {{ seo_description | default: site.description | truncate: 300 | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {{ canonical_url | jsonify }}
+      }{% if blog_image_ld %},
+      "image": [{{ blog_image_ld | jsonify }}]{% endif %}
     }
   </script>
 {% endif %}
