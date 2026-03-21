@@ -286,6 +286,16 @@ $doc-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
   padding: 0;
 }
 
+/* Home uses archive layout but reads cleaner without the framed card */
+.doc-archive--home .doc-shell-card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  margin-bottom: 0;
+}
+
 .doc-archive__body {
   padding: 1.25rem 1.35rem 1.75rem;
 }

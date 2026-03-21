@@ -25,7 +25,7 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <div class="archive doc-archive">
+  <div class="archive doc-archive{% if page.url == '/' %} doc-archive--home{% endif %}">
     <div class="doc-shell-card">
       {% unless arch_skip_band %}
         {% if page.title %}
