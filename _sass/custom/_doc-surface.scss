@@ -1,0 +1,370 @@
+/* Shared “cheatsheet” visual language for posts and home (not layout: ctf). */
+
+$doc-slate-50: #f8fafc;
+$doc-slate-100: #f1f5f9;
+$doc-slate-200: #e2e8f0;
+$doc-slate-400: #94a3b8;
+$doc-slate-500: #64748b;
+$doc-slate-600: #475569;
+$doc-slate-700: #334155;
+$doc-slate-800: #1e293b;
+$doc-slate-900: #0f172a;
+$doc-blue: #2563eb;
+$doc-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$doc-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+/* Card shell (matches CTF content frame feel) */
+.doc-shell-card {
+  background: $doc-slate-50;
+  border: 1px solid $doc-slate-200;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+/* Hero band (same gradient family as .ctf-hero) */
+.doc-hero {
+  background: linear-gradient(135deg, $doc-slate-900 0%, $doc-slate-800 100%);
+  color: $doc-slate-100;
+  padding: 1.75rem 1.25rem 1.35rem;
+  text-align: center;
+  font-family: $doc-font;
+  -webkit-font-smoothing: antialiased;
+}
+
+.doc-hero__title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+
+.doc-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8125rem;
+  color: $doc-slate-400;
+}
+
+.doc-hero__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.65rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  color: $doc-slate-200;
+}
+
+/* Archive / index title band: same look, a bit tighter than post hero */
+.doc-hero--archive {
+  padding: 1.25rem 1.15rem 1rem;
+}
+
+.doc-hero--archive .doc-hero__title {
+  font-size: 1.35rem;
+  margin-bottom: 0;
+}
+
+/* Article body typography (aligned with .ctf-body) */
+.doc-article .post-prose {
+  max-width: 42.5rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 1.75rem;
+  font-family: $doc-font;
+  font-size: 14px;
+  line-height: 1.65;
+  color: $doc-slate-700;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: $doc-slate-900;
+    margin: 1.5em 0 0.5em;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $doc-slate-900;
+    margin: 2.25rem 0 0.65rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid $doc-slate-200;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $doc-slate-900;
+    margin: 1.5rem 0 0.4rem;
+    line-height: 1.35;
+  }
+
+  h4 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: $doc-slate-800;
+    margin: 1.15rem 0 0.35rem;
+    line-height: 1.4;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-bottom: 0.65em;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.25rem;
+  }
+
+  li {
+    margin-bottom: 0.2em;
+  }
+
+  a {
+    color: $doc-blue;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  strong {
+    color: $doc-slate-900;
+    font-weight: 600;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background: $doc-slate-200;
+    margin: 1.75rem 0;
+  }
+
+  img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    max-height: min(75vh, 720px);
+    object-fit: contain;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+    border: 1px solid $doc-slate-200;
+  }
+
+  /* Intentional multi-photo grids: do not cap height or force single-column block flow */
+  .post-gallery img {
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  figure {
+    margin: 1.25rem 0;
+    max-width: 100%;
+  }
+
+  figcaption {
+    font-size: 0.8125rem;
+    color: $doc-slate-500;
+  }
+
+  code {
+    font-size: 12px;
+    padding: 2px 5px;
+    background: $doc-slate-100;
+    border-radius: 3px;
+    color: $doc-slate-900;
+    font-family: $doc-mono;
+  }
+
+  pre {
+    margin: 12px 0;
+    padding: 12px 16px;
+    padding-top: 32px;
+    background: $doc-slate-900;
+    color: $doc-slate-200;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1.55;
+    border: 1px solid $doc-slate-800;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+    border-radius: 0;
+  }
+
+  blockquote {
+    border-left: 3px solid $doc-blue;
+    padding: 0.25em 0 0.25em 1rem;
+    margin: 1rem 0;
+    color: $doc-slate-600;
+    font-style: italic;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+
+  th {
+    text-align: left;
+    padding: 6px 10px;
+    font-weight: 600;
+    font-size: 11px;
+    color: $doc-slate-500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid $doc-slate-200;
+  }
+
+  td {
+    padding: 6px 10px;
+    border-bottom: 1px solid $doc-slate-100;
+    vertical-align: top;
+  }
+
+  tr:hover td {
+    background: #fff;
+  }
+}
+
+/* Meta / taxonomy footer inside card */
+.doc-article .doc-shell-card .page__meta {
+  margin: 0;
+  padding: 1rem 1.25rem 1.25rem;
+  background: #fff;
+  border-top: 1px solid $doc-slate-200;
+  font-family: $doc-font;
+  font-size: 13px;
+  color: $doc-slate-600;
+}
+
+.doc-article .doc-shell-card .page__meta-title {
+  color: $doc-slate-900;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Archive + home main column */
+.doc-archive {
+  font-family: $doc-font;
+}
+
+.doc-archive .doc-shell-card {
+  padding: 0;
+}
+
+.doc-archive__body {
+  padding: 1.25rem 1.35rem 1.75rem;
+}
+
+/* Home: override legacy tiny inline fonts */
+.doc-home {
+  font-family: $doc-font;
+  font-size: 14px;
+  line-height: 1.65;
+  color: $doc-slate-700;
+  text-align: left;
+}
+
+.doc-home [style*="0.65em"] {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  color: $doc-slate-700 !important;
+}
+
+.doc-home h4[style*="0.685em"],
+.doc-home h4[style*="font-size: 0.685em"] {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: $doc-slate-900 !important;
+  margin: 1.75rem 0 0.5rem !important;
+  padding-bottom: 0.35rem !important;
+  border-bottom: 1px solid $doc-slate-200 !important;
+  line-height: 1.3 !important;
+}
+
+.doc-home [style*="#666"] {
+  color: $doc-slate-500 !important;
+}
+
+.doc-home a {
+  color: $doc-blue;
+}
+
+/* Inline and hero images: never wider than the column or taller than the viewport */
+.doc-home img {
+  max-width: 100%;
+  height: auto;
+  max-height: min(72vh, 680px);
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* Thumbnail grids already size themselves; avoid double constraints */
+.doc-home .youtube-video img,
+.doc-home .tdi-photos-row img {
+  max-height: none;
+}
+
+.doc-article .post-prose .post-lede,
+.doc-home .post-lede {
+  font-size: 15px;
+  color: $doc-slate-600;
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Photo-heavy posts: keep text width, narrow figures and galleries (body class from front matter) */
+body.doc-figures-compact .doc-article .post-prose figure {
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.doc-figures-compact .doc-article .post-prose figure img {
+  width: 100%;
+  max-width: 100%;
+}
+
+body.doc-figures-compact .doc-article .post-prose .post-gallery {
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.doc-figures-compact .doc-article .post-prose .embed-shell {
+  max-width: 32rem;
+}

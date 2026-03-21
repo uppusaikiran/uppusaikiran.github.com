@@ -1,5 +1,4 @@
 ---
-header:
 layout: single
 classes: wide
 author_profile: true
@@ -20,8 +19,7 @@ tags:
   - Image Generation
 ---
 
-An eye-opening analysis of the most recent prompt injection techniques that force popular AI models to expose their internal tool capabilities.
-
+<p class="post-lede">An eye-opening look at recent prompt injection techniques that push popular AI models to expose internal tool capabilities.</p>
 
 ## Introduction
 

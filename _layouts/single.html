@@ -14,89 +14,41 @@ layout: default
   {% endunless %}
 {% endif %}
 
+{% assign doc_skip_hero = false %}
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% assign doc_skip_hero = true %}
+{% endif %}
+{% if page.header.video.id and page.header.video.provider %}
+  {% assign doc_skip_hero = true %}
+{% endif %}
+
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="page doc-article" itemscope itemtype="http://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date: "%B %d, %Y" }}">{% endif %}
 
-    <div class="page__inner-wrap">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 id="page-title" class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
-          {% if page.read_time %}
-            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+    <div class="page__inner-wrap doc-shell-card">
+      {% unless doc_skip_hero %}
+        <div class="doc-hero">
+          {% if page.title %}
+            <h1 id="page-title" class="doc-hero__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
           {% endif %}
-        </header>
+          <div class="doc-hero__meta">
+            {% if page.read_time %}
+              <span class="doc-hero__pill"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</span>
+            {% endif %}
+            {% if page.date %}
+              <time class="doc-hero__pill" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+            {% endif %}
+          </div>
+        </div>
       {% endunless %}
 
-      <section class="page__content" itemprop="text" style="font-size: 0.65em;">
-        <style>
-          .page__content h1 {
-            font-size: 1.5em;
-          }
-          
-          .page__content h2 {
-            font-size: 1.3em;
-          }
-          
-          .page__content h3 {
-            font-size: 1.2em;
-          }
-          
-          .page__content h4 {
-            font-size: 1.1em;
-          }
-          
-          .page__content h5, 
-          .page__content h6 {
-            font-size: 1em;
-          }
-          
-          .page__content ul, 
-          .page__content ol {
-            font-size: 1em;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-          }
-          
-          .page__content code {
-            font-size: 1.4em;
-          }
-          
-          /* Limit image height */
-          .page__content img {
-            max-height: 600px;
-            object-fit: contain;
-            display: block;
-            margin-bottom: 1em;
-            clear: both;
-          }
-          
-          .page__content figure img {
-            max-height: 600px;
-            object-fit: contain;
-            width: 100%;
-            display: block;
-          }
-          
-          .page__content figure {
-            display: block;
-            width: 100%;
-            clear: both;
-          }
-          
-          .page__content figcaption {
-            display: block;
-            width: 100%;
-            clear: both;
-            margin-top: 0.5em;
-          }
-        </style>
-        
+      <section class="page__content page__content--modern" itemprop="text">
         {% if page.toc %}
           <aside class="sidebar__right">
             <nav class="toc">
@@ -105,51 +57,23 @@ layout: default
             </nav>
           </aside>
         {% endif %}
-        {{ content }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        <div class="post-prose">
+          {{ content }}
+          {% if page.link %}
+            <p><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></p>
+          {% endif %}
+        </div>
       </section>
 
-      <footer class="page__meta">
-        {% if site.data.ui-text[site.locale].meta_label %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
-        {% endif %}
-        {% include page__taxonomy.html %}
-        {% if page.last_modified_at %}
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%B %d, %Y" }}</time></p>
-        {% elsif page.date %}
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
-      </footer>
-
       {% if page.share %}{% include social-share.html %}{% endif %}
-
-      {% include post_pagination.html %}
     </div>
 
     {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
       {% include comments.html %}
     {% endif %}
-  </article>
 
-  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
-  {% if page.id and page.related and site.related_posts.size > 0 %}
-    <div class="page__related">
-      <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
-      <div class="grid__wrapper">
-        {% for post in site.related_posts limit:4 %}
-          {% include archive-single.html type="grid" %}
-        {% endfor %}
-      </div>
-    </div>
-  {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
-  {% elsif page.id and page.related %}
-    <div class="page__related">
-      <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
-      <div class="grid__wrapper">
-        {% for post in site.posts limit:4 %}
-          {% include archive-single.html type="grid" %}
-        {% endfor %}
-      </div>
-    </div>
-  {% endif %}
+    {% if page.embed_twitter %}
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    {% endif %}
+  </article>
 </div>

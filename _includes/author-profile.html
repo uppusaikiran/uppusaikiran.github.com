@@ -60,7 +60,7 @@
         <li>
           <a href="mailto:{{ author.email }}">
             <meta itemprop="email" content="{{ author.email }}" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}
+            {% include icon-mail.html %} {{ site.data.ui-text[site.locale].email_label | default: "Email" }}
           </a>
         </li>
       {% endif %}
@@ -76,7 +76,7 @@
       {% if author.twitter %}
         <li>
           <a href="https://x.com/{{ author.twitter }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter
+            {% include icon-x.html %} X
           </a>
         </li>
       {% endif %}
@@ -100,7 +100,7 @@
       {% if author.linkedin %}
         <li>
           <a href="https://www.linkedin.com/in/{{ author.linkedin }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+            {% include icon-linkedin.html %} LinkedIn
           </a>
         </li>
       {% endif %}
@@ -140,7 +140,7 @@
       {% if author.github %}
         <li>
           <a href="https://github.com/{{ author.github }}" itemprop="sameAs">
-            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+            {% include icon-github.html %} GitHub
           </a>
         </li>
       {% endif %}

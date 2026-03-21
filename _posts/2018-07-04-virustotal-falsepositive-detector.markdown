@@ -1,8 +1,11 @@
 ---
-header:
-  image: /assets/images/malware.jpg
 layout: single
 classes: wide
+title: "VirusTotal false positive helper: Python tooling for v2 reports, heuristics, and sample lookup"
+slug: virustotal-fp-tool
+redirect_from:
+  - /malware/virustotal-falsepositive-detector
+  - /malware/virustotal-falsepositive-detector/
 categories:
   - Malware
 tags:
@@ -15,66 +18,61 @@ tags:
   - false-positive 
 ---
 
-A simple tool to organise large malicious/benign files into a organised Structure.
+<p class="post-lede">Python tooling for VirusTotal v2 reports: search samples, dump JSON, and heuristics that highlight likely false positives versus stronger malware signals.</p>
 
-Source Code : [Virustotal-Falsepositive-Detector](https://github.com/uppusaikiran/virustotal-falsepositive-detector)
+**Source:** [VirusTotal-FP-TOOL](https://github.com/uppusaikiran/VirusTotal-FP-TOOL) (formerly published under a different repo name; this is the current public project.)
 
-Hit Counter : [![HitCount](http://hits.dwyl.io/uppusaikiran/virustotal-falsepositive-detector.svg)](http://hits.dwyl.io/uppusaikiran/virustotal-falsepositive-detector)
+The repository is described on GitHub as an open source Python tool to help identify false positives in VirusTotal detections. The code targets **Python 2.7** and the **VirusTotal v2 API** (see `app.py`).
 
+## Prerequisites
 
+1. A [VirusTotal API key](https://docs.virustotal.com/reference/overview).
+2. Edit `app.py` and set your key in the `vtAPI` class: replace `'<--API_KEY_HERE-->'` with your API key.
 
-### PreRequsite
+## Clone and run
 
-Get the Virustotal API Key.
-
-## Usage:
-
-
-Step-1 :
-
-Clone the Repo
-
+```bash
+git clone https://github.com/uppusaikiran/VirusTotal-FP-TOOL.git
+cd VirusTotal-FP-TOOL
 ```
 
-git clone git@github.com:uppusaikiran/virustotal-falsepositive-detector.git
-Cloning into 'virustotal-falsepositive-detector'...
-remote: Counting objects: 38, done.
-remote: Compressing objects: 100% (27/27), done.
-remote: Total 38 (delta 5), reused 38 (delta 5), pack-reused 0
-Receiving objects: 100% (38/38), 13.37 KiB | 0 bytes/s, done.
-Resolving deltas: 100% (5/5), done.
-Checking connectivity... done.
+### False positive / threat workflow
 
-```
-Step-2:
+`vt_fp_tool.py` takes an **MD5** (or fetches a report after `search` stores JSON), writes `reports/<md5>.json`, prints selected vendor fields, and applies the bundled heuristics (major-vendor detections vs BitDefender-family engines, positives count, and related flags).
 
-Change to the Folder
-```
-cd virustotal-falsepositive-detector
+```bash
+python vt_fp_tool.py 78a3a34cee255667095aac8ccb7540f3
 ```
 
-Step-3:
-Fill the Virustotal API Key in the settings.py file.
+Example-style output from the original tooling included lines such as `Potential False Positive` or `Potential Malware` depending on the report.
 
-Step-4:
-Run the Script
-```
+### General VirusTotal helper (`app.py`)
+
+Broader CLI for lookup, verbose output, JSON dump, download, PCAP, and rescan:
+
+```text
 python app.py -h
-usage: app.py [-h] [-v] hash
+usage: app.py [-h] [-s] [-v] [-j] [-d] [-p] [-r] HashorPath
 
-VirusTotal FalsePositive Detection Tool
+Search and Download from VirusTotal
 
 positional arguments:
-  hash           MD5 of the sample
+  HashorPath            Enter the MD5 Hash or Path to File
 
 optional arguments:
-  -h, --help     show this help message and exit
-  -v, --version  show program's version number and exit
-
-python app.py 78a3a34cee255667095aac8ccb7540f3
-The Result of Hash 78a3a34cee255667095aac8ccb7540f3 is potential false positive
-
-python app.py 43e2e0bef675c300e648c82874149d79
-The Result of Hash 43e2e0bef675c300e648c82874149d79 is potential malware
-
+  -h, --help            show this help message and exit
+  -s, --search          Search VirusTotal
+  -v, --verbose         Turn on verbosity of VT reports
+  -j, --jsondump        Dumps the full VT report to file (VTDLXXX.json)
+  -d, --download        Download File from Virustotal (VTDLXXX.danger)
+  -p, --pcap            Download Network Traffic (VTDLXXX.pcap)
+  -r, --rescan          Force Rescan with Current A/V Definitions
 ```
+
+Example:
+
+```bash
+python app.py 78a3a34cee255667095aac8ccb7540f3 -s
+```
+
+**Note:** VirusTotal has moved toward v3 APIs; for new integrations, plan a migration off v2. This repo matches the historical scripts as shipped on GitHub.

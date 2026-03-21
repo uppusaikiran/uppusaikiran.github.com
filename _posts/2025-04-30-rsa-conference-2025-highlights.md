@@ -15,12 +15,17 @@ tags:
   - Deception Technology
 ---
 
-The RSA Conference 2025 in San Francisco was a fantastic coming together of cybersecurity professionals, new technologies, and innovative solutions. Being a security professional, it was fascinating to witness how security technologies have evolved and learn from people with great insights about the future of our sector.
+<p class="post-lede">The RSA Conference 2025 in San Francisco brought together cybersecurity professionals, new technology, and sharp ideas about where the industry is headed.</p>
 
-<img src="/assets/images/rsa_conference.jpg" alt="RSA Conference 2025 Main Hall" width="600" height="400" style="max-width: 100%; height: auto;">
-*At RSA Conference 2025*
+<figure>
+  <img src="/assets/images/rsa_conference.jpg" alt="RSA Conference 2025 main hall" width="1200" height="800" loading="lazy">
+  <figcaption>Main hall at RSA Conference 2025</figcaption>
+</figure>
 
-<img src="/assets/images/me_at_rsa_2025.jpg" alt="Me at RSA Conference 2025" width="600" height="400" style="max-width: 100%; height: auto;">
+<figure>
+  <img src="/assets/images/me_at_rsa_2025.jpg" alt="Sai Kiran Uppu at RSA Conference 2025" width="1200" height="800" loading="lazy">
+  <figcaption>At the conference</figcaption>
+</figure>
 
 
 ## Key Themes and Trends

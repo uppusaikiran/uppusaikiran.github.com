@@ -1,9 +1,12 @@
 ---
-header:
-  
 layout: single
 classes: wide
 author_profile: true
+title: "Robinhood stock analyzer: CSV trades, FIFO positions, Yahoo Finance charts, and optional MFA export"
+slug: robinhood-stock-analyzer
+redirect_from:
+  - /robinhood/Robinhood_Stock_Analyzer
+  - /robinhood/Robinhood_Stock_Analyzer/
 categories:
   - Robinhood
 tags:
@@ -20,15 +23,12 @@ tags:
   - stocks-prices
   - stock-tracking
   - robinhood-signin
-toc: true
-toc_sticky: true
-toc_label: "Table of Contents"
 
 ---
 
-# Robinhood Stock Analyzer
+<p class="post-lede">Analyze stock trades and portfolio performance with optional Robinhood MFA export: CSV filtering, FIFO, Yahoo Finance pricing, and charts for strategy review.</p>
 
-A comprehensive tool for analyzing stock transactions and portfolio performance, specifically designed for integration with Robinhood. This project provides functionalities to filter and analyze stock trades, calculate outstanding stock quantities, and visualize historical stock prices. It integrates with Yahoo Finance to fetch current stock prices and plots various metrics to evaluate stock trading strategies and portfolio performance.
+**Source:** [robinhood_stock_analyzer](https://github.com/uppusaikiran/robinhood_stock_analyzer)
 
 ## Features
 
@@ -60,12 +60,17 @@ To enable MFA for your Robinhood account, you'll need a Time-based One-Time Pass
 
 ### 4. Add `robin_mfa` to `.env` File
 1. **Create or Open the `.env` File**: If you don’t already have a `.env` file in your project directory, create one. This file will store your environment variables.
-2. **Add Your Robinhood Credentials**:
-   - Open the `.env` file in a text editor.
-   - Add the following line, replacing `YOUR_TOTP_SECRET` with the secret key you copied earlier:
+2. **Add your Robinhood credentials** (including the TOTP secret used to generate MFA codes):
 
+   ```plaintext
+   robin_username=your_robinhood_username
+   robin_password=your_robinhood_password
+   robin_mfa=YOUR_TOTP_SECRET
+   ```
 
-### 5. Using MFA in Your Application
+   Replace `YOUR_TOTP_SECRET` with the backup or secret key from Robinhood (often a Base32 string).
+
+### 5. Using MFA in your application
 When you run your application, the robin_mfa variable will be used to generate a TOTP code automatically, which is required for logging in to Robinhood.
 
 ### 6. Testing the MFA Setup
@@ -127,7 +132,7 @@ Run your application and verify that it logs in successfully using the generated
    - Calculates and prints outstanding stock quantities and detailed sales information.
    - Plots historical stock prices and key transaction points.
 
-![Alt text](https://raw.githubusercontent.com/uppusaikiran/robinhood_stock_analyzer/main/sample.png))
+![Robinhood Stock Analyzer sample output](https://raw.githubusercontent.com/uppusaikiran/robinhood_stock_analyzer/main/sample.png)
 
 
 ## Example

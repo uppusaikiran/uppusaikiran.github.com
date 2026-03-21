@@ -14,13 +14,29 @@ layout: default
   {% endunless %}
 {% endif %}
 
+{% assign arch_skip_band = false %}
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% assign arch_skip_band = true %}
+{% endif %}
+{% if page.header.video.id and page.header.video.provider %}
+  {% assign arch_skip_band = true %}
+{% endif %}
+
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title">{{ page.title }}</h1>
-    {% endunless %}
-    {{ content }}
+  <div class="archive doc-archive">
+    <div class="doc-shell-card">
+      {% unless arch_skip_band %}
+        {% if page.title %}
+          <div class="doc-hero doc-hero--archive">
+            <h1 id="page-title" class="doc-hero__title">{{ page.title }}</h1>
+          </div>
+        {% endif %}
+      {% endunless %}
+      <div class="doc-archive__body">
+        {{ content }}
+      </div>
+    </div>
   </div>
 </div>

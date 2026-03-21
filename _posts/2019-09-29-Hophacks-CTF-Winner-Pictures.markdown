@@ -1,14 +1,25 @@
 ---
-header:
-  
 layout: single
 classes: wide
+title: "HopHacks CTF win: official Facebook post"
+slug: hophacks-ctf-win
+redirect_from:
+  - /personal/Hophacks-CTF-Winner-Pictures
+  - /personal/Hophacks-CTF-Winner-Pictures/
 categories:
   - Personal
 tags:
   - ctf
 ---
 
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FHopHacks%2Fposts%2F1361868183981523%3A0&width=500" width="500" height="338" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+<p class="post-lede">HopHacks CTF win: official Facebook post from the event.</p>
 
-<div class='embedsocial-album' data-ref="4246b280459a981a9abb9d030c9a25b24a2c2fa5"></div><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialScript"));</script>
+<section class="post-section">
+  <h2 class="post-section__title">Facebook</h2>
+  <div class="embed-shell" data-embed="facebook">
+    <div class="embed-shell__bar">Facebook</div>
+    <div class="embed-shell__frame">
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FHopHacks%2Fposts%2F1361868183981523%3A0&width=500" width="500" height="338" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" title="HopHacks Facebook post" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>

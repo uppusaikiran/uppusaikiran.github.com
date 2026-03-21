@@ -1,5 +1,4 @@
 ---
-header:
 layout: single
 classes: wide
 author_profile: true
@@ -15,9 +14,9 @@ tags:
   - multimodal AI
 ---
 
-A deep dive into Open AI's newly released GPT-Image-1 API, empowering developers with advanced image generation capabilities.
+<p class="post-lede">A practical overview of Open AI's GPT-Image-1 API for developers who want text-to-image generation in their own apps.</p>
 
-Source Code: [Open AI API Documentation](https://platform.openai.com/docs)
+<p><strong>Docs:</strong> <a href="https://platform.openai.com/docs">Open AI API documentation</a></p>
 
 
 ## Introduction
@@ -36,7 +35,7 @@ To use the Open AI GPT-Image-1 API, you need:
 
 The `gpt-image-1` API is a multimodal model, built on the GPT-4o architecture, capable of generating high-quality images from text prompts. Key specifications include:
 
-- **Input**: Text prompts describing the desired image, with optional parameters for aspect ratio, color schemes (e.g., hex codes),(container truncated, continuing from previous specifications) and transparency.
+- **Input**: Text prompts describing the desired image, with optional parameters for aspect ratio, color schemes (e.g., hex codes), and transparency.
 - **Output**: Photorealistic or stylized images in formats like PNG or JPEG.
 - **Response Time**: Image generation typically completes within 60 seconds, depending on complexity.
 - **Content Moderation**: Built-in safeguards block harmful, explicit, or deceptive content, with C2PA metadata for AI origin verification.

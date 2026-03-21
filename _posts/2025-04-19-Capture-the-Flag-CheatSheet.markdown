@@ -204,7 +204,7 @@ python3 -c "import pty; pty.spawn('/bin/bash')"
 
 ## Resources
 
-- **[CTFWriteups](https://github.com/uppusaikiran/CTFWriteups)** - HackTheBox, VulnHub, and CTF solutions by the author.
+- **[CTFWriteups](https://github.com/uppusaikiran/CTFWriteups)** - Capture the flag notes and solutions (including Hack The Box style challenges).
 - **[GTFOBins](https://gtfobins.github.io/)** - Unix binary abuse for privilege escalation.
 - **[LOLBAS](https://lolbas-project.github.io/)** - Windows Living Off The Land binaries.
 - **[PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)** - Payloads and cheatsheets for every attack type.

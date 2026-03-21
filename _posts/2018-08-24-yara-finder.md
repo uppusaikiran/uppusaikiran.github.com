@@ -1,9 +1,8 @@
 ---
-header:
-  image: /assets/images/malware.jpg
-
 layout: single
 classes: wide
+title: "YARA Finder: simple HTTP API to match files against bundled YARA rules"
+slug: yara-finder
 categories:
   - Malware
 tags:
@@ -15,15 +14,13 @@ tags:
 
 ---
 
-# Yara-Finder
-A simple tool to yara match the file against various yara rules to find the indicators of suspicion.
+<p class="post-lede">Match a file against bundled YARA rules to surface suspicious indicators (HTTP API, optional Docker).</p>
 
-<img src="https://travis-ci.org/uppusaikiran/yara-finder.svg?branch=master">
+**Source:** [yara-finder](https://github.com/uppusaikiran/yara-finder) · [![GitHub stars](https://img.shields.io/github/stars/uppusaikiran/yara-finder?style=social)](https://github.com/uppusaikiran/yara-finder)
 
+## Usage
 
-# Usage:
-
-### Clone the Repo and install and run the command `pip install -r requirements.txt`
+### Clone the repo, install dependencies (`pip install -r requirements.txt`)
 
 ```
 admin@cuckoo /tmp % git clone git@github.com:uppusaikiran/yara-finder.git
@@ -39,7 +36,7 @@ admin@cuckoo /tmp/yara-finder
  % pip install -r requirements.txt
 
 ```
-### To the Run the program
+### Run the app
 
 ```
 admin@cuckoo /tmp/yara-finder
@@ -110,10 +107,11 @@ curl  -X POST -F file=@e336f967802da8342f724d56dadb1e54200840f681927ba6b3d0a5a1d
 }
 ```
 
-## Docker Usage:
-```
+## Docker
+
+```bash
 docker pull uppusaikiran/yara-finder
-docker run -p 7777:7777 --rm -it yara-finder
+docker run -p 7777:7777 --rm -it uppusaikiran/yara-finder
 admin@cuckoo /tmp/yara-finder/tests
  %  curl  -X POST -F file=@test.pdf http://0.0.0.0:7777/yara
 {
@@ -130,9 +128,9 @@ admin@cuckoo /tmp/yara-finder/tests
 }
 ```
 
-## Features:
+## Features
 
-* Easy to Deploy and simple to use.
-* Ability to extend the yara rules with custom and third-party rules simply adding them in the rules folder.
-* Uses multiple layered scanning for finding yara matches including zip file extraction,applying yara on internal files as well.
-* Frequent Yara-rules updation to the repo.
+- Easy to deploy and use.
+- Extend rules by adding files under the `rules` folder.
+- Layered scanning including ZIP extraction and YARA on inner files.
+- Rules in the repo are updated over time.

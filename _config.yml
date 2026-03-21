@@ -155,13 +155,22 @@ paginate_path: /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-# Plugins
+# Plugins (use `plugins` for Jekyll 3.5+; `gems` kept for older themes)
 gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-redirect-from
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-redirect-from
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -170,6 +179,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-redirect-from
 
 
 # Archives
@@ -221,6 +231,5 @@ defaults:
       read_time: true
       comments: false     # Disable comments for all posts
       share: false        # Disable sharing for all posts
-      related: true
 
 search: true

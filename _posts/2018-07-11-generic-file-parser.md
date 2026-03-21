@@ -1,12 +1,13 @@
 ---
-title: "Generic File Parser to extract features from Malicious Files."
-
-category:
-    - Malware
-
 layout: single
 classes: wide
-
+title: "Generic malware file parser: MIME-based decomposition for PE, Office, PDF, archives, and optional YARA"
+slug: generic-malware-file-parser
+redirect_from:
+  - /malware/generic-file-parser
+  - /malware/generic-file-parser/
+categories:
+  - Malware
 tags: 
     - malware-analysis
     - pdf-parsing
@@ -24,12 +25,9 @@ tags:
     
 ---
 
-A Single Library Parser to extract meta information,static analysis and detect macros within the files.
+<p class="post-lede">Single-library parser for malware-oriented static analysis: metadata, MIME-based decomposition, optional YARA, and macro signals across PDFs, Office, PE, web types, and more.</p>
 
-Source Code : [Generic File Parser](https://github.com/uppusaikiran/generic-parser)
-
-Hit Counter : [![HitCount](http://hits.dwyl.com/uppusaikiran/generic-parser.svg)](http://hits.dwyl.com/uppusaikiran/generic-parser)
-
+**Source:** [generic-parser](https://github.com/uppusaikiran/generic-parser)
 
 # Usage:
 
@@ -73,7 +71,10 @@ optional arguments:
 4. Web Based files are decomposed to get interesting strings etc.
 5. Yara is applied on the entire file to get interesting matches which can help in identifying suspicious behaviour.
 
-### Sample UseCase For PDF File:
+### Sample use case (PDF)
+
+More examples live in the repo: [USECASES.md](https://github.com/uppusaikiran/generic-parser/blob/master/USECASES.md).
+
 
 ```
 python app.py -f test_files/0007b52a37aef3c0cbfb96348b826fb42a48ea895fa4446ce76683fb5195f759 -y 1 -e 1
