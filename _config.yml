@@ -8,9 +8,9 @@
 # Site Settings
 remote-theme             : minimal-mistakes-jekyll
 locale                   : "en"
-title                    : "SaiKiran Uppu"
+title                    : "Sai Kiran Uppu"
 title_separator          : "-"
-name                     : "SaiKiran Uppu"
+name                     : "Sai Kiran Uppu"
 description              : "Sai Kiran Uppu, Senior Security Researcher at Adobe CTRI: AI-driven threat intelligence, cloud security, Adobe Security Blog, JHU MS, CISSP/GCTI/AWS Security."
 url                      : "https://uppusaikiran.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -40,7 +40,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : /assets/images/SaiKiranUppu3.png
+og_image                 : /assets/images/SaiKiranUppu3.jpg
 # For specifying social profiles (JSON-LD sameAs; helps search and AI overviews)
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -61,7 +61,7 @@ analytics:
 # Site Author
 author:
   name             : "SaiKiran Uppu"
-  avatar           : /assets/images/SaiKiranUppu3.png
+  avatar           : /assets/images/SaiKiranUppu3.jpg
   bio              : "Senior Security Researcher, Adobe Cybersecurity Threat Research & Intelligence (CTRI)"
   location         : "San Jose, California"
   email            : "uppusaikiran@gmail.com"
