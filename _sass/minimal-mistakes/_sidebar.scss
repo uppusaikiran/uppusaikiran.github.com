@@ -21,20 +21,14 @@
   @include breakpoint($large) {
     float: left;
     width: calc(#{$right-sidebar-width-narrow} - 1em);
-    opacity: 0.75;
-    -webkit-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out;
-
-    &:hover {
-      opacity: 1;
-    }
+    opacity: 1;
 
     &.sticky {
+      position: sticky;
+      top: 60px;
+      height: auto;
+      max-height: calc(100vh - 70px);
       overflow-y: auto;
-      /* calculate height of nav list */
-      height: calc(
-        100vh - 90px - 2em
-      ); // viewport height - approx. masthead height - main content top margin
     }
   }
 

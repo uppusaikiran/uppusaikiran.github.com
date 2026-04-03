@@ -6,12 +6,13 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
+theme                    : minimal-mistakes-jekyll
 remote-theme             : minimal-mistakes-jekyll
 locale                   : "en"
 title                    : "Sai Kiran Uppu"
 title_separator          : "-"
 name                     : "Sai Kiran Uppu"
-description              : "Sai Kiran Uppu, Senior Security Researcher at Adobe CTRI: AI-driven threat intelligence, cloud security, Adobe Security Blog, JHU MS, CISSP/GCTI/AWS Security."
+description              : "Sai Kiran Uppu, Senior Security Researcher at Adobe: AI-driven threat intelligence, cloud security, Adobe Security Blog, JHU MS, CISSP/GCTI/AWS Security."
 url                      : "https://uppusaikiran.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "uppusaikiran/uppusaikiran.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -62,7 +63,7 @@ analytics:
 author:
   name             : "SaiKiran Uppu"
   avatar           : /assets/images/SaiKiranUppu3.jpg
-  bio              : "Senior Security Researcher, Adobe Cybersecurity Threat Research & Intelligence (CTRI)"
+  bio              : "Senior Security Researcher, Adobe"
   location         : "San Jose, California"
   email            : "uppusaikiran@gmail.com"
   uri              :
@@ -159,15 +160,6 @@ paginate_path: /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
-# Plugins (use `plugins` for Jekyll 3.5+; `gems` kept for older themes)
-gems:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-redirect-from
-
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -236,4 +228,4 @@ defaults:
       comments: false     # Disable comments for all posts
       share: false        # Disable sharing for all posts
 
-search: true
+search: false
