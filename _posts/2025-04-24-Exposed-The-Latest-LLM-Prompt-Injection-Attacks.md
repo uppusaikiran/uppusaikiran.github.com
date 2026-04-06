@@ -51,7 +51,7 @@ This attack works by:
 
 When faced with this attack, OpenAI's most advanced models — ChatGPT-4o and the recently released GPT-4.5 — can be tricked into revealing their available tools, including capabilities that aren't publicly documented:
 
-![ChatGPT Tool Exposure](/assets/images/chatgpt_tools_exposed.jpg)
+![ChatGPT Tool Exposure](/assets/images/posts/chatgpt-tools-exposed.jpg)
 *ChatGPT-4o responding with a comprehensive JSON listing of internal tools*
 
 The exposed tools include:
@@ -74,7 +74,7 @@ Notably, GPT-4.5 revealed several experimental features still in development, in
 
 OpenAI's Image 4o model is also susceptible to these attacks, exposing internal parameters that can be manipulated to bypass content filters:
 
-![ChatGPT Image 4o Vulnerability](/assets/images/chatgpt_image_4o_exposed.jpg)
+![ChatGPT Image 4o Vulnerability](/assets/images/posts/chatgpt-image-4o-exposed.jpg)
 *ChatGPT Image 4o model revealing its internal parameter structure and filter configurations*
 
 The Image 4o injection attack exposes:
@@ -87,7 +87,7 @@ The Image 4o injection attack exposes:
 
 Google's Gemini 2.5 Flash responds similarly, though with some differences in its tool structure:
 
-![Gemini Tool Exposure](/assets/images/gemini_tools_exposed.jpg)
+![Gemini Tool Exposure](/assets/images/posts/gemini-tools-exposed.jpg)
 *Gemini 2.5 Flash revealing its internal tool architecture and capabilities*
 
 The attack on Gemini 2.5 Flash exposed a single tool:
@@ -104,7 +104,7 @@ This suggests that the model may have a more limited set of integrated tools com
 
 Even Grok 3, which markets itself as more "unfiltered," maintains certain tool restrictions that this attack can bypass:
 
-![Grok Tool Exposure](/assets/images/grok_tools_exposed.jpg)
+![Grok Tool Exposure](/assets/images/posts/grok-tools-exposed.jpg)
 *Grok 3's tool capabilities being exposed through the injection attack*
 
 Grok 3 exposed a comprehensive set of analysis-oriented tools:

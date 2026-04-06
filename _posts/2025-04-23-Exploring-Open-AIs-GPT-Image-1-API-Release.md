@@ -99,7 +99,7 @@ Generated Image URL: https://example.com/generated_image.png
 
 The API returns a URL to the generated image. Below is a placeholder for a screenshot of a generated image (e.g., the futuristic city described above).
 
-![Generated Futuristic City](/assets/images/futuristic_city_screenshot.jpg)
+![Generated Futuristic City](/assets/images/posts/futuristic-city-screenshot.jpg)
 *Caption: Sample output from GPT-Image-1 API showing a futuristic city at sunset.*
 
 ### Step 5: Experiment with Edits
@@ -118,7 +118,7 @@ edited_image_url = response["data"][0]["url"]
 print(f"Edited Image URL: {edited_image_url}")
 ```
 
-![Edited Futuristic City with Moon](/assets/images/futuristic_city_moon_screenshot.jpg)
+![Edited Futuristic City with Moon](/assets/images/posts/futuristic-city-moon-screenshot.jpg)
 *Caption: Edited image with a glowing moon and stars added to the original scene.*
 
 ## Use Cases

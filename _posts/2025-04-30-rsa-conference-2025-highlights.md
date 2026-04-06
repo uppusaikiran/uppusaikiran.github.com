@@ -18,12 +18,12 @@ tags:
 <p class="post-lede">The RSA Conference 2025 in San Francisco brought together cybersecurity professionals, new technology, and sharp ideas about where the industry is headed.</p>
 
 <figure>
-  <img src="/assets/images/rsa_conference.jpg" alt="RSA Conference 2025 main hall" width="1200" height="800" loading="lazy">
+  <img src="/assets/images/posts/rsa-conference-2025.jpg" alt="RSA Conference 2025 main hall" width="1200" height="800" loading="lazy">
   <figcaption>Main hall at RSA Conference 2025</figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/images/me_at_rsa_2025.jpg" alt="Sai Kiran Uppu at RSA Conference 2025" width="1200" height="800" loading="lazy">
+  <img src="/assets/images/posts/me-at-rsa-2025.jpg" alt="Sai Kiran Uppu at RSA Conference 2025" width="1200" height="800" loading="lazy">
   <figcaption>At the conference</figcaption>
 </figure>
 
@@ -60,7 +60,7 @@ I attended Google's Threat Intelligence platform (formerly Mandiant) demonstrati
 ### AI-Powered Security Evolution
 I also visited CrowdStrike's presentation on AI capabilities in security operations where they demonstrated their telemetry and machine learning implementations.
 
-<img src="/assets/images/crowdstrike_rsa_2025.jpg" alt="CrowdStrike AI Security" width="600" height="400" style="max-width: 100%; height: auto;">
+<img src="/assets/images/posts/crowdstrike-rsa-2025.jpg" alt="CrowdStrike AI Security" width="600" height="400" style="max-width: 100%; height: auto;">
 *CrowdStrike's AI Security Innovation Showcase*
 
 ### Deception Technology Frontiers
@@ -76,7 +76,7 @@ One of the conference highlights was participating in Recorded Future's CTF chal
 - Gain hands-on platform experience with their new malware intelligence platform
 - Experiment with their cutting-edge threat analysis tools
 
-<img src="/assets/images/recorded_future_ctf.png" alt="Recorded Future CTF Challenge" width="600" height="350" style="max-width: 100%; height: auto;">
+<img src="/assets/images/posts/recorded-future-ctf.png" alt="Recorded Future CTF Challenge" width="600" height="350" style="max-width: 100%; height: auto;">
 *Recorded Future's CTF Challenge Arena*
 
 ### Interactive Sessions

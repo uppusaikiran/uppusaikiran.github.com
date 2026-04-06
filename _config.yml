@@ -16,7 +16,7 @@ description              : "Sai Kiran Uppu, Senior Security Researcher at Adobe:
 url                      : "https://uppusaikiran.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "uppusaikiran/uppusaikiran.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/malware.png"
+teaser                   : "/assets/images/site/malware.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 
@@ -41,7 +41,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : /assets/images/SaiKiranUppu3.jpg
+og_image                 : /assets/images/site/saikiran-uppu-3.jpg
 # For specifying social profiles (JSON-LD sameAs; helps search and AI overviews)
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -62,7 +62,7 @@ analytics:
 # Site Author
 author:
   name             : "SaiKiran Uppu"
-  avatar           : /assets/images/SaiKiranUppu3.jpg
+  avatar           : /assets/images/site/saikiran-uppu-3.jpg
   bio              : "Senior Security Researcher, Adobe"
   location         : "San Jose, California"
   email            : "uppusaikiran@gmail.com"

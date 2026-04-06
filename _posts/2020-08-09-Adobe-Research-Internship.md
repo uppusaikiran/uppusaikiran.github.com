@@ -23,7 +23,7 @@ tags:
 ---
 
 <figure>
-  <img src="/assets/images/LinkedInBanner-Indeed-2019.jpg" alt="Adobe internship banner" loading="lazy" width="1200" height="630">
+  <img src="/assets/images/posts/linkedin-banner-indeed-2019.jpg" alt="Adobe internship banner" loading="lazy" width="1200" height="630">
 </figure>
 
 ## Adobe summer internship
@@ -35,19 +35,19 @@ tags:
 #### Onboarding
 
 <figure>
-  <img src="/assets/images/InternOnboardingCleaned.png" alt="Virtual internship onboarding presentation" loading="lazy">
+  <img src="/assets/images/posts/intern-onboarding-cleaned.png" alt="Virtual internship onboarding presentation" loading="lazy">
 </figure>
 
 <p>Adobe ran the internship fully virtual with 700+ interns worldwide. I worked on the security research team across enterprise and cloud, focusing on threats at scale.</p>
 
 <figure>
-  <img src="/assets/images/InternOnboardingUniversities.png" alt="Universities represented in the intern cohort" loading="lazy">
+  <img src="/assets/images/posts/intern-onboarding-universities.png" alt="Universities represented in the intern cohort" loading="lazy">
 </figure>
 
 #### Interns meet the CEO
 
 <figure>
-  <img src="/assets/images/InternsCEOMeet.png" alt="Intern session with Adobe leadership" loading="lazy">
+  <img src="/assets/images/posts/interns-ceo-meet.png" alt="Intern session with Adobe leadership" loading="lazy">
 </figure>
 
 <div class="embed-shell" data-embed="linkedin">
@@ -62,21 +62,21 @@ tags:
 #### Pixel art
 
 <figure>
-  <img src="/assets/images/InternForce.jpg" alt="Pixel art intern event" loading="lazy">
+  <img src="/assets/images/posts/intern-force.jpg" alt="Pixel art intern event" loading="lazy">
 </figure>
 
 #### Escape room
 
 <figure>
-  <img src="/assets/images/EscapeRoom.png" alt="Virtual escape room event" loading="lazy">
+  <img src="/assets/images/posts/escape-room.png" alt="Virtual escape room event" loading="lazy">
 </figure>
 
 ### Swag
 
 <div class="post-gallery">
-  <img src="/assets/images/Swag.jpg" alt="Adobe internship swag" loading="lazy">
-  <img src="/assets/images/Swag1.jpg" alt="Adobe internship swag" loading="lazy">
-  <img src="/assets/images/Swag2.jpg" alt="Adobe internship swag" loading="lazy">
+  <img src="/assets/images/posts/adobe-intern-swag-1.jpg" alt="Adobe internship swag" loading="lazy">
+  <img src="/assets/images/posts/adobe-intern-swag-2.jpg" alt="Adobe internship swag" loading="lazy">
+  <img src="/assets/images/posts/adobe-intern-swag-3.jpg" alt="Adobe internship swag" loading="lazy">
 </div>
 
 ### Project: DMZ and firewall hygiene
@@ -103,11 +103,11 @@ tags:
 ### Full-time welcome
 
 <figure>
-  <img src="/assets/images/AbobeGift1.JPG" alt="Adobe welcome gift" loading="lazy">
+  <img src="/assets/images/posts/adobe-welcome-gift-1.jpg" alt="Adobe welcome gift" loading="lazy">
 </figure>
 <figure>
-  <img src="/assets/images/AbobeGift2.JPG" alt="Adobe welcome gift" loading="lazy">
+  <img src="/assets/images/posts/adobe-welcome-gift-2.jpg" alt="Adobe welcome gift" loading="lazy">
 </figure>
 <figure>
-  <img src="/assets/images/AbobeGift3.JPG" alt="Adobe welcome gift" loading="lazy">
+  <img src="/assets/images/posts/adobe-welcome-gift-3.jpg" alt="Adobe welcome gift" loading="lazy">
 </figure>
