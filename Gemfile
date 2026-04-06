@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3"
-gem "minimal-mistakes-jekyll"
+# Theme via remote_theme in _config.yml (required for GitHub Pages). Fetch locally with:
+gem "jekyll-remote-theme", "~> 0.4.3", group: :jekyll_plugins
 gem "webrick"
 gem "csv"
 gem "bigdecimal"

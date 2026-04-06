@@ -6,8 +6,9 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-theme                    : minimal-mistakes-jekyll
-remote-theme             : minimal-mistakes-jekyll
+# GitHub Pages: use remote_theme only (theme: gem is not available in jekyll-build-pages).
+# Local dev: bundle install includes jekyll-remote-theme (see Gemfile).
+remote_theme             : "mmistakes/minimal-mistakes@4.28.0"
 locale                   : "en"
 title                    : "Sai Kiran Uppu"
 title_separator          : "-"
