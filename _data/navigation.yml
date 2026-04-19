@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "ToroHack Keynote"
+    url: /talks/torohack/
   - title: "CTF Cheatsheet"
     url: /hacking/Capture-the-Flag-CheatSheet/
   - title: "Recent Posts"

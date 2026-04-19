@@ -1,0 +1,583 @@
+---
+title: "AI vs AI: How Machines Are Hacking Machines — ToroHack 10.0 Keynote"
+layout: default
+permalink: /talks/torohack/
+author_profile: false
+---
+
+<style>
+/* Hide site header & footer for immersive full-screen */
+.masthead { display: none !important; }
+.page__footer { display: none !important; }
+.initial-content { margin-top: 0 !important; }
+
+/* Kill theme layout defaults */
+#main { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+.page { padding: 0 !important; margin: 0 !important; float: none !important; width: 100% !important; }
+.page__inner-wrap { padding: 0 !important; margin: 0 !important; max-width: 100% !important; float: none !important; width: 100% !important; }
+.page__content { padding: 0 !important; margin: 0 !important; float: none !important; width: 100% !important; }
+.page__title { display: none !important; }
+.page__hero--overlay { display: none !important; }
+
+*,*::before,*::after { box-sizing: border-box; }
+
+.th-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #e2e8f0;
+  background: #0a0a0a;
+  min-height: 100vh;
+}
+
+/* ── Full-viewport slideshow ── */
+.th-slideshow-wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top bar */
+.th-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+  z-index: 20;
+}
+.th-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.th-topbar-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f1f5f9;
+  letter-spacing: -0.01em;
+}
+.th-topbar-sub {
+  font-size: 11px;
+  color: #64748b;
+}
+.th-topbar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(235,16,0,0.15);
+  border: 1px solid rgba(235,16,0,0.3);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ff6b4a;
+}
+.th-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.th-topbar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+.th-topbar-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #f1f5f9;
+  border-color: rgba(255,255,255,0.2);
+}
+.th-topbar-btn svg { width: 13px; height: 13px; }
+.th-topbar-btn.active {
+  background: rgba(235,16,0,0.2);
+  border-color: rgba(235,16,0,0.4);
+  color: #ff6b4a;
+}
+.th-home-link {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+.th-home-link:hover { color: #f1f5f9; }
+
+/* Autoplay indicator */
+.th-autoplay-indicator {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: #ff6b4a;
+  font-weight: 600;
+}
+.th-autoplay-indicator.active { display: inline-flex; }
+.th-autoplay-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: #ff6b4a;
+  animation: th-pulse 1.5s infinite;
+}
+@keyframes th-pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+/* Slide area - takes all remaining space */
+.th-slide-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 0;
+  padding: 8px;
+}
+.th-slide-viewport {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  user-select: none;
+}
+.th-slide-viewport img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  transition: opacity 0.3s ease;
+}
+.th-slide-viewport img.th-loading { opacity: 0; }
+
+/* Constrain viewport to fill available space */
+@media (min-aspect-ratio: 16/9) {
+  .th-slide-viewport { height: 100%; width: auto; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .th-slide-viewport { width: 100%; height: auto; }
+}
+
+/* Nav arrows */
+.th-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+}
+.th-slide-area:hover .th-nav-arrow { opacity: 1; }
+.th-nav-arrow:hover {
+  background: rgba(235,16,0,0.85);
+  transform: translateY(-50%) scale(1.08);
+}
+.th-nav-arrow:disabled { opacity: 0 !important; pointer-events: none; }
+.th-nav-prev { left: 20px; }
+.th-nav-next { right: 20px; }
+
+/* Slide counter overlay */
+.th-slide-counter {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 999px;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+  font-variant-numeric: tabular-nums;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.th-slide-area:hover .th-slide-counter { opacity: 1; }
+
+/* Bottom bar with thumbnails + progress */
+.th-bottombar {
+  flex-shrink: 0;
+  position: relative;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  z-index: 20;
+  transition: transform 0.32s ease, opacity 0.28s ease;
+}
+.th-progress-track {
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,0.08);
+}
+.th-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #EB1000, #ff6b4a);
+  transition: width 0.3s ease;
+}
+
+/* Thumbnail strip */
+.th-thumbnails {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 8px 16px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.th-thumbnails::-webkit-scrollbar { display: none; }
+.th-thumb {
+  flex-shrink: 0;
+  width: 96px;
+  aspect-ratio: 16/9;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  background: #1a1a1a;
+  opacity: 0.5;
+}
+.th-thumb:hover { opacity: 0.85; transform: translateY(-1px); }
+.th-thumb.active {
+  border-color: #EB1000;
+  opacity: 1;
+  box-shadow: 0 0 0 1px rgba(235,16,0,0.3);
+}
+.th-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Keyboard hints (shown briefly on load) */
+.th-kbd-toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  color: #94a3b8;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 12px;
+  display: flex;
+  gap: 16px;
+  z-index: 100;
+  transition: opacity 0.5s;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.th-kbd-toast.hidden { opacity: 0; pointer-events: none; }
+.th-kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 20px;
+  padding: 0 5px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 3px;
+  background: rgba(255,255,255,0.06);
+  font-size: 10px;
+  font-weight: 600;
+  color: #cbd5e1;
+  font-family: inherit;
+  margin: 0 3px;
+}
+
+/* Browser fullscreen overrides */
+.th-slideshow-wrap:fullscreen,
+.th-slideshow-wrap:-webkit-full-screen,
+.th-slideshow-wrap:-moz-full-screen {
+  background: #000;
+}
+
+/*
+ * Hide bottom strip in real browser fullscreen.
+ * :fullscreen alone is unreliable across themes/browsers; we also set .th-browser-fullscreen via JS.
+ */
+.th-slideshow-wrap:fullscreen .th-bottombar,
+.th-slideshow-wrap:-webkit-full-screen .th-bottombar,
+.th-slideshow-wrap:-moz-full-screen .th-bottombar,
+.th-slideshow-wrap.th-browser-fullscreen .th-bottombar {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .th-topbar { padding: 8px 12px; }
+  .th-topbar-title { font-size: 11px; }
+  .th-topbar-sub { display: none; }
+  .th-nav-arrow { width: 36px; height: 36px; font-size: 16px; opacity: 1; }
+  .th-nav-prev { left: 8px; }
+  .th-nav-next { right: 8px; }
+  .th-slide-counter { opacity: 1; font-size: 11px; }
+  .th-thumb { width: 64px; }
+  .th-kbd-toast { display: none; }
+}
+</style>
+
+<div class="th-page">
+<div class="th-slideshow-wrap" id="slideshowWrap">
+
+  <!-- Top bar -->
+  <div class="th-topbar">
+    <div class="th-topbar-left">
+      <a href="/" class="th-home-link">&larr; Home</a>
+      <span style="color: rgba(255,255,255,0.12);">|</span>
+      <div>
+        <div class="th-topbar-title">AI vs AI: How Machines Are Hacking Machines</div>
+        <div class="th-topbar-sub">Sai Kiran Uppu &middot; Senior Security Researcher, Adobe</div>
+      </div>
+    </div>
+    <div class="th-topbar-right">
+      <span class="th-topbar-badge">ToroHack 10.0</span>
+      <span class="th-autoplay-indicator" id="autoplayIndicator">
+        <span class="th-autoplay-dot"></span> Auto
+      </span>
+      <button class="th-topbar-btn" id="autoplayBtn" title="Autoplay (Space)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      </button>
+      <button class="th-topbar-btn" id="fullscreenBtn" title="Fullscreen (F)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Slide area -->
+  <div class="th-slide-area" id="slideArea">
+    <div class="th-slide-viewport" id="slideViewport">
+      <img id="slideImg" src="/assets/images/torohack-slides/slide-01.png" alt="Slide 1 of 21" draggable="false">
+    </div>
+    <button class="th-nav-arrow th-nav-prev" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+    <button class="th-nav-arrow th-nav-next" id="nextBtn" aria-label="Next slide">&#10095;</button>
+    <div class="th-slide-counter" id="slideCounter">1 / 21</div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="th-bottombar">
+    <div class="th-progress-track">
+      <div class="th-progress-fill" id="progressFill" style="width: 4.76%"></div>
+    </div>
+    <div class="th-thumbnails" id="thumbStrip"></div>
+  </div>
+
+</div><!-- /slideshow-wrap -->
+
+<!-- Keyboard hint toast -->
+<div class="th-kbd-toast" id="kbdToast">
+  <span><span class="th-kbd">&larr;</span><span class="th-kbd">&rarr;</span> Navigate</span>
+  <span><span class="th-kbd">F</span> Fullscreen</span>
+  <span><span class="th-kbd">Space</span> Autoplay</span>
+</div>
+
+</div><!-- /th-page -->
+
+<script>
+(function() {
+  var TOTAL = 21;
+  var AUTOPLAY_MS = 8000;
+  var current = 1;
+  var autoplayTimer = null;
+  var touchStartX = 0;
+
+  var img = document.getElementById('slideImg');
+  var counter = document.getElementById('slideCounter');
+  var progress = document.getElementById('progressFill');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var fullscreenBtn = document.getElementById('fullscreenBtn');
+  var wrap = document.getElementById('slideshowWrap');
+  var slideArea = document.getElementById('slideArea');
+  var thumbStrip = document.getElementById('thumbStrip');
+  var autoplayBtn = document.getElementById('autoplayBtn');
+  var autoplayIndicator = document.getElementById('autoplayIndicator');
+  var kbdToast = document.getElementById('kbdToast');
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function slidePath(n) { return '/assets/images/torohack-slides/slide-' + pad(n) + '.png'; }
+
+  // Build thumbnails
+  for (var i = 1; i <= TOTAL; i++) {
+    (function(idx) {
+      var t = document.createElement('div');
+      t.className = 'th-thumb' + (idx === 1 ? ' active' : '');
+      t.dataset.slide = idx;
+      var ti = document.createElement('img');
+      ti.src = slidePath(idx);
+      ti.alt = 'Slide ' + idx;
+      ti.loading = 'lazy';
+      ti.draggable = false;
+      t.appendChild(ti);
+      t.addEventListener('click', function() { goTo(idx); });
+      thumbStrip.appendChild(t);
+    })(i);
+  }
+
+  function goTo(n) {
+    if (n < 1 || n > TOTAL) return;
+    current = n;
+    img.classList.add('th-loading');
+    img.src = slidePath(n);
+    img.alt = 'Slide ' + n + ' of ' + TOTAL;
+    counter.textContent = n + ' / ' + TOTAL;
+    progress.style.width = ((n / TOTAL) * 100) + '%';
+    prevBtn.disabled = (n === 1);
+    nextBtn.disabled = (n === TOTAL);
+
+    thumbStrip.querySelectorAll('.th-thumb').forEach(function(t) {
+      t.classList.toggle('active', parseInt(t.dataset.slide) === n);
+    });
+    var active = thumbStrip.querySelector('.th-thumb.active');
+    if (active) active.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
+    // Preload adjacent
+    preload(n + 1);
+    preload(n - 1);
+  }
+
+  function preload(n) {
+    if (n >= 1 && n <= TOTAL) { var i = new Image(); i.src = slidePath(n); }
+  }
+
+  img.addEventListener('load', function() { img.classList.remove('th-loading'); });
+
+  prevBtn.addEventListener('click', function(e) { e.stopPropagation(); goTo(current - 1); });
+  nextBtn.addEventListener('click', function(e) { e.stopPropagation(); goTo(current + 1); });
+
+  // Keyboard
+  document.addEventListener('keydown', function(e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    switch(e.key) {
+      case 'ArrowLeft': case 'ArrowUp':
+        e.preventDefault(); goTo(current - 1); break;
+      case 'ArrowRight': case 'ArrowDown':
+        e.preventDefault(); goTo(current + 1); break;
+      case 'Home': e.preventDefault(); goTo(1); break;
+      case 'End': e.preventDefault(); goTo(TOTAL); break;
+      case 'f': case 'F': e.preventDefault(); toggleFullscreen(); break;
+      case ' ': e.preventDefault(); toggleAutoplay(); break;
+      case 'Escape':
+        if (autoplayTimer) toggleAutoplay();
+        break;
+    }
+  });
+
+  // Touch/swipe on slide area
+  slideArea.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+  slideArea.addEventListener('touchend', function(e) {
+    var diff = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) goTo(current - 1);
+      else goTo(current + 1);
+    }
+  }, { passive: true });
+
+  // Click on slide area to navigate
+  slideArea.addEventListener('click', function(e) {
+    if (e.target.closest('.th-nav-arrow') || e.target.closest('.th-topbar-btn')) return;
+    var rect = slideArea.getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    if (x < rect.width * 0.35) goTo(current - 1);
+    else goTo(current + 1);
+  });
+
+  // Fullscreen (API + class so bottom strip hides everywhere)
+  function syncFullscreenChrome() {
+    var fs = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+    if (fs === wrap) {
+      wrap.classList.add('th-browser-fullscreen');
+    } else {
+      wrap.classList.remove('th-browser-fullscreen');
+    }
+  }
+
+  function toggleFullscreen() {
+    if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+      if (document.exitFullscreen) document.exitFullscreen();
+      else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+      else if (document.msExitFullscreen) document.msExitFullscreen();
+    } else {
+      var req = wrap.requestFullscreen || wrap.webkitRequestFullscreen || wrap.mozRequestFullScreen || wrap.msRequestFullscreen;
+      if (req) req.call(wrap);
+    }
+  }
+  fullscreenBtn.addEventListener('click', function(e) { e.stopPropagation(); toggleFullscreen(); });
+
+  document.addEventListener('fullscreenchange', syncFullscreenChrome);
+  document.addEventListener('webkitfullscreenchange', syncFullscreenChrome);
+  document.addEventListener('mozfullscreenchange', syncFullscreenChrome);
+  document.addEventListener('MSFullscreenChange', syncFullscreenChrome);
+  syncFullscreenChrome();
+
+  // Autoplay
+  function toggleAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+      autoplayBtn.classList.remove('active');
+      autoplayBtn.querySelector('svg').innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
+      autoplayIndicator.classList.remove('active');
+    } else {
+      autoplayTimer = setInterval(function() {
+        if (current < TOTAL) goTo(current + 1);
+        else toggleAutoplay();
+      }, AUTOPLAY_MS);
+      autoplayBtn.classList.add('active');
+      autoplayBtn.querySelector('svg').innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+      autoplayIndicator.classList.add('active');
+    }
+  }
+  autoplayBtn.addEventListener('click', function(e) { e.stopPropagation(); toggleAutoplay(); });
+
+  // Dismiss keyboard toast after 4s
+  setTimeout(function() { kbdToast.classList.add('hidden'); }, 4000);
+
+  // Preload first few
+  preload(2);
+  preload(3);
+
+  // Init
+  goTo(1);
+})();
+</script>
