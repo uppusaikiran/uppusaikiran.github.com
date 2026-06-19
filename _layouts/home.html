@@ -23,48 +23,6 @@ image: /assets/images/site/header.jpg
     overflow: hidden;
     border-radius: 8px;
   }
-  /* LinkedIn embeds: full-width row, two equal columns */
-  .linkedin-embed-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-    width: 100%;
-    overflow: hidden;
-  }
-  .linkedin-embed-slot {
-    min-width: 0;
-    width: 100%;
-    overflow: hidden;
-  }
-  .linkedin-embed-frame {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  /* Collapsed LinkedIn embeds: one size for both columns to avoid inner iframe scrollbars */
-  .linkedin-embed-frame--collapsed {
-    aspect-ratio: 504 / 580;
-    max-height: 640px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .linkedin-embed-frame--collapsed::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    display: none;
-  }
-  .linkedin-embed-frame iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% + 8px);
-    height: calc(100% + 6px);
-    margin: -3px 0 0 -4px;
-    border: 0 !important;
-    display: block;
-    overflow: hidden;
-  }
   /* TDI 2025: keep three photos on one row (flex-wrap broke when 3x300px exceeded main column) */
   .tdi-photos-row {
     display: grid;
@@ -96,7 +54,7 @@ image: /assets/images/site/header.jpg
 <div class="page-content doc-home">
   <h4 style="font-size: 0.685em;"><strong>About Me</strong></h4>
   <p style="font-size: 0.65em;">
-    I am a Senior Security Researcher in Adobe's Cybersecurity Threat Research & Intelligence team, where I focus on AI-driven threat intelligence and cloud security. I architect and run Adobe's threat intelligence and fleet sweep platform and have built agentic AI threat intel pipelines to stay ahead of adversaries. I am the author of the Adobe Security Blog article <em>Building an agentic AI-powered threat intelligence platform</em> (March 2026). I am a 2026 Gold Award winner for AI Security Innovator of the Year at the Cybersecurity Excellence Awards and have placed first in the Recorded Future CTF at RSA Conference. I hold an MS in Security Informatics from Johns Hopkins and am certified in CISSP, GCTI, and AWS Security - Specialty. I have spoken at IEEE SVCC, The Diana Initiative, BSides SLC, Penn State, and UMBC Cyber Defense Lab, was invited by Johns Hopkins as a panelist for Security Metamorphosis 2026, and am the Adobe keynote speaker at ToroHack 10.0 (CSUDH) in April 2026. I have judged for the Monterey Cyber 9/12 Strategy Challenge and student hackathons.
+    I am a Senior Security Researcher in Adobe's Cybersecurity Threat Research & Intelligence team, where I focus on AI-driven threat intelligence and cloud security. I architect and run Adobe's threat intelligence and fleet sweep platform and have built agentic AI threat intel pipelines to stay ahead of adversaries. I am the author of the Adobe Security Blog article <em>Building an agentic AI-powered threat intelligence platform</em> (March 2026). I am a 2026 Gold Award winner for AI Security Innovator of the Year at the Cybersecurity Excellence Awards and have placed first in the Recorded Future CTF at RSA Conference. I hold an MS in Security Informatics from Johns Hopkins and am certified in CISSP, GCTI, and AWS Security - Specialty. I have spoken at Databricks Data+AI Summit, IEEE SVCC (industry talk and panel, 2026), The Diana Initiative, BSides SLC, Penn State, and UMBC Cyber Defense Lab, was invited by Johns Hopkins as a panelist for Security Metamorphosis 2026, and was the Adobe keynote speaker at ToroHack 10.0 (CSUDH) in April 2026. I have judged for the Monterey Cyber 9/12 Strategy Challenge and student hackathons.
   </p>
   <p style="font-size: 0.65em;">
     I also hold a B.Tech in Computer Science from Vellore Institute of Technology (India). I am passionate about designing large-scale secure systems with a focus on Cloud Security, Application Security, and Threat Intelligence. My expertise includes detecting cloud threats at scale, developing automated security pipelines, and implementing proactive threat hunting frameworks. I have worked extensively with AWS environments, aligning cloud infrastructure with enterprise security policies and strengthening security controls.
@@ -172,6 +130,47 @@ image: /assets/images/site/header.jpg
   </p>
   
   <div class="conference-section" style="margin-top: 15px;">
+    <!-- Databricks Data + AI Summit 2026 -->
+    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px;">
+      <img src="/assets/images/logos/databricks-logo.png" alt="Databricks" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
+      <div>
+        <div style="font-size: 0.65em;"><strong>Databricks Data + AI Summit - Speaker (June 18, 2026)</strong></div>
+        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
+          Architecting Agentic Security: Scaling Threat Detection with LLM and Lakehouse Architecture - 40-minute breakout in the Cybersecurity track, San Francisco (June 18, 2026).
+          <br><a href="https://www.databricks.com/dataaisummit/session/architecting-agentic-security-scaling-threat-detection-llm-and-lake" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px;">Watch Session &rarr;</a>
+          <a href="https://www.databricks.com/dataaisummit/speaker/sai-kiran-uppu" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; margin-left: 12px;">Speaker Profile &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; align-items: center; margin-bottom: 20px; margin-left: 80px;">
+      <img src="/assets/images/gallery/databricks-data-ai-summit-2026-stage-photo.jpeg" alt="Presenting at Databricks Data + AI Summit 2026" style="width: 100%; height: 225px; object-fit: contain; border-radius: 8px;">
+      <img src="/assets/images/gallery/databricks-data-ai-summit-2026-speaker-badge-photo.jpeg" alt="Speaker badge at Databricks Data + AI Summit 2026" style="width: 100%; height: 225px; object-fit: contain; border-radius: 8px;">
+      <img src="/assets/images/gallery/databricks-data-ai-summit-2026-poster.jpeg" alt="Databricks Data + AI Summit 2026 session poster" style="width: 100%; height: 225px; object-fit: contain; border-radius: 8px;">
+    </div>
+
+    <!-- SVCC 2026 Industry Talk -->
+    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-start;">
+      <img src="/assets/images/logos/svcc-logo.png" alt="SVCC" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
+      <div>
+        <div style="font-size: 0.65em;"><strong>SVCC - Industry Talk - Speaker (June 12, 2026)</strong></div>
+        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
+          Building Agentic Security: Scaling Threat Detection with LLM and Fleet Sweep Orchestration - Industry talk at the 7th Silicon Valley Cybersecurity Conference (IEEE Computer Society), San Jose State University, San Jose, CA.
+          <br><a href="https://www.svcc-svcsi.org/services-7-1" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px;">Accepted Talks &rarr;</a>
+          <a href="https://www.svcc-svcsi.org/" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; margin-left: 12px;">Conference Site &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: nowrap; gap: 15px; align-items: center; justify-content: flex-start; margin-bottom: 20px; margin-left: 80px;">
+      <img src="/assets/images/gallery/svcc-2026-industry-talk-photo.jpeg" alt="Presenting industry talk at SVCC 2026" style="height: 225px; width: auto; max-width: 300px; object-fit: contain; border-radius: 8px;" loading="lazy">
+      <img src="/assets/images/gallery/svcc-2026-panel-flyer.jpg" alt="SVCC 2026 panel discussion flyer" style="height: 225px; width: auto; max-width: 300px; object-fit: contain; border-radius: 8px;" loading="lazy">
+    </div>
+    <div style="margin-left: 80px; margin-bottom: 20px;">
+      <div style="font-size: 0.65em; margin-bottom: 10px;"><strong>Panel Discussion: The Future of Work - AI, Cybersecurity, and Career Growth (June 12, 2026)</strong></div>
+      <div style="font-size: 0.65em; line-height: 1.5; margin-bottom: 10px;">
+        Invited panelist alongside leaders from Intuit, ThoughtSpot, Straiker, and Adobe. Moderated by Sujata Ramamoorthy (Verizon, retired; SJSU).
+      </div>
+    </div>
+
     <!-- JHU Security Metamorphosis 2026 -->
     <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px;">
       <img src="/assets/images/logos/hopkins.png" alt="Johns Hopkins University" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
@@ -339,45 +338,6 @@ image: /assets/images/site/header.jpg
       An in-depth analysis of network segmentation strategies and firewall configuration best practices to protect critical infrastructure from emerging threats.
     </li>
   </ul>
-
-  <div style="font-size: 0.65em; margin: 18px 0 12px 0;">
-    <p style="margin-bottom: 10px; line-height: 1.5;">
-      <strong>Leadership spotlight:</strong>
-    </p>
-
-    <div class="linkedin-embed-grid">
-      <div class="linkedin-embed-slot">
-        <p style="margin: 0 0 8px 0; line-height: 1.4;">
-          <strong><a href="https://www.linkedin.com/in/aanchalgupta/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Aanchal Gupta</a></strong>,
-          Chief Security Officer, Adobe
-        </p>
-        <div class="linkedin-embed-frame linkedin-embed-frame--collapsed">
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7440448240405315584?collapsed=1"
-            width="504"
-            height="900"
-            scrolling="no"
-            allowfullscreen=""
-            title="Embedded post"
-            loading="lazy"></iframe>
-        </div>
-      </div>
-      <div class="linkedin-embed-slot">
-        <p style="margin: 0 0 8px 0; line-height: 1.4;">
-          <strong><a href="https://www.linkedin.com/in/maartenv/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Maarten Van Horenbeeck</a></strong>,
-          Adobe Fellow and former Adobe Chief Security Officer
-        </p>
-        <div class="linkedin-embed-frame linkedin-embed-frame--collapsed">
-          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7440795232968794112?collapsed=1"
-            width="504"
-            height="900"
-            scrolling="no"
-            allowfullscreen=""
-            title="LinkedIn: Maarten Van Horenbeeck shares article"
-            loading="lazy"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <h4 style="font-size: 0.685em; margin-top: 0.75em;"><strong>Academic Publications</strong></h4>
   <p style="font-size: 0.65em;">
