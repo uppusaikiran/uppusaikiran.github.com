@@ -14,9 +14,9 @@ title                    : "Sai Kiran Uppu"
 title_separator          : "-"
 name                     : "Sai Kiran Uppu"
 description              : "Sai Kiran Uppu, Senior Security Researcher at Adobe: AI-driven threat intelligence, cloud security, Adobe Security Blog, JHU MS, CISSP/GCTI/AWS Security."
-url                      : "https://uppusaikiran.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://uppusaikiran.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "uppusaikiran/uppusaikiran.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "uppusaikiran/uppusaikiran.github.com" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/site/malware.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
