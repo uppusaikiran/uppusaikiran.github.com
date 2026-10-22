@@ -1,8 +1,22 @@
 # main links
 main:
-  - title: "ToroHack Keynote"
-    url: /talks/torohack/
+  - title: "About"
+    url: /#about
+    section: about
+  - title: "Experience"
+    url: /#experience
+    section: experience
+  - title: "Speaking"
+    url: /#speaking
+    section: speaking
+  - title: "Credentials"
+    url: /#credentials
+    section: credentials
+  - title: "Publications"
+    url: /#publications
+    section: publications
+  - title: "Highlights"
+    url: /#highlights
+    section: highlights
   - title: "CTF Cheatsheet"
     url: /hacking/Capture-the-Flag-CheatSheet/
-  - title: "Recent Posts"
-    url: /year-archive/

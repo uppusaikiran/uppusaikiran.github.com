@@ -1,5 +1,6 @@
 ---
 layout: single
+published: false
 classes: wide
 author_profile: true
 title: "Unveiling the Invisible: How One Simple Prompt Makes LLMs Spill Their Secrets"
@@ -167,4 +168,4 @@ For companies developing and deploying LLMs, several mitigation strategies shoul
 
 2. **Output Scanning**: Scan model outputs for signs of successful injections, such as structured tool listings.
 
-3. **Deployment Architecture**: Consider architectures where sensitive tools are separated from the core language model. 
+3. **Deployment Architecture**: Consider architectures where sensitive tools are separated from the core language model.

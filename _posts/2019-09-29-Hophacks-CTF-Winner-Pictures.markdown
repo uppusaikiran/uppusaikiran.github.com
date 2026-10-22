@@ -1,5 +1,6 @@
 ---
 layout: single
+published: false
 classes: wide
 title: "HopHacks CTF win: official Facebook post"
 slug: hophacks-ctf-win

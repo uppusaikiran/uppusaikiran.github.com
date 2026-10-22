@@ -1,5 +1,6 @@
 ---
 layout: single
+published: false
 classes: wide
 title: "YARA Finder: simple HTTP API to match files against bundled YARA rules"
 slug: yara-finder

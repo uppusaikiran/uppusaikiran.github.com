@@ -1,5 +1,6 @@
 ---
 layout: single
+published: false
 classes:
   - wide
   - doc-figures-compact

@@ -46,6 +46,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 .greedy-nav a:hover {
   color: #0f172a !important;
 }
+.greedy-nav a.section-nav-link.active,
+.greedy-nav a.section-nav-link[aria-current="location"] {
+  color: #2563eb !important;
+  font-weight: 600 !important;
+}
+.greedy-nav .visible-links a.section-nav-link.active::before,
+.greedy-nav .visible-links a.section-nav-link[aria-current="location"]::before {
+  -webkit-transform: scaleX(1) translate3d(0, 0, 0) !important;
+  transform: scaleX(1) translate3d(0, 0, 0) !important;
+}
 .greedy-nav a.site-title {
   color: #0f172a !important;
   margin-left: 0 !important;
@@ -60,6 +70,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 .greedy-nav__toggle {
   background-color: #0f172a !important;
   border-radius: 4px !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+.home-section-anchor {
+  scroll-margin-top: 72px;
 }
 
 /* ── Modern Footer ── */

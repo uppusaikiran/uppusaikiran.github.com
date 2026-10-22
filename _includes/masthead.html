@@ -11,7 +11,12 @@
               {% assign domain = site.url | append: site.baseurl %}
             {% endif %}
             <li class="masthead__menu-item">
-              <a href="{{ domain }}{{ link.url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              {% if page.url == '/' and link.section %}
+                {% assign nav_href = '#' | append: link.section %}
+              {% else %}
+                {% assign nav_href = domain | append: link.url %}
+              {% endif %}
+              <a href="{{ nav_href }}"{% if link.section %} class="section-nav-link" data-section="{{ link.section }}"{% endif %}{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
           {% endfor %}
         </ul>

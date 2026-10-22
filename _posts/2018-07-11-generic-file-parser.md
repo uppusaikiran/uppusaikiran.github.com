@@ -1,5 +1,6 @@
 ---
 layout: single
+published: false
 classes: wide
 title: "Generic malware file parser: MIME-based decomposition for PE, Office, PDF, archives, and optional YARA"
 slug: generic-malware-file-parser
