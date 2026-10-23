@@ -15,23 +15,24 @@
 
 .timeline-entry {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: 92px 78px minmax(0, 1fr);
   align-items: stretch;
 }
 
 .timeline-entry .year {
-  grid-column: span 1;
+  grid-column: 1;
   padding: 2px 6px 20px 0;
   color: #aaa;
   font-family: sans-serif;
   font-size: 13px;
   line-height: 1.35;
   text-align: right;
+  white-space: nowrap;
 }
 
 .timeline-entry__rail {
   position: relative;
-  grid-column: span 1;
+  grid-column: 2;
   min-height: 88px;
   border-left: 2px solid #cfcfcf;
 }
@@ -58,7 +59,7 @@
 }
 
 .timeline-entry__description {
-  grid-column: span 10;
+  grid-column: 3;
   padding: 0 0 24px 20px;
   color: #333;
   font-family: sans-serif;
@@ -76,6 +77,15 @@
   font-weight: 600;
 }
 
+.timeline-entry__rail .timeline-entry__logo--wide {
+  width: 68px;
+  height: 38px;
+  margin-top: 9px;
+  margin-left: 6px;
+  object-fit: cover;
+  object-position: center;
+}
+
 @media screen and (max-width: 700px) {
   .career-timeline {
     margin: 30px 0 36px;
@@ -87,7 +97,7 @@
   }
 
   .timeline-entry {
-    grid-template-columns: 68px 52px minmax(0, 1fr);
+    grid-template-columns: 74px 52px minmax(0, 1fr);
   }
 
   .timeline-entry .year {
@@ -104,6 +114,13 @@
     width: 42px;
     height: 42px;
     margin-left: 8px;
+  }
+
+  .timeline-entry__rail .timeline-entry__logo--wide {
+    width: 46px;
+    height: 30px;
+    margin-top: 6px;
+    margin-left: 4px;
   }
 
   .timeline-entry__description {
@@ -133,7 +150,7 @@
 
   @media screen and (max-width: 400px) {
     .timeline-entry {
-      grid-template-columns: 58px 44px minmax(0, 1fr);
+      grid-template-columns: 68px 44px minmax(0, 1fr);
     }
 
     .timeline-entry .year {
