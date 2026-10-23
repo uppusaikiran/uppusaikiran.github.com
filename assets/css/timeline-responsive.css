@@ -1,100 +1,117 @@
-/* Timeline Responsive Styles */
+/* Compact chronological history. */
 
-/* Default styles (desktop) - don't change these */
-.timeline-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
-  margin-left: 10px;
+.career-timeline {
+  margin: 34px 0 42px;
 }
 
-.timeline-container::before {
-  content: "";
-  position: absolute;
-  left: 75px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #eee;
+.doc-home .career-timeline__title {
+  margin: 0 0 20px;
+  color: #333;
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 .timeline-entry {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding-left: 90px;
-  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: stretch;
 }
 
-.year {
-  position: absolute;
-  left: 0;
-  color: #999;
-  width: 75px;
-  padding-top: 5px;
-  font-size: 0.65em;
+.timeline-entry .year {
+  grid-column: span 1;
+  padding: 2px 6px 20px 0;
+  color: #aaa;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 1.35;
   text-align: right;
-  padding-right: 15px;
 }
 
-.timeline-entry::before {
-  content: "";
+.timeline-entry__rail {
+  position: relative;
+  grid-column: span 1;
+  min-height: 88px;
+  border-left: 2px solid #cfcfcf;
+}
+
+.timeline-entry__dot {
   position: absolute;
-  left: 71px;
-  top: 8px;
-  width: 10px;
-  height: 10px;
-  background-color: #999;
+  top: 0;
+  left: -8px;
+  width: 14px;
+  height: 14px;
+  background: #cfcfcf;
+  border: 2px solid #fff;
   border-radius: 50%;
 }
 
-/* Mobile Styles */
-@media screen and (max-width: 600px) {
-  /* Timeline Section */
-  .timeline-container {
-    margin-left: 0;
+.timeline-entry__rail img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin-left: 10px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.timeline-entry__description {
+  grid-column: span 10;
+  padding: 0 0 24px 20px;
+  color: #333;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.doc-home .timeline-entry__description p {
+  margin: 0 0 6px;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.timeline-entry__description strong {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 700px) {
+  .career-timeline {
+    margin: 30px 0 36px;
   }
-  
-  .timeline-container::before {
-    left: 20px;
+
+  .doc-home .career-timeline__title {
+    margin-bottom: 18px;
+    font-size: 25px;
   }
-  
+
   .timeline-entry {
-    padding-left: 35px;
-    margin-bottom: 25px;
+    grid-template-columns: 68px 52px minmax(0, 1fr);
   }
-  
-  .year {
-    position: relative;
-    left: 0;
-    width: 100%;
-    text-align: left;
-    padding-left: 35px;
-    padding-right: 0;
-    margin-bottom: 5px;
-    font-weight: bold;
+
+  .timeline-entry .year {
+    grid-column: 1;
+    padding-right: 8px;
+    font-size: 12px;
   }
-  
-  .timeline-entry::before {
-    left: 16px;
-    top: 8px;
+
+  .timeline-entry__rail {
+    grid-column: 2;
   }
-  
-  /* Adjust the image and text layout for mobile */
-  .timeline-entry > div {
-    width: 100%;
+
+  .timeline-entry__rail img {
+    width: 42px;
+    height: 42px;
+    margin-left: 8px;
   }
-  
-  .timeline-entry > div > div {
-    flex-direction: column;
-    align-items: flex-start;
+
+  .timeline-entry__description {
+    grid-column: 3;
+    padding-left: 14px;
+    font-size: 15px;
   }
-  
-  .timeline-entry img {
-    margin-bottom: 5px;
-  }
-  
+
   /* Hackathon Section */
   .hackathon-entry {
     flex-direction: column !important;
@@ -109,16 +126,33 @@
     height: 50px !important;
   }
   
-  /* Fix any potential overflow issues */
   .page-content {
     overflow-x: hidden;
     max-width: 100%;
   }
-  
-  /* Ensure certification images stack properly on very small screens */
+
   @media screen and (max-width: 400px) {
+    .timeline-entry {
+      grid-template-columns: 58px 44px minmax(0, 1fr);
+    }
+
+    .timeline-entry .year {
+      font-size: 11px;
+    }
+
+    .timeline-entry__rail img {
+      width: 36px;
+      height: 36px;
+      margin-left: 6px;
+    }
+
+    .timeline-entry__description {
+      padding: 0 0 20px 12px;
+      font-size: 14px;
+    }
+
     div[style*="display: flex; flex-wrap: wrap; gap: 20px;"] {
       justify-content: center;
     }
   }
-} 
+}
