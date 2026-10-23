@@ -1,16 +1,7 @@
 /* Compact chronological history. */
 
 .career-timeline {
-  margin: 34px 0 42px;
-}
-
-.doc-home .career-timeline__title {
-  margin: 0 0 20px;
-  color: #333;
-  font-family: sans-serif;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.2;
+  margin: 22px 0 36px;
 }
 
 .timeline-entry {
@@ -88,12 +79,7 @@
 
 @media screen and (max-width: 700px) {
   .career-timeline {
-    margin: 30px 0 36px;
-  }
-
-  .doc-home .career-timeline__title {
-    margin-bottom: 18px;
-    font-size: 25px;
+    margin: 20px 0 32px;
   }
 
   .timeline-entry {
