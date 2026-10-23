@@ -30,6 +30,14 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.speaking-grid--portrait {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.speaking-grid--landscape {
+  margin-top: 10px;
+}
+
 .doc-home .speaking-card {
   display: flex;
   min-width: 0;
@@ -131,7 +139,8 @@
 
 @media (max-width: 760px) {
   .speaking-grid--featured,
-  .speaking-grid--archive {
+  .speaking-grid--archive,
+  .speaking-grid--portrait {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -142,7 +151,8 @@
   }
 
   .speaking-grid--featured,
-  .speaking-grid--archive {
+  .speaking-grid--archive,
+  .speaking-grid--portrait {
     grid-template-columns: 1fr;
   }
 
