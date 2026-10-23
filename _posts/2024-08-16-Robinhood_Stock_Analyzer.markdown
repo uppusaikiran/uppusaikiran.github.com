@@ -2,7 +2,7 @@
 layout: single
 published: false
 classes: wide
-author_profile: true
+author_profile: false
 title: "Robinhood stock analyzer: CSV trades, FIFO positions, Yahoo Finance charts, and optional MFA export"
 slug: robinhood-stock-analyzer
 redirect_from:

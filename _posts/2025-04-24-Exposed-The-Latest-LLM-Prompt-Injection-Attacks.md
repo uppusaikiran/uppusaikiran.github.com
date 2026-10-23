@@ -2,7 +2,7 @@
 layout: single
 published: false
 classes: wide
-author_profile: true
+author_profile: false
 title: "Unveiling the Invisible: How One Simple Prompt Makes LLMs Spill Their Secrets"
 categories:
   - Cybersecurity

@@ -1,6 +1,7 @@
 ---
 layout: ctf
 author_profile: false
+sitemap: true
 categories:
   - Hacking
 tags:
