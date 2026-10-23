@@ -9,6 +9,7 @@ image: /assets/images/site/header.jpg
 
 <!-- Include responsive timeline CSS -->
 <link rel="stylesheet" href="/assets/css/timeline-responsive.css">
+<link rel="stylesheet" href="/assets/css/home-profile.css">
 <!-- Ensure proper mobile viewport scaling -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -58,7 +59,37 @@ image: /assets/images/site/header.jpg
 </style>
 
 <div class="page-content doc-home">
-  <h4 id="about" class="home-section-anchor" style="font-size: 0.685em;"><strong>About Me</strong></h4>
+  <section id="about" class="home-profile home-section-anchor" aria-labelledby="home-profile-name">
+    <div class="home-profile__photo">
+      <img src="/assets/images/site/saikiran-uppu-3.jpg" alt="Sai Kiran Uppu" width="1200" height="1200">
+    </div>
+    <div class="home-profile__intro">
+      <p class="home-profile__eyebrow">AI security · agentic systems · enterprise defense</p>
+      <h1 id="home-profile-name">Sai Kiran Uppu</h1>
+      <p class="home-profile__tagline">I build security systems that turn complex signals into investigations, automated controls, and faster decisions.</p>
+      <p class="home-profile__meta">
+        <strong>Senior Security Researcher at Adobe</strong>
+        <span aria-hidden="true">·</span>
+        <span>San Jose, California</span>
+      </p>
+      <div class="home-profile__links" aria-label="Profile links">
+        <a href="mailto:uppusaikiran@gmail.com" aria-label="Email Sai Kiran Uppu" title="Email">
+          {% include icon-mail.html %}
+        </a>
+        <a href="https://github.com/uppusaikiran" target="_blank" rel="noopener noreferrer" aria-label="Sai Kiran Uppu on GitHub" title="GitHub">
+          {% include icon-github.html %}
+        </a>
+        <a href="https://www.linkedin.com/in/saikiranuppu" target="_blank" rel="noopener noreferrer" aria-label="Sai Kiran Uppu on LinkedIn" title="LinkedIn">
+          {% include icon-linkedin.html %}
+        </a>
+        <a href="https://x.com/uppusaikiran" target="_blank" rel="noopener noreferrer" aria-label="Sai Kiran Uppu on X" title="X">
+          {% include icon-x.html %}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <h4 style="font-size: 0.685em;"><strong>About Me</strong></h4>
   <p style="font-size: 0.65em;">
     I am a security engineer and technical leader at Adobe specializing in AI security, agentic systems, and large-scale security platforms. Over the past seven years, I have designed and built production systems that turn complex security telemetry into prioritized investigations, automated controls, and faster response.
   </p>
