@@ -10,6 +10,7 @@ image: /assets/images/site/header.jpg
 <!-- Include responsive timeline CSS -->
 <link rel="stylesheet" href="/assets/css/timeline-responsive.css">
 <link rel="stylesheet" href="/assets/css/home-profile.css">
+<link rel="stylesheet" href="/assets/css/speaking.css">
 <!-- Ensure proper mobile viewport scaling -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,38 +24,6 @@ image: /assets/images/site/header.jpg
     display: block;
     overflow: hidden;
     border-radius: 8px;
-  }
-  /* TDI 2025: keep three photos on one row (flex-wrap broke when 3x300px exceeded main column) */
-  .tdi-photos-row {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-    align-items: center;
-    width: calc(100% - 80px);
-    max-width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    margin-left: 80px;
-  }
-  .tdi-photos-row img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: contain;
-  }
-  .asw-episode-image {
-    margin: -5px 0 20px 80px;
-  }
-  @media (max-width: 600px) {
-    .tdi-photos-row {
-      margin-left: 0;
-      width: 100%;
-      gap: 8px;
-    }
-    .asw-episode-image {
-      margin-left: 0;
-    }
   }
 </style>
 
@@ -164,231 +133,117 @@ image: /assets/images/site/header.jpg
     </div>
   </section>
 
-  <h4 id="speaking" class="home-section-anchor" style="font-size: 0.685em;"><strong>Recent Conference Talks</strong></h4>
-  <p style="font-size: 0.65em;">
-    I regularly speak at security conferences and universities on topics including AI-driven threat intelligence, cloud security, and cybersecurity careers:
-  </p>
-  
-  <div class="conference-section" style="margin-top: 15px;">
-    <!-- Upcoming JHU AI + Cyber Defense panel -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-start;">
-      <img src="/assets/images/logos/hopkins.png" alt="Johns Hopkins University" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
-      <div>
-        <div style="font-size: 0.65em;"><strong>Connect to Industry AI + Spotlight - Panelist (October 1, 2026)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          AI x Future of Cyber Defense panel hosted by the Johns Hopkins Master's Life Design Hub and Women in Cybersecurity JHU. The virtual panel will cover AI in cyber defense, emerging cybersecurity technologies, and career pathways in AI, cybersecurity, and digital risk management.
-        </div>
-      </div>
-    </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: flex-start; margin-bottom: 20px; margin-left: 80px;">
-      <img src="/assets/images/gallery/jhu-ai-cyber-defense-panel-2026.png" alt="Connect to Industry AI + Spotlight: AI x Future of Cyber Defense panel flyer featuring Sai Kiran Uppu" style="max-width: 300px; width: 100%; height: auto; border-radius: 8px; object-fit: contain;" loading="lazy">
-    </div>
+  <section class="speaking-section" aria-labelledby="speaking">
+    <h2 id="speaking" class="home-section-title home-section-anchor">Selected Speaking</h2>
+    <p class="speaking-intro">Talks and conversations on AI security, agentic systems, threat intelligence, and building defenses at enterprise scale.</p>
 
-    <!-- Application Security Weekly #396 -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-start;">
-      <img src="/assets/images/logos/sc-media.jpg" alt="SC Media" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
-      <div>
-        <div style="font-size: 0.65em;"><strong>Application Security Weekly #396 - Guest (August 18, 2026)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          Augmenting Threat Intel Analysis with Agents - Interview on Security Weekly with host Mike Shema. We discuss agentic systems that analyze external threat intelligence, examine internal systems, and present triage decisions at petabyte scale, along with proactive application-security defenses, developer engagement, and hardening services against common attacks.
-          <br><a href="https://www.scworld.com/podcast-segment/14854-augmenting-threat-intel-analysis-with-agents-sai-kiran-uppu-chris-wallis-ramin-farassat-asw-396" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px;">Episode &amp; Show Notes &rarr;</a>
-          <a href="https://www.youtube.com/watch?v=Yzv3USkZAeQ" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; margin-left: 12px;">Watch on YouTube &rarr;</a>
-          <a href="https://podcasts.apple.com/us/podcast/augmenting-threat-intel-analysis-with-agents-sai-kiran/id1338908396?i=1000784020151" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; margin-left: 12px;">Listen on Apple Podcasts &rarr;</a>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7495556317651169280/" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; margin-left: 12px;">LinkedIn Post &rarr;</a>
+    <div class="speaking-grid speaking-grid--featured">
+      <a class="speaking-card speaking-card--featured" href="https://www.youtube.com/watch?v=Yzv3USkZAeQ" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/application-security-weekly-396.jpg" alt="Application Security Weekly episode 396" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">Application Security Weekly · Guest · Aug 2026</span>
+          <h3>Augmenting Threat Intelligence with Agents</h3>
+          <p>Agentic analysis, fleet sweeps, and proactive application-security defenses.</p>
+          <span class="speaking-card__action">Watch episode ↗</span>
         </div>
-      </div>
-    </div>
-    <div class="asw-episode-image">
-      <a href="https://www.youtube.com/watch?v=Yzv3USkZAeQ" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
-        <img src="/assets/images/gallery/application-security-weekly-396.jpg" alt="Application Security Weekly episode 396: Threat Intel Analysis with Sai Kiran Uppu" style="display: block; width: 100%; max-width: 300px; height: auto; border-radius: 8px;" loading="lazy">
+      </a>
+
+      <a class="speaking-card speaking-card--featured" href="https://www.databricks.com/dataaisummit/session/architecting-agentic-security-scaling-threat-detection-llm-and-lake" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/databricks-data-ai-summit-2026-stage-photo.jpeg" alt="Presenting at the Databricks Data and AI Summit" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">Data + AI Summit · Speaker · Jun 2026</span>
+          <h3>Architecting Agentic Security</h3>
+          <p>Scaling threat detection with LLMs and lakehouse architecture.</p>
+          <span class="speaking-card__action">Session details ↗</span>
+        </div>
+      </a>
+
+      <a class="speaking-card speaking-card--featured" href="https://www.svcc-svcsi.org/services-7-1" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/svcc-2026-industry-talk-photo.jpeg" alt="Presenting an industry talk at IEEE SVCC" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">IEEE SVCC · Speaker and panelist · Jun 2026</span>
+          <h3>Building Agentic Security</h3>
+          <p>LLM-driven detection, fleet-sweep orchestration, and the future of security work.</p>
+          <span class="speaking-card__action">Conference details ↗</span>
+        </div>
       </a>
     </div>
 
-    <!-- P R Government College (A) international seminar -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-start;">
-      <div aria-label="P R Government College" style="width: 60px; height: 60px; flex: 0 0 60px; border-radius: 8px; background: #185e56; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;">PRGC</div>
-      <div>
-        <div style="font-size: 0.65em;"><strong>P R Government College (A) - International Seminar Key Speaker (August 17, 2026)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          AI &amp; Cybersecurity: Skills for Tomorrow's Careers - International seminar for P R Government College (A), Kakinada, India, on emerging technologies, real-world applications, and the skills needed for careers in AI and cybersecurity.
-          <br><a href="https://www.youtube.com/watch?v=rTFuHWcDr-g" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px;">Watch Seminar &rarr;</a>
+    <h3 class="speaking-subtitle">More speaking</h3>
+    <div class="speaking-grid speaking-grid--archive">
+      <article class="speaking-card">
+        <img class="speaking-card__image" src="/assets/images/gallery/jhu-ai-cyber-defense-panel-2026.png" alt="Johns Hopkins AI and Cyber Defense panel" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">Johns Hopkins · Panelist · Oct 2026</span>
+          <h3>AI and the Future of Cyber Defense</h3>
         </div>
-      </div>
-    </div>
-    <div class="asw-episode-image">
-      <a href="https://www.youtube.com/watch?v=rTFuHWcDr-g" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
-        <img src="/assets/images/gallery/pr-government-college-ai-cybersecurity-2026.png" alt="P R Government College AI and Cybersecurity international seminar poster" style="display: block; width: 100%; max-width: 300px; height: auto; border-radius: 8px;" loading="lazy">
+      </article>
+
+      <a class="speaking-card" href="https://www.youtube.com/watch?v=rTFuHWcDr-g" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/pr-government-college-ai-cybersecurity-2026.png" alt="AI and Cybersecurity international seminar" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">International Seminar · Key speaker · Aug 2026</span>
+          <h3>AI and Cybersecurity: Skills for Tomorrow</h3>
+        </div>
       </a>
-    </div>
-    <!-- Databricks Data + AI Summit 2026 -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px;">
-      <img src="/assets/images/logos/databricks-logo.png" alt="Databricks" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
-      <div>
-        <div style="font-size: 0.65em;"><strong>Databricks Data + AI Summit - Speaker (June 18, 2026)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          Architecting Agentic Security: Scaling Threat Detection with LLM and Lakehouse Architecture - 40-minute breakout in the Cybersecurity track, San Francisco (June 18, 2026).
-          <br><a href="https://www.databricks.com/dataaisummit/session/architecting-agentic-security-scaling-threat-detection-llm-and-lake" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px;">Watch Session &rarr;</a>
-          <a href="https://www.databricks.com/dataaisummit/speaker/sai-kiran-uppu" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; margin-left: 12px;">Speaker Profile &rarr;</a>
-        </div>
-      </div>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; align-items: center; margin-bottom: 20px; margin-left: 80px;">
-      <img src="/assets/images/gallery/databricks-data-ai-summit-2026-stage-photo.jpeg" alt="Presenting at Databricks Data + AI Summit 2026" style="width: 100%; height: 225px; object-fit: contain; border-radius: 8px;">
-      <img src="/assets/images/gallery/databricks-data-ai-summit-2026-speaker-badge-photo.jpeg" alt="Speaker badge at Databricks Data + AI Summit 2026" style="width: 100%; height: 225px; object-fit: contain; border-radius: 8px;">
-      <img src="/assets/images/gallery/databricks-data-ai-summit-2026-poster.jpeg" alt="Databricks Data + AI Summit 2026 session poster" style="width: 100%; height: 225px; object-fit: contain; border-radius: 8px;">
-    </div>
 
-    <!-- SVCC 2026 Industry Talk -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-start;">
-      <img src="/assets/images/logos/svcc-logo.png" alt="SVCC" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
-      <div>
-        <div style="font-size: 0.65em;"><strong>SVCC - Industry Talk - Speaker (June 12, 2026)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          Building Agentic Security: Scaling Threat Detection with LLM and Fleet Sweep Orchestration - Industry talk at the 7th Silicon Valley Cybersecurity Conference (IEEE Computer Society), San Jose State University, San Jose, CA.
-          <br><a href="https://www.svcc-svcsi.org/services-7-1" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px;">Accepted Talks &rarr;</a>
-          <a href="https://www.svcc-svcsi.org/" target="_blank" rel="noopener noreferrer" style="color: #EB1000; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; margin-left: 12px;">Conference Site &rarr;</a>
+      <a class="speaking-card" href="https://torohack.rexctf.com" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/torohack-10-0-csudh-2026-speaker-spotlight.png" alt="ToroHack speaker spotlight" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">ToroHack 10.0 · Keynote · Apr 2026</span>
+          <h3>AI vs AI: How Machines Are Hacking Machines</h3>
         </div>
-      </div>
-    </div>
-    <div style="display: flex; flex-wrap: nowrap; gap: 15px; align-items: center; justify-content: flex-start; margin-bottom: 20px; margin-left: 80px;">
-      <img src="/assets/images/gallery/svcc-2026-industry-talk-photo.jpeg" alt="Presenting industry talk at SVCC 2026" style="height: 225px; width: auto; max-width: 300px; object-fit: contain; border-radius: 8px;" loading="lazy">
-      <img src="/assets/images/gallery/svcc-2026-panel-flyer.jpg" alt="SVCC 2026 panel discussion flyer" style="height: 225px; width: auto; max-width: 300px; object-fit: contain; border-radius: 8px;" loading="lazy">
-    </div>
-    <div style="margin-left: 80px; margin-bottom: 20px;">
-      <div style="font-size: 0.65em; margin-bottom: 10px;"><strong>Panel Discussion: The Future of Work - AI, Cybersecurity, and Career Growth (June 12, 2026)</strong></div>
-      <div style="font-size: 0.65em; line-height: 1.5; margin-bottom: 10px;">
-        Invited panelist alongside leaders from Intuit, ThoughtSpot, Straiker, and Adobe. Moderated by Sujata Ramamoorthy (Verizon, retired; SJSU).
-      </div>
-    </div>
+      </a>
 
-    <!-- JHU Security Metamorphosis 2026 -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px;">
-      <img src="/assets/images/logos/hopkins.png" alt="Johns Hopkins University" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
-      <div>
-        <div style="font-size: 0.65em;"><strong>JHU Security Metamorphosis - Invited Panelist (April 10, 2026)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          Security Metamorphosis: A Cybersecurity Student's Roadmap to Careers - Invited as a mid-career panelist at Johns Hopkins University's Imagine Center, Baltimore, MD. Organized by the Master's Life Design Hub for MSSI and engineering master's students.
+      <article class="speaking-card">
+        <img class="speaking-card__image" src="/assets/images/gallery/jhu-security-metamorphosis-2026-panel-stage.png" alt="Johns Hopkins Security Metamorphosis panel" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">Johns Hopkins · Panelist · Apr 2026</span>
+          <h3>Security Metamorphosis</h3>
         </div>
-      </div>
-    </div>
-    <!-- JHU Panel Image -->
-    <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: flex-start; margin-bottom: 20px; margin-left: 80px;">
-      <img src="/assets/images/gallery/hopkins-panel.jpg" alt="JHU Security Metamorphosis 2026 Panel" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-      <img src="/assets/images/gallery/jhu-security-metamorphosis-2026-panel-stage.png" alt="JHU Security Metamorphosis 2026 panel in session at the Imagine Center" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-    </div>
+      </article>
 
-    <!-- ToroHack 10.0 CSUDH 2026 -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px;">
-      <img src="/assets/images/logos/torohack-10-0-csudh-2026-flyer.png" alt="ToroHack 10.0" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
-      <div>
-        <div style="font-size: 0.65em;"><strong>ToroHack 10.0 (CSUDH) - Keynote Speaker (April 11, 2026)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          AI vs AI: How Machines Are Hacking Machines - Invited keynote at the California State University, Dominguez Hills Cybersecurity and Hacking Expo (<a href="https://torohack.rexctf.com" target="_blank" rel="noopener noreferrer">event site</a>). Adobe is a platinum sponsor; virtual delivery.
+      <article class="speaking-card">
+        <img class="speaking-card__image" src="/assets/images/gallery/umbc-cdl-talk-2026.png" alt="UMBC Cyber Defense Lab invited talk" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">UMBC Cyber Defense Lab · Invited talk · Mar 2026</span>
+          <h3>Agentic Threat Intel</h3>
         </div>
-      </div>
-    </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: flex-start; margin-bottom: 20px; margin-left: 80px;">
-      <img src="/assets/images/gallery/torohack-10-0-csudh-2026-speaker-spotlight.png" alt="ToroHack 10.0 speaker spotlight on torohack.rexctf.com" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-    </div>
+      </article>
 
-    <!-- TDI 2025 talk -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px;">
-      <img src="/assets/images/logos/diana-initiative-logo.jpg" alt="The Diana Initiative" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
-      <div>
-        <div style="font-size: 0.65em;"><strong>The Diana Initiative (TDI 2025) - Speaker (August 4, 2025)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          Supercharging Threat Intelligence with AI: Automating IOC Extraction and Enrichment - Las Vegas, Nevada
+      <article class="speaking-card">
+        <img class="speaking-card__image" src="/assets/images/gallery/penn-state-ist-guest-lecture.png" alt="Penn State IST guest lecture" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">Penn State IST · Guest lecture · Oct 2025</span>
+          <h3>Supercharging Threat Intelligence with AI</h3>
         </div>
-      </div>
-    </div>
-    
-    <!-- TDI Images: single row, columns share width -->
-    <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: flex-start; margin-bottom: 20px; margin-left: 80px;">
-      <img src="/assets/images/gallery/tdi-2025-conference.png" alt="TDI 2025 Conference" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-      <img src="/assets/images/gallery/tdi-2025-badge.jpg" alt="TDI 2025 Badge" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-    </div>
+      </article>
 
-    <!-- SVCC-SVCSI Talk -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-start;">
-      <img src="/assets/images/logos/svcc-logo.png" alt="SVCC-SVCSI Conference" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
-      <div>
-        <div style="font-size: 0.65em;"><strong>SVCC-SVCSI Industry Talk - Speaker (June 24, 2025)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          Supercharging Threat Intelligence with AI: Automating IOC Extraction and Enrichment - Fremont, California
+      <article class="speaking-card">
+        <img class="speaking-card__image" src="/assets/images/gallery/tdi-2025-conference.png" alt="Speaking at The Diana Initiative" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">The Diana Initiative · Speaker · Aug 2025</span>
+          <h3>Supercharging Threat Intelligence with AI</h3>
         </div>
-      </div>
-    </div>
-    <!-- SVCC-SVCSI Images -->
-    <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: flex-start; margin-bottom: 20px; margin-left: 80px;">
-      <img src="/assets/images/gallery/svcc-2025-conference.jpg" alt="SVCC-SVCSI 2025 Conference" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-      <img src="/assets/images/gallery/svcc-2025-badge.jpg" alt="SVCC-SVCSI 2025 Badge" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-    </div>
-    
-    
-    <!-- Panel Discussion -->
-    <div style="margin-left: 80px; margin-bottom: 20px;">
-      <div style="font-size: 0.65em; margin-bottom: 10px;"><strong>Panel Discussion: Responsible Cybersecurity for AI and Post-Quantum Cryptography (PQC)</strong></div>
-      <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: flex-start;">
-        <img src="/assets/images/gallery/svcc-2025-panel-pdf.png" alt="Responsible Cybersecurity for AI and PQC Panel" style="height: 225px; width: auto; max-width: 300px; object-fit: contain; border-radius: 8px;">
-        <img src="/assets/images/gallery/svcc-2025-panel.jpg" alt="Responsible Cybersecurity for AI and PQC Panel" style="height: 225px; width: auto; max-width: 300px; object-fit: contain; border-radius: 8px;">
-      </div>
-    </div>
-    
-    <!-- BSides SLC Talk -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-start;">
-      <img src="/assets/images/logos/bsides-slc-logo.jpeg" alt="BSides SLC Conference" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
-      <div>
-        <div style="font-size: 0.65em;"><strong>BSides SLC - Speaker (November 2024)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          Designing effective data security schema - Salt Lake City, Utah
+      </article>
+
+      <a class="speaking-card" href="https://www.svcc-svcsi.org/" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/svcc-2025-conference.jpg" alt="Speaking at SVCC in 2025" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">SVCC-SVCSI · Speaker and panelist · Jun 2025</span>
+          <h3>AI Threat Intelligence and Responsible Security</h3>
         </div>
-      </div>
-    </div>
-    <!-- BSides SLC Images -->
-    <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: flex-start; margin-bottom: 20px; margin-left: 80px;">
-      <img src="/assets/images/gallery/bsides-slc-2024-conference.jpg" alt="BSides SLC 2024 Conference" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-      <img src="/assets/images/gallery/bsides-slc-2024-badge.jpg" alt="BSides SLC 2024 Badge" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-    </div>
-  </div>
-  
+      </a>
 
-  <h4 style="font-size: 0.685em;"><strong>Guest Lectures</strong></h4>
-  <p style="font-size: 0.65em;">
-    Invited to deliver guest lectures at universities on AI-driven threat intelligence and cybersecurity:
-  </p>
-
-  <div class="conference-section" style="margin-top: 15px;">
-    <!-- UMBC CDL Guest Lecture -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px;">
-      <img src="/assets/images/logos/umbc-logo.png" alt="UMBC" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
-      <div>
-        <div style="font-size: 0.65em;"><strong>UMBC Cyber Defense Lab - Invited Talk (March 27, 2026)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          Agentic Threat Intel: From Unstructured Reports to Coordinated Hunts - Invited by Dr. Alan T. Sherman to speak at the UMBC Cyber Defense Lab seminar series, supported by the National Science Foundation.
+      <article class="speaking-card">
+        <img class="speaking-card__image" src="/assets/images/gallery/bsides-slc-2024-conference.jpg" alt="Speaking at BSides Salt Lake City" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">BSides SLC · Speaker · Nov 2024</span>
+          <h3>Designing Effective Data Security Schemas</h3>
         </div>
-      </div>
+      </article>
     </div>
-
-    <!-- UMBC CDL Image -->
-    <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: flex-start; margin-bottom: 20px; margin-left: 80px;">
-      <img src="/assets/images/gallery/umbc-cdl-talk-2026.png" alt="UMBC Cyber Defense Lab Talk 2026" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-    </div>
-
-    <!-- Penn State IST Guest Lecture -->
-    <div class="conference-entry" style="display: flex; gap: 20px; margin-bottom: 20px;">
-      <img src="/assets/images/logos/penn-state-ist-logo.png" alt="Penn State IST" width="60" height="60" style="border-radius: 8px; object-fit: contain;">
-      <div>
-        <div style="font-size: 0.65em;"><strong>Penn State IST - Guest Lecture (October 2025)</strong></div>
-        <div style="margin-top: 5px; line-height: 1.5; font-size: 0.65em;">
-          Supercharging Threat Intelligence with AI: Automating IOC Extraction and Enrichment - Invited by Dr. Yuchen Yang, Assistant Professor at Penn State IST, for cybersecurity master's students in her threat hunting course.
-        </div>
-      </div>
-    </div>
-    <!-- Penn State Image -->
-    <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: flex-start; margin-bottom: 20px; margin-left: 80px;">
-      <img src="/assets/images/gallery/penn-state-ist-guest-lecture.png" alt="Penn State IST Guest Lecture" style="max-width: 300px; height: auto; border-radius: 8px; object-fit: contain;">
-    </div>
-  </div>
+  </section>
 
   <h4 id="credentials" class="home-section-anchor" style="font-size: 0.685em;"><strong>Certifications</strong></h4>
   <p style="font-size: 0.65em;">

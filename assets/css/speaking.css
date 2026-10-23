@@ -1,0 +1,144 @@
+/* Compact speaking portfolio. */
+
+.speaking-section {
+  margin: 36px 0 42px;
+}
+
+.doc-home .speaking-section > .home-section-title {
+  margin-bottom: 6px;
+}
+
+.doc-home .speaking-intro {
+  max-width: 680px;
+  margin: 0 0 16px;
+  color: #64748b;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.speaking-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.speaking-grid--featured {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.speaking-grid--archive {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.doc-home .speaking-card {
+  display: flex;
+  min-width: 0;
+  padding: 5px 5px 10px;
+  overflow: hidden;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  flex-direction: column;
+  text-decoration: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.doc-home a.speaking-card:hover,
+.doc-home a.speaking-card:focus-visible {
+  color: #333;
+  border-color: #aaa;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.09);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.speaking-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+
+.speaking-card__body {
+  display: flex;
+  min-height: 0;
+  padding: 8px 6px 2px;
+  flex: 1;
+  flex-direction: column;
+}
+
+.doc-home .speaking-card__meta {
+  color: #888;
+  font-family: sans-serif;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.doc-home .speaking-card h3 {
+  padding: 0;
+  margin: 4px 0 0;
+  color: #333;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  border: 0;
+}
+
+.doc-home .speaking-card--featured h3 {
+  font-size: 15px;
+}
+
+.doc-home .speaking-card p {
+  margin: 5px 0 0;
+  color: #666;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.doc-home .speaking-card__action {
+  margin-top: auto;
+  padding-top: 10px;
+  color: #2563eb;
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.doc-home .speaking-subtitle {
+  padding: 0;
+  margin: 26px 0 10px;
+  color: #333;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  border: 0;
+}
+
+@media (max-width: 760px) {
+  .speaking-grid--featured,
+  .speaking-grid--archive {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .speaking-section {
+    margin: 30px 0 36px;
+  }
+
+  .speaking-grid--featured,
+  .speaking-grid--archive {
+    grid-template-columns: 1fr;
+  }
+
+  .speaking-card__image {
+    aspect-ratio: 16 / 9;
+  }
+}
