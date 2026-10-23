@@ -55,12 +55,20 @@
 
 .speaking-card__image {
   display: block;
-  width: 100%;
-  aspect-ratio: 16 / 10;
+  width: calc(100% + 10px);
+  height: 142px;
+  max-width: none;
+  margin: -5px -5px 0;
+  flex: 0 0 142px;
   object-fit: cover;
   object-position: center;
   background: #f3f4f6;
-  border-radius: 3px;
+  border-radius: 2px 2px 0 0;
+}
+
+.doc-home .speaking-card--featured .speaking-card__image {
+  height: 184px;
+  flex-basis: 184px;
 }
 
 .speaking-card__body {
@@ -139,6 +147,7 @@
   }
 
   .speaking-card__image {
-    aspect-ratio: 16 / 9;
+    height: 160px;
+    flex-basis: 160px;
   }
 }
