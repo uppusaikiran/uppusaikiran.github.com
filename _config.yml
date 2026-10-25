@@ -38,7 +38,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : /assets/images/site/saikiran-uppu-3.jpg
+og_image                 : /assets/images/site/saikiran-uppu-4.jpg
 # For specifying social profiles (JSON-LD sameAs; helps search and AI overviews)
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -59,7 +59,7 @@ analytics:
 # Site Author
 author:
   name             : "SaiKiran Uppu"
-  avatar           : /assets/images/site/saikiran-uppu-3.jpg
+  avatar           : /assets/images/site/saikiran-uppu-4.jpg
   bio              : "Senior Security Researcher, Adobe"
   location         : "San Jose, California"
   email            : "uppusaikiran@gmail.com"
