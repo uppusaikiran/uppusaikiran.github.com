@@ -26,12 +26,16 @@ layout: default
   .ctf-hero {
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(50% - 50vw);
     background:
       radial-gradient(circle at 18% 18%, rgba(45, 212, 191, 0.18), transparent 30%),
       radial-gradient(circle at 82% 8%, rgba(59, 130, 246, 0.2), transparent 34%),
       linear-gradient(135deg, #07111f 0%, #0f1e34 52%, #111c32 100%);
     color: #f1f5f9;
-    padding: 4.25rem 1.25rem 2rem;
+    padding: 2.75rem 1.25rem 1.4rem;
     text-align: center;
   }
   .ctf-hero::before {
@@ -48,36 +52,36 @@ layout: default
   }
   .ctf-hero__inner { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
   .ctf-hero__mark {
-    display: grid; place-items: center; width: 64px; height: 64px; margin: 0 auto 18px;
+    display: grid; place-items: center; width: 50px; height: 50px; margin: 0 auto 11px;
     color: #5eead4; background: rgba(15, 118, 110, 0.12);
-    border: 1px solid rgba(94, 234, 212, 0.24); border-radius: 18px;
+    border: 1px solid rgba(94, 234, 212, 0.24); border-radius: 14px;
     box-shadow: 0 18px 60px rgba(15, 118, 110, 0.18), inset 0 1px 0 rgba(255,255,255,0.08);
     transform: rotate(-3deg);
   }
   .ctf-hero__eyebrow {
-    display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px;
-    color: #99f6e4; font-size: 11px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px;
+    color: #99f6e4; font-size: 10px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
   }
   .ctf-hero__eyebrow span { width: 20px; height: 1px; background: currentColor; }
   .ctf-hero h1 {
-    color: #fff; font-size: clamp(36px, 6vw, 68px); font-weight: 850;
-    letter-spacing: -0.055em; margin: 0 0 0.8rem; line-height: 0.98;
+    color: #fff; font-size: clamp(34px, 4.5vw, 52px); font-weight: 850;
+    letter-spacing: -0.055em; margin: 0 0 0.6rem; line-height: 1;
   }
   .ctf-hero h1 em { color: #5eead4; font-style: normal; }
   .ctf-hero p {
-    color: #b6c3d4; font-size: 16px; margin: 0 auto;
-    max-width: 650px; line-height: 1.65;
+    color: #b6c3d4; font-size: 14px; margin: 0 auto;
+    max-width: 680px; line-height: 1.55;
   }
   .ctf-hero-icon {
-    display: block; width: 34px; height: 34px; opacity: 0.95;
+    display: block; width: 27px; height: 27px; opacity: 0.95;
   }
   .ctf-hero__actions {
     display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin: 26px 0 22px;
+    gap: 9px; margin: 18px 0 14px;
   }
   .ctf-hero__search, .ctf-hero__browse {
-    min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-    padding: 0 17px; border-radius: 12px; font: 700 13px/1 inherit; text-decoration: none;
+    min-height: 42px; display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+    padding: 0 15px; border-radius: 11px; font: 700 12px/1 inherit; text-decoration: none;
     transition: transform 0.18s, background 0.18s, border-color 0.18s, box-shadow 0.18s;
   }
   .ctf-hero__search {
@@ -92,8 +96,8 @@ layout: default
   .ctf-hero__browse { color: #dbeafe; border: 1px solid rgba(191, 219, 254, 0.22); background: rgba(255,255,255,0.055); }
   .ctf-hero__browse:hover { color: #fff; text-decoration: none; transform: translateY(-2px); border-color: rgba(94, 234, 212, 0.4); background: rgba(94, 234, 212, 0.08); }
   .ctf-hero__meta {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px;
-    color: #7f93ac; font-size: 11px;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 7px 18px;
+    color: #7f93ac; font-size: 10px;
   }
   .ctf-hero__meta span { display: inline-flex; align-items: center; gap: 5px; }
   .ctf-hero__meta span::before { content: ''; width: 5px; height: 5px; background: #2dd4bf; border-radius: 50%; box-shadow: 0 0 12px rgba(45, 212, 191, 0.8); }
@@ -143,11 +147,11 @@ layout: default
   .ctf-pills {
     position: relative; z-index: 1;
     display: flex; flex-wrap: wrap; gap: 6px;
-    justify-content: center; padding: 18px 0 0; margin: 28px auto 0;
+    justify-content: center; padding: 13px 0 0; margin: 18px auto 0;
     max-width: 860px; list-style: none; border-top: 1px solid rgba(148, 163, 184, 0.13);
   }
   .ctf-pills a {
-    display: inline-block; padding: 5px 11px;
+    display: inline-block; padding: 4px 10px;
     font-size: 11px; font-weight: 700; color: #aebdd0;
     background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
     border-radius: 999px; text-decoration: none;
@@ -487,17 +491,17 @@ layout: default
     .ctf-main { width: 100%; }
   }
   @media (max-width: 600px) {
-    .ctf-hero { padding: 3rem 1rem 1.4rem; }
-    .ctf-hero h1 { font-size: 39px; }
+    .ctf-hero { padding: 2rem 1rem 1.1rem; }
+    .ctf-hero h1 { font-size: 33px; }
     .ctf-hero p { font-size: 13px; }
-    .ctf-hero__mark { width: 54px; height: 54px; margin-bottom: 14px; border-radius: 15px; }
-    .ctf-hero__actions { align-items: stretch; flex-direction: column; margin: 22px 0 18px; }
+    .ctf-hero__mark { width: 44px; height: 44px; margin-bottom: 10px; border-radius: 12px; }
+    .ctf-hero__actions { align-items: stretch; flex-direction: column; margin: 16px 0 13px; }
     .ctf-hero__search, .ctf-hero__browse { width: 100%; }
     .ctf-hero__meta { gap: 6px 12px; }
     .ctf-body { padding: 22px 14px 42px; }
     .ctf-body h2 { font-size: 21px !important; }
     .ctf-card-grid, .ctf-section-index { grid-template-columns: 1fr 1fr; }
-    .ctf-pills { gap: 4px; }
+    .ctf-pills { gap: 4px; margin-top: 14px; padding-top: 10px; }
     .ctf-pills a { font-size: 10px; padding: 3px 8px; }
     .ctf-backtop-float { bottom: 16px; right: 16px; width: 40px; height: 40px; }
     .ctf-search-dialog { padding: 18px 10px; place-items: start center; }
