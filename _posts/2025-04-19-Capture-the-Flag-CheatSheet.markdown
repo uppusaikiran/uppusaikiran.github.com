@@ -1,7 +1,9 @@
 ---
 layout: ctf
+title: "Capture the Flag Cheatsheet"
 author_profile: false
 sitemap: true
+last_modified_at: 2026-10-26
 categories:
   - Hacking
 tags:
@@ -19,12 +21,30 @@ toc: false
 ---
 
 <div class="ctf-hero" id="top">
-  <svg class="ctf-hero-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="4" y1="22" x2="4" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-  </svg>
-  <h1>Capture the Flag Cheatsheet</h1>
-  <p>The single source of truth for CTF players. Methodology, platforms, tools, and copy-paste commands for HackTheBox, VulnHub, TryHackMe, and live competitions.</p>
+  <div class="ctf-hero__inner">
+    <div class="ctf-hero__mark" aria-hidden="true">
+      <svg class="ctf-hero-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="4" y1="22" x2="4" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="ctf-hero__eyebrow"><span></span> Living field manual</div>
+    <h1>Capture the Flag <em>Cheatsheet</em></h1>
+    <p>The single source of truth for CTF players. Methodology, platforms, tools, and copy-paste commands for HackTheBox, VulnHub, TryHackMe, and live competitions.</p>
+    <div class="ctf-hero__actions">
+      <button class="ctf-hero__search" type="button" data-ctf-search-open>
+        <i class="fas fa-search" aria-hidden="true"></i>
+        Search commands and topics
+        <kbd>Ctrl K</kbd>
+      </button>
+      <a class="ctf-hero__browse" href="#getting-started">Start exploring <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="ctf-hero__meta" aria-label="Guide details">
+      <span><strong>7</strong> focused categories</span>
+      <span><strong>Copy-ready</strong> command blocks</span>
+      <span><strong>Reviewed</strong> October 2026</span>
+    </div>
+  </div>
   <ul class="ctf-pills">
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#platforms">Platforms</a></li>
@@ -45,6 +65,11 @@ toc: false
 </div>
 
 <div class="ctf-body" markdown="1">
+
+<div class="ctf-safety" role="note">
+  <span class="ctf-safety__icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></span>
+  <div><strong>Practice responsibly.</strong> Use these techniques only in CTFs, labs, and systems where you have explicit authorization. Commands marked as noisy can trigger defenses or disrupt a target.</div>
+</div>
 
 ## Getting started
 
