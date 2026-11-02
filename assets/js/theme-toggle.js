@@ -18,7 +18,7 @@
 
     root.dataset.theme = theme;
     root.style.colorScheme = theme;
-    themeColor.content = isDark ? "#090d14" : "#ffffff";
+    themeColor.content = isDark ? "#050505" : "#ffffff";
 
     if (toggle) {
       toggle.setAttribute("aria-label", "Switch to " + nextTheme + " theme");

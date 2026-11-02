@@ -1,12 +1,12 @@
 :root {
   --theme-transition: 180ms ease;
-  --night-canvas: #090d14;
-  --night-surface: #0f1622;
-  --night-surface-raised: #141d2b;
-  --night-border: #263347;
-  --night-text: #edf4fb;
-  --night-muted: #93a4b8;
-  --night-faint: #697b91;
+  --night-canvas: #050505;
+  --night-surface: #080808;
+  --night-surface-raised: #0c0c0c;
+  --night-border: #242424;
+  --night-text: #f2f2f2;
+  --night-muted: #a3a3a3;
+  --night-faint: #737373;
   --night-accent: #62d9ff;
   --night-accent-strong: #9be7ff;
   --night-signal: #b9f76d;
@@ -94,24 +94,17 @@ html[data-theme="dark"] body {
 }
 
 html[data-theme="dark"] body::before {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  content: "";
-  opacity: 0.22;
-  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='.7' fill='%23697b91'/%3E%3C/svg%3E");
+  display: none;
 }
 
 html[data-theme="dark"] .masthead,
 html[data-theme="dark"] .greedy-nav {
-  background: rgba(9, 13, 20, 0.9) !important;
-  border-color: rgba(98, 217, 255, 0.12) !important;
+  background: var(--night-canvas) !important;
+  border-color: var(--night-border) !important;
 }
 
 html[data-theme="dark"] .masthead {
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(16px);
+  box-shadow: none;
 }
 
 html[data-theme="dark"] .site-title,
@@ -135,20 +128,20 @@ html[data-theme="dark"] .greedy-nav .visible-links a::before {
 }
 
 html[data-theme="dark"] .greedy-nav__toggle {
-  background-color: var(--night-surface-raised) !important;
+  background-color: var(--night-canvas) !important;
 }
 
 html[data-theme="dark"] .theme-toggle {
   color: var(--night-accent);
-  background: rgba(20, 29, 43, 0.78);
+  background: var(--night-canvas);
   border-color: var(--night-border);
 }
 
 html[data-theme="dark"] .theme-toggle:hover,
 html[data-theme="dark"] .theme-toggle:focus-visible {
   color: var(--night-signal);
-  background: #182334;
-  border-color: #3c526d;
+  background: #0d0d0d;
+  border-color: #3a3a3a;
 }
 
 html[data-theme="dark"] .theme-toggle:focus-visible {
@@ -209,13 +202,13 @@ html[data-theme="dark"] blockquote {
 
 html[data-theme="dark"] code {
   color: #dff7ff;
-  background: #172131;
+  background: #111;
 }
 
 html[data-theme="dark"] pre,
 html[data-theme="dark"] div.highlighter-rouge,
 html[data-theme="dark"] figure.highlight {
-  background: #070b11;
+  background: #080808;
   border-color: var(--night-border);
 }
 
@@ -229,8 +222,8 @@ html[data-theme="dark"] .home-profile::after {
 }
 
 html[data-theme="dark"] .home-profile__photo img {
-  border: 1px solid rgba(98, 217, 255, 0.24);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.48), 0 0 0 8px rgba(98, 217, 255, 0.035);
+  border: 1px solid var(--night-border);
+  box-shadow: none;
 }
 
 html[data-theme="dark"] .doc-home .home-profile h1,
@@ -270,7 +263,7 @@ html[data-theme="dark"] .doc-home .research-list em {
 }
 
 html[data-theme="dark"] .timeline-entry__rail {
-  border-left-color: #314159;
+  border-left-color: var(--night-border);
 }
 
 html[data-theme="dark"] .timeline-entry__dot {
@@ -296,7 +289,7 @@ html[data-theme="dark"] .doc-home .speaking-card {
   background: var(--night-surface);
   border-color: var(--night-border);
   border-radius: 8px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
 }
 
 html[data-theme="dark"] .doc-home a.writing-card:hover,
@@ -305,7 +298,7 @@ html[data-theme="dark"] .doc-home a.speaking-card:hover,
 html[data-theme="dark"] .doc-home a.speaking-card:focus-visible {
   color: var(--night-text);
   border-color: rgba(98, 217, 255, 0.55);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(98, 217, 255, 0.08);
+  box-shadow: none;
 }
 
 html[data-theme="dark"] .doc-home .credential-card strong,
@@ -351,7 +344,7 @@ html[data-theme="dark"] .doc-home .portfolio-link-row a {
 }
 
 html[data-theme="dark"] .speaking-card__image {
-  background: #101827;
+  background: #0a0a0a;
 }
 
 /* Shared article and archive surfaces. */
@@ -360,11 +353,11 @@ html[data-theme="dark"] .embed-shell,
 html[data-theme="dark"] .x-card {
   background: var(--night-surface);
   border-color: var(--night-border);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
 }
 
 html[data-theme="dark"] .doc-hero {
-  background: #101827;
+  background: #080808;
   border-bottom: 1px solid var(--night-border);
 }
 
@@ -393,7 +386,7 @@ html[data-theme="dark"] .x-card__footer {
 
 html[data-theme="dark"] .doc-article .post-prose code {
   color: #dff7ff;
-  background: #172131;
+  background: #111;
 }
 
 html[data-theme="dark"] .doc-article .post-prose tr:hover td,
