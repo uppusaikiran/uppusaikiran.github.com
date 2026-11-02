@@ -517,6 +517,244 @@ layout: default
     .ctf-search-panel { animation: none; }
     .ctf-card, .ctf-hero__search, .ctf-hero__browse, .ctf-backtop-float { transition: none; }
   }
+
+  /* ── Unified dark system ── */
+  html[data-theme="dark"] .ctf-wrap,
+  html[data-theme="dark"] .ctf-two-col,
+  html[data-theme="dark"] .ctf-main,
+  html[data-theme="dark"] .ctf-body {
+    background: #050505;
+  }
+  html[data-theme="dark"] .ctf-hero {
+    color: #f2f2f2;
+    background: #050505;
+    border-bottom: 1px solid #242424;
+  }
+  html[data-theme="dark"] .ctf-hero::before { display: none; }
+  html[data-theme="dark"] .ctf-hero__mark {
+    color: #62d9ff;
+    background: #080808;
+    border-color: #242424;
+    border-radius: 10px;
+    box-shadow: none;
+    transform: none;
+  }
+  html[data-theme="dark"] .ctf-hero__eyebrow,
+  html[data-theme="dark"] .ctf-hero h1 em { color: #62d9ff; }
+  html[data-theme="dark"] .ctf-hero h1 { color: #f2f2f2; }
+  html[data-theme="dark"] .ctf-hero p { color: #a3a3a3; }
+  html[data-theme="dark"] .ctf-hero__search,
+  html[data-theme="dark"] .ctf-hero__browse {
+    color: #f2f2f2;
+    background: #080808;
+    border-color: #2b2b2b;
+    border-radius: 7px;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .ctf-hero__search:hover,
+  html[data-theme="dark"] .ctf-hero__browse:hover {
+    color: #fff;
+    background: #0d0d0d;
+    border-color: #62d9ff;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .ctf-hero__search kbd,
+  html[data-theme="dark"] .ctf-sidebar-search kbd {
+    color: #a3a3a3;
+    background: #111;
+    border-color: #2b2b2b;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .ctf-hero__meta { color: #737373; }
+  html[data-theme="dark"] .ctf-hero__meta strong { color: #d4d4d4; }
+  html[data-theme="dark"] .ctf-hero__meta span::before {
+    background: #b9f76d;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .ctf-pills { border-top-color: #242424; }
+  html[data-theme="dark"] .ctf-pills a {
+    color: #a3a3a3;
+    background: #080808;
+    border-color: #242424;
+    border-radius: 6px;
+  }
+  html[data-theme="dark"] .ctf-pills a:hover {
+    color: #f2f2f2;
+    background: #0d0d0d;
+    border-color: #3a3a3a;
+  }
+  html[data-theme="dark"] .ctf-pills .pill-sep { color: #525252; }
+  html[data-theme="dark"] .ctf-progress { background: #111; }
+  html[data-theme="dark"] .ctf-progress span { background: #62d9ff; }
+
+  html[data-theme="dark"] .ctf-body {
+    color: #a3a3a3;
+  }
+  html[data-theme="dark"] .ctf-body h2 {
+    color: #f2f2f2 !important;
+    border-bottom-color: #242424 !important;
+  }
+  html[data-theme="dark"] .ctf-body h3,
+  html[data-theme="dark"] .ctf-body h4 {
+    color: #e5e5e5 !important;
+  }
+  html[data-theme="dark"] .ctf-body p,
+  html[data-theme="dark"] .ctf-body li { color: #a3a3a3; }
+  html[data-theme="dark"] .ctf-body strong { color: #f2f2f2; }
+  html[data-theme="dark"] .ctf-body a { color: #62d9ff; }
+  html[data-theme="dark"] .ctf-body hr { background: #242424; }
+  html[data-theme="dark"] .ctf-body code {
+    color: #dff7ff;
+    background: #111;
+    border: 1px solid #242424;
+  }
+  html[data-theme="dark"] .ctf-body pre {
+    color: #d4d4d4;
+    background: #080808;
+    border-color: #242424;
+    border-radius: 7px;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .ctf-body pre code { border: 0; }
+  html[data-theme="dark"] .ctf-copy-btn {
+    color: #a3a3a3;
+    background: #111;
+    border-color: #2b2b2b;
+  }
+  html[data-theme="dark"] .ctf-copy-btn:hover {
+    color: #fff;
+    background: #191919;
+  }
+  html[data-theme="dark"] .ctf-body th {
+    color: #737373;
+    border-bottom-color: #2b2b2b;
+  }
+  html[data-theme="dark"] .ctf-body td {
+    color: #a3a3a3;
+    border-bottom-color: #1f1f1f;
+  }
+  html[data-theme="dark"] .ctf-body tr:hover td { background: #0a0a0a; }
+
+  html[data-theme="dark"] .ctf-safety,
+  html[data-theme="dark"] .ctf-methodology-diagram,
+  html[data-theme="dark"] .ctf-card,
+  html[data-theme="dark"] .ctf-section-index a {
+    color: #a3a3a3;
+    background: #080808;
+    border-color: #242424;
+    border-radius: 7px;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .ctf-safety strong,
+  html[data-theme="dark"] .ctf-card strong,
+  html[data-theme="dark"] .ctf-section-index a { color: #f2f2f2; }
+  html[data-theme="dark"] .ctf-safety__icon {
+    color: #62d9ff;
+    background: #111;
+  }
+  html[data-theme="dark"] .ctf-methodology-diagram .flow-step {
+    fill: #0a0a0a;
+    stroke: #62d9ff;
+  }
+  html[data-theme="dark"] .ctf-methodology-diagram .flow-arrow { stroke: #525252; }
+  html[data-theme="dark"] .ctf-methodology-diagram .flow-text { fill: #d4d4d4; }
+  html[data-theme="dark"] .ctf-card .ctf-card-icon,
+  html[data-theme="dark"] .ctf-section-index .ctf-sec-icon { color: #62d9ff; }
+  html[data-theme="dark"] .ctf-card span,
+  html[data-theme="dark"] .ctf-section-index span { color: #737373; }
+  html[data-theme="dark"] .ctf-card:hover,
+  html[data-theme="dark"] .ctf-section-index a:hover {
+    background: #0d0d0d;
+    border-color: #3a3a3a;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .ctf-steps li { border-left-color: #242424; }
+  html[data-theme="dark"] .ctf-steps li::before {
+    color: #050505;
+    background: #62d9ff;
+  }
+  html[data-theme="dark"] .ctf-steps li strong { color: #f2f2f2; }
+  html[data-theme="dark"] .ctf-tip,
+  html[data-theme="dark"] .ctf-info,
+  html[data-theme="dark"] .ctf-warn {
+    color: #a3a3a3;
+    background: #080808;
+    border-color: #2b2b2b;
+  }
+  html[data-theme="dark"] .ctf-tip h4 { color: #b9f76d !important; }
+  html[data-theme="dark"] .ctf-info h4 { color: #62d9ff !important; }
+  html[data-theme="dark"] .ctf-warn h4 { color: #fbbf24 !important; }
+
+  html[data-theme="dark"] .ctf-sidebar {
+    background: #050505;
+    border-color: #242424;
+  }
+  html[data-theme="dark"] .ctf-sidebar-title {
+    color: #737373;
+    border-bottom-color: #242424;
+  }
+  html[data-theme="dark"] .ctf-sidebar-search,
+  html[data-theme="dark"] .ctf-toc-toggle {
+    color: #d4d4d4;
+    background: #080808;
+    border-color: #242424;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .ctf-sidebar-search:hover {
+    color: #62d9ff;
+    border-color: #3a3a3a;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .ctf-toc a { color: #737373; }
+  html[data-theme="dark"] .ctf-toc a:hover,
+  html[data-theme="dark"] .ctf-toc a.is-active,
+  html[data-theme="dark"] .ctf-toc .toc-h3 a.is-active { color: #62d9ff; }
+  html[data-theme="dark"] .ctf-toc a.is-active {
+    background: #0a0a0a;
+    border-left-color: #62d9ff;
+  }
+  html[data-theme="dark"] .ctf-search-dialog { background: rgba(0, 0, 0, 0.82); }
+  html[data-theme="dark"] .ctf-search-panel {
+    background: #080808;
+    border-color: #2b2b2b;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .ctf-search-head,
+  html[data-theme="dark"] .ctf-search-footer { border-color: #242424; }
+  html[data-theme="dark"] .ctf-search-head > i { color: #62d9ff; }
+  html[data-theme="dark"] .ctf-search-input { color: #f2f2f2; }
+  html[data-theme="dark"] .ctf-search-close,
+  html[data-theme="dark"] .ctf-search-footer {
+    color: #a3a3a3;
+    background: #0d0d0d;
+    border-color: #242424;
+  }
+  html[data-theme="dark"] .ctf-search-summary,
+  html[data-theme="dark"] .ctf-search-result__snippet,
+  html[data-theme="dark"] .ctf-search-result__type,
+  html[data-theme="dark"] .ctf-search-empty { color: #737373; }
+  html[data-theme="dark"] .ctf-search-result { color: #a3a3a3; }
+  html[data-theme="dark"] .ctf-search-result:hover,
+  html[data-theme="dark"] .ctf-search-result:focus-visible {
+    color: #f2f2f2;
+    background: #0d0d0d;
+  }
+  html[data-theme="dark"] .ctf-search-result__icon {
+    color: #62d9ff;
+    background: #111;
+  }
+  html[data-theme="dark"] .ctf-search-result__title { color: #f2f2f2; }
+  html[data-theme="dark"] .ctf-backtop-float {
+    color: #f2f2f2;
+    background: #0d0d0d;
+    border-color: #2b2b2b;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .ctf-backtop-float:hover { background: #171717; }
+
+  @media (max-width: 900px) {
+    html[data-theme="dark"] .ctf-sidebar { background: #050505; }
+  }
 </style>
 
 <div class="ctf-progress" aria-hidden="true"><span></span></div>
