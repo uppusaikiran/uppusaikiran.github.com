@@ -217,6 +217,21 @@ html[data-theme="dark"] .layout--home .doc-archive__body {
   position: relative;
 }
 
+html[data-theme="dark"] .doc-home {
+  color: var(--night-muted);
+}
+
+html[data-theme="dark"] .doc-home [style*="0.65em"],
+html[data-theme="dark"] .doc-home [style*="#666"] {
+  color: var(--night-muted) !important;
+}
+
+html[data-theme="dark"] .doc-home h4[style*="0.685em"],
+html[data-theme="dark"] .doc-home h4[style*="font-size: 0.685em"] {
+  color: var(--night-text) !important;
+  border-bottom-color: var(--night-border) !important;
+}
+
 html[data-theme="dark"] .home-profile::after {
   background: rgba(98, 217, 255, 0.32);
 }
