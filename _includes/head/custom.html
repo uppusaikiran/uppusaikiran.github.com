@@ -1,5 +1,21 @@
 <!-- start custom head snippets -->
 
+<script>
+  (function () {
+    var theme = "light";
+    try {
+      var savedTheme = localStorage.getItem("site-theme");
+      theme = savedTheme === "dark" || savedTheme === "light"
+        ? savedTheme
+        : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    } catch (error) {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.dataset.theme = theme;
+  }());
+</script>
+<link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
+
 {% if page.sitemap == false %}
 <meta name="robots" content="noindex, follow">
 {% endif %}
