@@ -81,7 +81,7 @@ layout: default
   }
   .ctf-hero__search, .ctf-hero__browse {
     min-height: 42px; display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-    padding: 0 15px; border-radius: 11px; font: 700 12px/1 inherit; text-decoration: none;
+    padding: 0 15px; border-radius: 11px; font-family: inherit; font-size: 12px; font-weight: 700; line-height: 1; text-decoration: none;
     transition: transform 0.18s, background 0.18s, border-color 0.18s, box-shadow 0.18s;
   }
   .ctf-hero__search {
@@ -91,7 +91,7 @@ layout: default
   .ctf-hero__search:hover { transform: translateY(-2px); background: #fff; box-shadow: 0 18px 40px rgba(0,0,0,0.28); }
   .ctf-hero__search kbd {
     padding: 3px 6px; color: #64748b; background: #e2e8f0; border: 1px solid #cbd5e1;
-    border-radius: 5px; font: 700 9px/1 inherit; box-shadow: 0 1px 0 #fff inset;
+    border-radius: 5px; font-family: inherit; font-size: 9px; font-weight: 700; line-height: 1; box-shadow: 0 1px 0 #fff inset;
   }
   .ctf-hero__browse { color: #dbeafe; border: 1px solid rgba(191, 219, 254, 0.22); background: rgba(255,255,255,0.055); }
   .ctf-hero__browse:hover { color: #fff; text-decoration: none; transform: translateY(-2px); border-color: rgba(94, 234, 212, 0.4); background: rgba(94, 234, 212, 0.08); }
@@ -332,11 +332,11 @@ layout: default
   .ctf-sidebar-search {
     display: flex; align-items: center; gap: 8px; width: 100%; margin: 0 0 14px; padding: 9px 10px;
     color: #475569; background: #fff; border: 1px solid #dbe4ef; border-radius: 9px;
-    font: 650 11px/1.2 inherit; cursor: pointer; box-shadow: 0 4px 12px rgba(15,23,42,0.04);
+    font-family: inherit; font-size: 11px; font-weight: 650; line-height: 1.2; cursor: pointer; box-shadow: 0 4px 12px rgba(15,23,42,0.04);
     transition: border-color 0.15s, box-shadow 0.15s;
   }
   .ctf-sidebar-search:hover { color: #0f766e; border-color: #99f6e4; box-shadow: 0 7px 18px rgba(15,118,110,0.08); }
-  .ctf-sidebar-search kbd { margin-left: auto; padding: 2px 5px; color: #94a3b8; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 4px; font: 700 8px/1.2 inherit; }
+  .ctf-sidebar-search kbd { margin-left: auto; padding: 2px 5px; color: #94a3b8; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 4px; font-family: inherit; font-size: 8px; font-weight: 700; line-height: 1.2; }
   .ctf-toc {
     list-style: none;
     padding: 0;
@@ -388,12 +388,12 @@ layout: default
   .ctf-search-head > i { color: #0f766e; }
   .ctf-search-input {
     min-width: 0; flex: 1; padding: 0; color: #0f172a; background: transparent; border: 0; outline: 0;
-    font: 650 16px/1.3 inherit;
+    font-family: inherit; font-size: 16px; font-weight: 650; line-height: 1.3;
   }
   .ctf-search-input::placeholder { color: #94a3b8; font-weight: 500; }
   .ctf-search-close {
     padding: 5px 8px; color: #64748b; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px;
-    font: 700 10px/1 inherit; cursor: pointer;
+    font-family: inherit; font-size: 10px; font-weight: 700; line-height: 1; cursor: pointer;
   }
   .ctf-search-summary { padding: 10px 16px 7px; color: #64748b; font-size: 11px; }
   .ctf-search-results { overflow-y: auto; padding: 4px 10px 12px; }
