@@ -16,7 +16,7 @@
               {% else %}
                 {% assign nav_href = domain | append: link.url %}
               {% endif %}
-              <a href="{{ nav_href }}"{% if link.section %} class="section-nav-link" data-section="{{ link.section }}"{% endif %}{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              <a href="{{ nav_href }}"{% if link.section %} class="section-nav-link" data-section="{{ link.section }}"{% elsif page.url == link.url %} class="is-current" aria-current="page"{% endif %}{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
           {% endfor %}
         </ul>

@@ -118,9 +118,14 @@ html[data-theme="dark"] .greedy-nav a {
 
 html[data-theme="dark"] .greedy-nav a:hover,
 html[data-theme="dark"] .greedy-nav a:focus-visible,
+html[data-theme="dark"] .greedy-nav a.is-current,
 html[data-theme="dark"] .greedy-nav a.section-nav-link.active,
 html[data-theme="dark"] .greedy-nav a.section-nav-link[aria-current="location"] {
   color: var(--night-accent-strong) !important;
+}
+
+html[data-theme="dark"] .greedy-nav a.is-current::before {
+  transform: scaleX(1) !important;
 }
 
 html[data-theme="dark"] .greedy-nav .visible-links a::before {
