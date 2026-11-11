@@ -1,0 +1,18 @@
+{% comment %}
+  X quote card. Pass HTML captures as body and optional footer.
+  {% capture xb %}<p>...</p>{% endcapture %}
+  {% capture xf %}— Author, <a href="...">link</a>{% endcapture %}
+  {% include x-card.html body=xb footer=xf %}
+{% endcomment %}
+<aside class="x-card" aria-label="Post on X">
+  <div class="x-card__header">
+    {% include icon-x.html %}
+    <span>Post on X</span>
+  </div>
+  <div class="x-card__content">
+    {{ include.body }}
+  </div>
+  {% if include.footer != blank %}
+    <div class="x-card__footer">{{ include.footer }}</div>
+  {% endif %}
+</aside>

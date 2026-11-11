@@ -1,0 +1,59 @@
+/* X (formerly Twitter): FA 5 has no x-twitter glyph; inline SVG + share button */
+/* Mail: FA envelope-square reads heavy; use inline SVG aligned with other row icons */
+
+.icon-x,
+.icon-mail,
+.icon-github,
+.icon-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.28571429em;
+  vertical-align: -0.075em;
+
+  svg {
+    width: 0.88em;
+    height: 0.88em;
+    display: block;
+  }
+}
+
+.page__footer-follow .icon-x,
+.page__footer-follow .icon-github,
+.page__footer-follow .icon-linkedin {
+  color: inherit;
+}
+
+.social-icons .icon-x {
+  color: #000;
+}
+
+.social-icons .icon-mail {
+  color: $text-color;
+}
+
+.social-icons .icon-github {
+  color: $github-color;
+}
+
+.social-icons .icon-linkedin {
+  color: $linkedin-color;
+}
+
+.btn .icon-x,
+.btn .icon-github,
+.btn .icon-linkedin {
+  margin-right: 0.5em;
+}
+
+.btn--x {
+  @include yiq-contrasted(#000);
+
+  &:hover {
+    @include yiq-contrasted(mix(#000, #333, 25%));
+  }
+
+  &:visited {
+    @include yiq-contrasted(#000);
+  }
+}

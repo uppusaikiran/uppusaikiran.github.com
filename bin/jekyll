@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+# Load taint backport for Ruby 3.2+ (Liquid 4.0.3 compatibility) then run Jekyll.
+require_relative "../config/taint_backport"
+load Gem.bin_path("jekyll", "jekyll")

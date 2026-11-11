@@ -1,0 +1,191 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+# Site Settings
+# GitHub Pages: use remote_theme only (theme: gem is not available in jekyll-build-pages).
+# Local dev: bundle install includes jekyll-remote-theme (see Gemfile).
+remote_theme             : "mmistakes/minimal-mistakes@4.28.0"
+locale                   : "en"
+title                    : "Sai Kiran Uppu"
+title_separator          : "-"
+name                     : "Sai Kiran Uppu"
+description              : "Sai Kiran Uppu, Senior Security Researcher at Adobe: AI-driven threat intelligence, cloud security, Adobe Security Blog, JHU MS, CISSP/GCTI/AWS Security."
+url                      : "https://uppusaikiran.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : # the subpath of your site, e.g. "/blog"
+repository               : "uppusaikiran/uppusaikiran.github.com" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                   : "/assets/images/site/malware.jpg"
+# breadcrumbs            : false # true, false (default)
+words_per_minute         : 200
+
+# Comments
+comments                 : false  # Disable comments globally
+  
+# SEO Related
+google_site_verification : NrwopgCVDIBQFrBuV0-iO4PkG0CQMtIUQf7ZtJAFAMY
+bing_site_verification   : F514F1AAACFB561A1542260200878BC7
+alexa_site_verification  :
+yandex_site_verification :
+
+# Social Sharing
+share                    : false  # Disable social sharing globally
+twitter:
+  username               : uppusaikiran
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 : /assets/images/site/saikiran-uppu-4.jpg
+# For specifying social profiles (JSON-LD sameAs; helps search and AI overviews)
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : Person
+  name                   : "SaiKiran Uppu"
+  links:
+    - "https://github.com/uppusaikiran"
+    - "https://www.linkedin.com/in/saikiranuppu"
+    - "https://x.com/uppusaikiran"
+
+# Analytics
+analytics:
+  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          : "G-85FLWE8XC8"
+
+
+# Site Author
+author:
+  name             : "SaiKiran Uppu"
+  avatar           : /assets/images/site/saikiran-uppu-4.jpg
+  bio              : "Senior Security Researcher, Adobe"
+  location         : "San Jose, California"
+  email            : "uppusaikiran@gmail.com"
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : "uppusaikiran"
+  google_plus      :
+  keybase          : #"backdoorcipher"
+  instagram        :
+  lastfm           :
+  linkedin         : "saikiranuppu"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : #"5908241/backdoor-cipher" # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
+  steam            :
+  tumblr           :
+  twitter          : uppusaikiran
+  vine             :
+  weibo            :
+  xing             :
+  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+ 
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - robots.txt
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
+# Outputting
+permalink: /:categories/:title/
+timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: false     # Disable comments for all posts
+      share: false        # Disable sharing for all posts
+
+search: false

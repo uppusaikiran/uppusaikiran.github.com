@@ -1,0 +1,383 @@
+---
+layout: archive
+classes: wide
+
+header:
+image: /assets/images/site/header.jpg
+
+---
+
+<!-- Include responsive timeline CSS -->
+<link rel="stylesheet" href="/assets/css/timeline-responsive.css">
+<link rel="stylesheet" href="/assets/css/home-profile.css">
+<link rel="stylesheet" href="/assets/css/speaking.css">
+<link rel="stylesheet" href="/assets/css/portfolio-sections.css">
+<!-- Ensure proper mobile viewport scaling -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Custom styles for YouTube thumbnails -->
+<style>
+  .youtube-video img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  .youtube-video a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+</style>
+
+<div class="page-content doc-home">
+  <section id="about" class="home-profile home-section-anchor" aria-labelledby="home-profile-name">
+    <div class="home-profile__photo">
+      <img src="/assets/images/site/saikiran-uppu-4.jpg" alt="Sai Kiran Uppu" width="1200" height="1200">
+    </div>
+    <div class="home-profile__intro">
+      <h1 id="home-profile-name">Sai Kiran Uppu</h1>
+      <p class="home-profile__focus">AI security · agentic systems · enterprise defense</p>
+      <p class="home-profile__tagline">I build enterprise AI security platforms and secure agentic systems, from architecture and guardrails to production-scale defenses.</p>
+      <div class="home-profile__links" aria-label="Profile links">
+        <a href="mailto:uppusaikiran@gmail.com" aria-label="Email Sai Kiran Uppu" title="Email">
+          {% include icon-mail.html %}
+        </a>
+        <a href="https://github.com/uppusaikiran" target="_blank" rel="noopener noreferrer" aria-label="Sai Kiran Uppu on GitHub" title="GitHub">
+          {% include icon-github.html %}
+        </a>
+        <a href="https://www.linkedin.com/in/saikiranuppu" target="_blank" rel="noopener noreferrer" aria-label="Sai Kiran Uppu on LinkedIn" title="LinkedIn">
+          {% include icon-linkedin.html %}
+        </a>
+        <a href="https://x.com/uppusaikiran" target="_blank" rel="noopener noreferrer" aria-label="Sai Kiran Uppu on X" title="X">
+          {% include icon-x.html %}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="home-section-title">About Me</h2>
+  <p style="font-size: 0.65em;">
+    I am a security engineer and technical leader at Adobe specializing in AI security, agentic systems, and large-scale security platforms. Over the past seven years, I have designed and built production systems that turn complex security telemetry into prioritized investigations, automated controls, and faster response.
+  </p>
+  <p style="font-size: 0.65em;">
+    At Adobe, I architected Project Enola, a patent-pending agentic security platform that correlated 3.94 billion SIEM events and delivered more than 5,800 investigations across 18 teams. My work also includes multi-agent security automation, enterprise monitoring for LLM and RAG systems, vulnerability-prioritization pipelines, and data-protection controls operating across high-volume telemetry. I set technical direction, mentor senior team members, and work across security, engineering, and leadership teams to turn emerging risks into deployable controls.
+  </p>
+  <p style="font-size: 0.65em;">
+    My focus is the intersection of AI security, distributed security platforms, application security, and threat intelligence. I work on securing LLM and agentic systems against prompt injection, jailbreaks, data leakage, poisoned context, and unsafe automation. I translate those defenses into practical guardrails for enterprise engineering teams.
+  </p>
+  <p style="font-size: 0.65em;">
+    I also share this work through technical writing and speaking, including the Databricks Data + AI Summit, IEEE Silicon Valley Cybersecurity Conference, Application Security Weekly, The Diana Initiative, and university security programs.
+  </p>
+
+  <section id="experience" class="career-timeline home-section-anchor" aria-label="Experience and education">
+    <div class="timeline-container">
+      <article class="timeline-entry">
+        <div class="year">2021 – now</div>
+        <div class="timeline-entry__rail">
+          <span class="timeline-entry__dot" aria-hidden="true"></span>
+          <img src="/assets/images/logos/adobe.png" alt="Adobe">
+        </div>
+        <div class="timeline-entry__description">
+          <p><strong>Adobe</strong> · Senior Security and AI Engineer</p>
+          <p>I lead security and AI engineering, building agentic platforms, LLM and RAG guardrails, and data-protection systems. I architected Project Enola, a <strong>patent-pending agentic security platform</strong> that correlated 3.94 billion SIEM events and delivered more than 5,800 investigations across 18 teams.</p>
+        </div>
+      </article>
+
+      <article class="timeline-entry">
+        <div class="year">2020</div>
+        <div class="timeline-entry__rail">
+          <span class="timeline-entry__dot" aria-hidden="true"></span>
+          <img src="/assets/images/logos/adobe.png" alt="Adobe">
+        </div>
+        <div class="timeline-entry__description">
+          <p><strong>Adobe</strong> · Security Engineering Intern</p>
+          <p>I built automated AWS enforcement controls that closed more than 10 cloud-security detection gaps and developed a firewall-policy methodology that reduced false negatives by 60%.</p>
+        </div>
+      </article>
+
+      <article class="timeline-entry">
+        <div class="year">2017 – 2019</div>
+        <div class="timeline-entry__rail">
+          <span class="timeline-entry__dot" aria-hidden="true"></span>
+          <img class="timeline-entry__logo--wide" src="/assets/images/logos/netskope.png" alt="Netskope">
+        </div>
+        <div class="timeline-entry__description">
+          <p><strong>Netskope</strong> · Senior Security Engineer, promoted from Security Intern</p>
+          <p>I productionized a distributed Python malware-analysis pipeline and built real-time malicious-URL detection and YARA-based file classification for cloud traffic.</p>
+        </div>
+      </article>
+
+      <h2 class="home-section-title">Education</h2>
+
+      <article class="timeline-entry">
+        <div class="year">2019 – 2020</div>
+        <div class="timeline-entry__rail">
+          <span class="timeline-entry__dot" aria-hidden="true"></span>
+          <img src="/assets/images/logos/hopkins.png" alt="Johns Hopkins University">
+        </div>
+        <div class="timeline-entry__description">
+          <p><strong>Johns Hopkins University</strong> · M.S. in Security Informatics</p>
+          <p>I studied applied cryptography, network security, software vulnerability analysis, ethical hacking, and cloud security, graduating with a 3.9 GPA.</p>
+        </div>
+      </article>
+
+      <article class="timeline-entry">
+        <div class="year">2013 – 2017</div>
+        <div class="timeline-entry__rail">
+          <span class="timeline-entry__dot" aria-hidden="true"></span>
+          <img src="/assets/images/logos/vit-logo.jpeg" alt="VIT">
+        </div>
+        <div class="timeline-entry__description">
+          <p><strong>Vellore Institute of Technology</strong> · B.Tech. in Computer Science and Engineering</p>
+          <p>I studied computer science in Vellore, India, where I began building software and exploring security.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="speaking-section" aria-labelledby="speaking">
+    <h2 id="speaking" class="home-section-title home-section-anchor">Selected Speaking</h2>
+    <p class="speaking-intro">Talks and conversations on AI security, agentic systems, threat intelligence, and building defenses at enterprise scale.</p>
+
+    <div class="speaking-grid speaking-grid--featured">
+      <a class="speaking-card speaking-card--featured" href="https://www.youtube.com/watch?v=Yzv3USkZAeQ" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/application-security-weekly-396.jpg" alt="Application Security Weekly episode 396" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">Application Security Weekly · Guest · Aug 2026</span>
+          <h3>Augmenting Threat Intelligence with Agents</h3>
+          <p>Agentic analysis, fleet sweeps, and proactive application-security defenses.</p>
+          <span class="speaking-card__action">Watch episode ↗</span>
+        </div>
+      </a>
+
+      <a class="speaking-card speaking-card--featured" href="https://www.databricks.com/dataaisummit/session/architecting-agentic-security-scaling-threat-detection-llm-and-lake" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/databricks-data-ai-summit-2026-stage-photo.jpeg" alt="Presenting at the Databricks Data and AI Summit" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">Data + AI Summit · Speaker · Jun 2026</span>
+          <h3>Architecting Agentic Security</h3>
+          <p>Scaling threat detection with LLMs and lakehouse architecture.</p>
+          <span class="speaking-card__action">Session details ↗</span>
+        </div>
+      </a>
+
+      <a class="speaking-card speaking-card--featured" href="https://youtu.be/N945-v6f3Ck" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/tdi-2025-badge.jpg" alt="Sai Kiran Uppu presenting at The Diana Initiative" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">The Diana Initiative · Speaker · Aug 2025</span>
+          <h3>Supercharging Threat Intelligence with AI</h3>
+          <p>Automating IOC extraction and enrichment for faster threat analysis.</p>
+          <span class="speaking-card__action">Watch talk ↗</span>
+        </div>
+      </a>
+    </div>
+
+    <h3 class="speaking-subtitle">More speaking</h3>
+    <div class="speaking-grid speaking-grid--archive speaking-grid--portrait">
+      <article class="speaking-card">
+        <img class="speaking-card__image" src="/assets/images/gallery/jhu-ai-cyber-defense-panel-2026.png" alt="Johns Hopkins AI and Cyber Defense panel" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">Johns Hopkins · Panelist · Oct 2026</span>
+          <h3>AI and the Future of Cyber Defense</h3>
+        </div>
+      </article>
+
+      <a class="speaking-card" href="https://www.youtube.com/watch?v=rTFuHWcDr-g" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/pr-government-college-ai-cybersecurity-2026.png" alt="AI and Cybersecurity international seminar" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">International Seminar · Key speaker · Aug 2026</span>
+          <h3>AI and Cybersecurity: Skills for Tomorrow</h3>
+          <span class="speaking-card__action">Watch seminar ↗</span>
+        </div>
+      </a>
+
+      <a class="speaking-card" href="https://www.svcc-svcsi.org/services-7-1" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/svcc-2026-industry-talk-photo.jpeg" alt="Presenting an industry talk at IEEE SVCC" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">IEEE SVCC · Speaker and panelist · Jun 2026</span>
+          <h3>Building Agentic Security</h3>
+          <span class="speaking-card__action">Conference details ↗</span>
+        </div>
+      </a>
+
+      <article class="speaking-card">
+        <img class="speaking-card__image" src="/assets/images/gallery/penn-state-ist-guest-lecture.png" alt="Penn State IST guest lecture" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">Penn State IST · Guest lecture · Oct 2025</span>
+          <h3>Supercharging Threat Intelligence with AI</h3>
+        </div>
+      </article>
+    </div>
+
+    <div class="speaking-grid speaking-grid--archive speaking-grid--landscape">
+      <a class="speaking-card" href="https://torohack.rexctf.com" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/torohack-10-0-csudh-2026-speaker-spotlight.png" alt="ToroHack speaker spotlight" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">ToroHack 10.0 · Keynote · Apr 2026</span>
+          <h3>AI vs AI: How Machines Are Hacking Machines</h3>
+          <span class="speaking-card__action">Event details ↗</span>
+        </div>
+      </a>
+
+      <a class="speaking-card" href="https://www.linkedin.com/posts/saikiranuppu_cybersecurity-security-mentorship-activity-7450002890389364737-4JgP" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/jhu-security-metamorphosis-2026-panel-stage.png" alt="Johns Hopkins Security Metamorphosis panel" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">Johns Hopkins · Panelist · Apr 2026</span>
+          <h3>Security Metamorphosis</h3>
+          <span class="speaking-card__action">View event recap ↗</span>
+        </div>
+      </a>
+
+      <a class="speaking-card" href="https://cisa.umbc.edu/agentic-threat-intel-from-unstructured-reports-to-coordinated-hunts/" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/umbc-cdl-talk-2026.png" alt="UMBC Cyber Defense Lab invited talk" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">UMBC Cyber Defense Lab · Invited talk · Mar 2026</span>
+          <h3>Agentic Threat Intel</h3>
+          <span class="speaking-card__action">Talk details ↗</span>
+        </div>
+      </a>
+
+      <a class="speaking-card" href="https://www.svcc-svcsi.org/" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/svcc-2025-conference.jpg" alt="Speaking at SVCC in 2025" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">SVCC-SVCSI · Speaker and panelist · Jun 2025</span>
+          <h3>AI Threat Intelligence and Responsible Security</h3>
+          <span class="speaking-card__action">Conference details ↗</span>
+        </div>
+      </a>
+
+      <a class="speaking-card" href="https://bsides-slc-2024.sessionize.com/session/625007" target="_blank" rel="noopener noreferrer">
+        <img class="speaking-card__image" src="/assets/images/gallery/bsides-slc-2024-conference.jpg" alt="Speaking at BSides Salt Lake City" loading="lazy">
+        <div class="speaking-card__body">
+          <span class="speaking-card__meta">BSides SLC · Speaker · Nov 2024</span>
+          <h3>Designing Effective Data Security Schemas</h3>
+          <span class="speaking-card__action">Session details ↗</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="portfolio-section" aria-labelledby="credentials">
+    <h2 id="credentials" class="home-section-title home-section-anchor">Credentials</h2>
+    <div class="credential-grid">
+      <article class="credential-card">
+        <img src="https://images.credly.com/images/b7150375-ed4c-4383-b976-951b8f531899/image.png" alt="CISSP badge" loading="lazy">
+        <div><strong>CISSP</strong><span>Security leadership</span></div>
+      </article>
+      <article class="credential-card">
+        <img src="https://images.credly.com/images/7842127e-a517-4060-858e-01e7fae7d716/image.png" alt="GIAC GCTI badge" loading="lazy">
+        <div><strong>GIAC GCTI</strong><span>Cyber threat intelligence</span></div>
+      </article>
+      <article class="credential-card">
+        <img src="https://images.credly.com/size/340x340/images/53acdae5-d69f-4dda-b650-d02ed7a50dd7/image.png" alt="AWS Security Specialty badge" loading="lazy">
+        <div><strong>AWS Security</strong><span>Specialty certification</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="portfolio-section" aria-labelledby="publications">
+    <h2 id="publications" class="home-section-title home-section-anchor">Selected Writing</h2>
+    <p class="portfolio-intro">Practical systems work across agentic security, enterprise telemetry, and cloud defense.</p>
+    <div class="writing-grid">
+      <a class="writing-card writing-card--lead" href="https://blog.adobe.com/security/building-an-agentic-ai-powered-threat-intelligence-platform" target="_blank" rel="noopener noreferrer">
+        <span class="portfolio-kicker">Adobe Security · Agentic AI</span>
+        <h3>Building an Agentic AI-Powered Threat Intelligence Platform</h3>
+        <p>How LLM extraction, lakehouse architecture, and parallel fleet sweeps turn threat reports into enterprise investigations.</p>
+        <span class="portfolio-action">Read article ↗</span>
+      </a>
+      <a class="writing-card" href="https://blog.developer.adobe.com/designing-effective-data-security-schemas-d33af7b205e0" target="_blank" rel="noopener noreferrer">
+        <span class="portfolio-kicker">Adobe Tech Blog · Data systems</span>
+        <h3>Designing Effective Data Security Schemas</h3>
+        <p>Normalizing heterogeneous security telemetry for portable, high-confidence correlation.</p>
+        <span class="portfolio-action">Read article ↗</span>
+      </a>
+      <a class="writing-card" href="https://blog.developer.adobe.com/practicing-proper-dmz-and-firewall-hygiene-eb0534b73319" target="_blank" rel="noopener noreferrer">
+        <span class="portfolio-kicker">Adobe Tech Blog · Network security</span>
+        <h3>Practicing Proper DMZ and Firewall Hygiene</h3>
+        <p>Segmentation and firewall patterns for reducing exposure around critical infrastructure.</p>
+        <span class="portfolio-action">Read article ↗</span>
+      </a>
+    </div>
+
+    <h3 class="portfolio-subtitle">Earlier research</h3>
+    <div class="research-list">
+      <a href="https://www.ingentaconnect.com/content/asp/jctn/2019/00000016/f0020005/art00038" target="_blank" rel="noopener noreferrer">
+        <span>2019</span>
+        <strong>Malware and Threat Analysis and Remediation of Cloud SaaS Traffic</strong>
+        <em>Journal of Computational and Theoretical Nanoscience ↗</em>
+      </a>
+      <a href="http://jctjournals.com/April2016/v8.pdf" target="_blank" rel="noopener noreferrer">
+        <span>2016</span>
+        <strong>Proactive Approach for SQL Injection Attack</strong>
+        <em>Journal of Computer Technology ↗</em>
+      </a>
+    </div>
+  </section>
+
+  <section class="portfolio-section" aria-labelledby="highlights">
+    <h2 id="highlights" class="home-section-title home-section-anchor">Builds &amp; Competitions</h2>
+    <p class="portfolio-intro">Selected prototypes, agent projects, hackathons, and security competitions.</p>
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-card__header"><img src="/assets/images/logos/recorded-future.png" alt="" loading="lazy"><span>2025 · CTF</span></div>
+        <h3>Recorded Future RSA CTF</h3>
+        <p>First place at RSA Conference 2025.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__header"><img src="/assets/images/logos/aws.png" alt="" loading="lazy"><span>2025 · Finalist</span></div>
+        <h3>Nexus Agent</h3>
+        <p>MCP and A2A Hackathon, AWS Edition.</p>
+        <div class="project-card__links"><a href="https://devpost.com/software/nexus-agent" target="_blank" rel="noopener noreferrer">Devpost ↗</a><a href="https://youtu.be/P1ZYyQfUk08" target="_blank" rel="noopener noreferrer">Demo ↗</a></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__header"><img src="/assets/images/logos/airbnb.png" alt="" loading="lazy"><span>2025 · CTF</span></div>
+        <h3>Airbnb CTF</h3>
+        <p>10th overall and 2nd among Adobe teams across 600+ participants.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__header"><img src="/assets/images/logos/qloo-app-logo.png" alt="" loading="lazy"><span>2025 · AI prototype</span></div>
+        <h3>Curio</h3>
+        <p>Multimodal cultural intelligence across music, film, dining, and fashion.</p>
+        <div class="project-card__links"><a href="https://devpost.com/software/curio-cultural-intelligence-assistant" target="_blank" rel="noopener noreferrer">Devpost ↗</a><a href="https://youtu.be/2jQMcFMPgA4" target="_blank" rel="noopener noreferrer">Demo ↗</a></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__header"><img src="/assets/images/logos/perplexity.svg" alt="" loading="lazy"><span>2025 · AI prototype</span></div>
+        <h3>Trade Lense</h3>
+        <p>An AI copilot for navigating public-market research and investment signals.</p>
+        <div class="project-card__links"><a href="https://devpost.com/software/tradelense" target="_blank" rel="noopener noreferrer">Devpost ↗</a><a href="https://youtu.be/DPcGiyTsZe4" target="_blank" rel="noopener noreferrer">Demo ↗</a></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__header"><img class="project-card__logo--dark" src="/assets/images/logos/bolt.png" alt="" loading="lazy"><span>2025 · AI prototype</span></div>
+        <h3>Huggy</h3>
+        <p>A voice-first companion designed around human connection and care.</p>
+        <div class="project-card__links"><a href="https://devpost.com/software/huggy-just-a-call-away-coz-care-deserves-human-touch" target="_blank" rel="noopener noreferrer">Devpost ↗</a><a href="https://youtu.be/NbeCHPAYc30" target="_blank" rel="noopener noreferrer">Demo ↗</a></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__header"><img src="/assets/images/logos/airbnb.png" alt="" loading="lazy"><span>2024 · CTF</span></div>
+        <h3>Airbnb CTF</h3>
+        <p>4th overall and 1st among Adobe teams.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__header"><img src="/assets/images/logos/northrop-grumman.png" alt="" loading="lazy"><span>2019 · CTF</span></div>
+        <h3>Northrop Grumman CTF</h3>
+        <p>First-prize team in the security competition.</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__header"><img src="/assets/images/logos/netskope.png" alt="" loading="lazy"><span>2017 · Finalist</span></div>
+        <h3>Netskope Hackathon</h3>
+        <p>Built a security prototype under a compressed delivery window.</p>
+      </article>
+    </div>
+
+    <div class="portfolio-link-row" aria-label="Additional highlights">
+      <a href="https://youtu.be/0CEdoUnT090" target="_blank" rel="noopener noreferrer"><strong>100 Agents Hackathon</strong><span>Watch demo ↗</span></a>
+      <a href="https://www.svcsi.org/post/cyberwarrior-adobe_ctf-svcc-2025" target="_blank" rel="noopener noreferrer"><strong>CyberWarrior Adobe CTF</strong><span>Read feature ↗</span></a>
+      <a href="https://www.svcsi.org/post/the-svcc-2025-industry-sessions-shaping-the-future-of-cybersecurity-by-silicon-valley-cybersecurity" target="_blank" rel="noopener noreferrer"><strong>SVCC Industry Sessions</strong><span>Read feature ↗</span></a>
+    </div>
+  </section>

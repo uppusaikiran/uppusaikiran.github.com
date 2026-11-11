@@ -1,0 +1,190 @@
+/* Embeds and curated sections (body typography: see _doc-surface.scss, .doc-article .post-prose). */
+
+.page__content--modern {
+  font-size: inherit !important;
+}
+
+/* Section rhythm for curated posts */
+.post-section {
+  margin: 2.75rem 0;
+  scroll-margin-top: 1rem;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.post-section__title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #2563eb;
+  color: #0f172a;
+}
+
+/* Linked / FB / generic embeds */
+.embed-shell {
+  max-width: 36rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+}
+
+.embed-shell__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+
+.embed-shell[data-embed="linkedin"] .embed-shell__bar {
+  background: #0a66c2;
+}
+
+.embed-shell[data-embed="facebook"] .embed-shell__bar {
+  background: #1877f2;
+}
+
+.embed-shell[data-embed="generic"] .embed-shell__bar {
+  background: #2563eb;
+}
+
+.embed-shell[data-embed="x"] .embed-shell__bar {
+  background: #000;
+}
+
+/* Official X widget replaces .twitter-tweet; avoid clipping the rendered iframe */
+.embed-shell[data-embed="x"] {
+  overflow: visible;
+}
+
+.embed-shell[data-embed="x"] .embed-shell__frame {
+  min-height: 120px;
+  padding: 1rem 1rem 1.25rem;
+  overflow: visible;
+  background: #f8fafc;
+}
+
+.embed-shell[data-embed="x"] .twitter-tweet {
+  margin: 0 auto !important;
+}
+
+.embed-shell__frame {
+  position: relative;
+  background: #fff;
+
+  iframe {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    min-height: 320px;
+    border: 0 !important;
+  }
+}
+
+.embed-shell[data-embed="generic"] .embed-shell__frame {
+  min-height: 420px;
+}
+
+.embed-shell__note {
+  font-size: 0.85rem;
+  color: #64748b;
+  padding: 0.65rem 1rem 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* X / Twitter-style quote cards */
+.x-card {
+  max-width: 36rem;
+  margin: 0 auto 1.75rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+}
+
+.x-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  background: #000;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.x-card__header .icon-x {
+  color: #fff;
+  width: auto;
+  min-width: 0;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+.x-card__content {
+  padding: 1.15rem 1.2rem 0.25rem;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #334155;
+
+  p {
+    margin: 0 0 0.85em;
+  }
+
+  a {
+    font-weight: 600;
+  }
+}
+
+.x-card__footer {
+  padding: 0 1.2rem 1.15rem;
+  font-size: 0.88rem;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 0.5rem;
+  padding-top: 0.85rem;
+
+  a {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+}
+
+/* Photo grid (e.g. internship swag) */
+.post-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+
+  img {
+    width: 100%;
+    margin: 0;
+    max-height: none;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+}
+
+.post-lede {
+  font-size: 1.05rem;
+  color: mix($text-color, $muted-text-color, 85%);
+  margin-bottom: 1.5rem;
+}

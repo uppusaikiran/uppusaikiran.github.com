@@ -1,0 +1,126 @@
+<!-- start custom head snippets -->
+
+<script>
+  (function () {
+    var hour = new Date().getHours();
+    var theme = hour >= 19 || hour < 7 ? "dark" : "light";
+    document.documentElement.dataset.theme = theme;
+  }());
+</script>
+<link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+
+{% if page.sitemap == false %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5BGSWPK');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BGSWPK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<style>
+/* ── Modern Header ── */
+.masthead {
+  border-bottom: 1px solid #f1f5f9 !important;
+  background: #fff !important;
+}
+.masthead__inner-wrap {
+  max-width: 960px !important;
+  padding: 0 20px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+.site-title {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  letter-spacing: -0.01em;
+}
+.greedy-nav {
+  background: #fff !important;
+}
+.greedy-nav a {
+  color: #475569 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 8px 0 !important;
+  margin: 0 14px !important;
+  transition: color 0.15s !important;
+}
+.greedy-nav a:hover {
+  color: #0f172a !important;
+}
+.greedy-nav a.section-nav-link.active,
+.greedy-nav a.section-nav-link[aria-current="location"] {
+  color: #2563eb !important;
+  font-weight: 600 !important;
+}
+.greedy-nav .visible-links a.section-nav-link.active::before,
+.greedy-nav .visible-links a.section-nav-link[aria-current="location"]::before {
+  -webkit-transform: scaleX(1) translate3d(0, 0, 0) !important;
+  transform: scaleX(1) translate3d(0, 0, 0) !important;
+}
+.greedy-nav a.site-title {
+  color: #0f172a !important;
+  margin-left: 0 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+.greedy-nav .visible-links a::before {
+  height: 2px !important;
+  background: #2563eb !important;
+  bottom: 0 !important;
+}
+.greedy-nav__toggle {
+  background-color: #0f172a !important;
+  border-radius: 4px !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+.home-section-anchor {
+  scroll-margin-top: 72px;
+}
+
+/* ── Modern Footer ── */
+.page__footer {
+  display: none !important;
+}
+.page__footer footer {
+  max-width: 960px !important;
+  padding: 0 20px !important;
+}
+.page__footer-follow {
+  margin-bottom: 2px !important;
+}
+.page__footer-follow span {
+  display: none !important;
+}
+.page__footer-follow a {
+  color: #94a3b8 !important;
+  font-size: 14px !important;
+  padding: 0 6px !important;
+  transition: color 0.15s !important;
+}
+.page__footer-follow a:hover {
+  color: #0f172a !important;
+  text-decoration: none !important;
+}
+.page__footer-copyright {
+  font-size: 11px !important;
+  color: #94a3b8 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  line-height: 1.4 !important;
+}
+</style>
+
+<!-- end custom head snippets -->

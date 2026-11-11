@@ -1,0 +1,9 @@
+<div class="page__footer-follow">
+  {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}" title="GitHub" aria-label="GitHub">{% include icon-github.html %}</a>{% endif %}
+  {% if site.twitter.username %}<a href="https://x.com/{{ site.twitter.username }}" title="X" aria-label="X">{% include icon-x.html %}</a>{% endif %}
+  {% if site.author.linkedin %}<a href="https://linkedin.com/in/{{ site.author.linkedin }}" title="LinkedIn" aria-label="LinkedIn">{% include icon-linkedin.html %}</a>{% endif %}
+</div>
+
+<div class="page__footer-copyright">
+  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
+</div>
