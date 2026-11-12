@@ -18,7 +18,5 @@ main:
   - title: "Highlights"
     url: /#highlights
     section: highlights
-  - title: "Agent Lab"
-    url: /agent/
   - title: "CTF Cheatsheet"
     url: /hacking/Capture-the-Flag-CheatSheet/
